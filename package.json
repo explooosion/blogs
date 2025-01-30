@@ -4,7 +4,8 @@
   "description": "My blogs backup",
   "main": "index.js",
   "scripts": {
-    "backup": "node index.js"
+    "download": "node -r dotenv/config src/download",
+    "upload": "node -r dotenv/config src/upload"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,10 @@
   },
   "homepage": "https://github.com/explooosion/blogs#readme",
   "devDependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
     "puppeteer": "^24.1.1",
+    "string-similarity": "^4.0.4",
     "turndown": "^7.2.0"
   }
 }
