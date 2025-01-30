@@ -56,7 +56,9 @@ image: ""
 
 直接透過 [directive](https://github.com/angular/angular-cli/wiki/generate-directive)，自訂組件：
 
-    ng g directive my-new-directive
+```bash
+ng g directive my-new-directive
+```
 
 ．．．　以下省略
 
@@ -89,8 +91,10 @@ image: ""
 
 每次調用服務都只會重新 new 一個服務：
 
-    var directionsService = new google.maps.DirectionsService;
-    var directionsDisplay = new google.maps.DirectionsRenderer;
+```typescript
+var directionsService = new google.maps.DirectionsService;
+var directionsDisplay = new google.maps.DirectionsRenderer;
+```
 
 而不會將原本的重新修改，
 
@@ -119,48 +123,59 @@ image: ""
 
 ### **I、Install**
 
-    npm install --save agm-direction
+```bash
+npm install --save agm-direction
+```
 
 ### **II、Import** Module
 
-    import { AgmDirectionModule } from 'agm-direction';
-
-    imports: [
-        BrowserModule,
-        AgmCoreModule.forRoot({ // @agm/core
-          apiKey: 'your key',
-        }),
-        AgmDirectionModule      // agm-direction
-    ],
+```typescript
+import { AgmDirectionModule } from 'agm-direction';
+```
+```typescript
+imports: [
+    BrowserModule,
+    AgmCoreModule.forRoot({ // @agm/core
+      apiKey: 'your key',
+    }),
+    AgmDirectionModule      // agm-direction
+],
+```
 
 ### **III、HTML**
 
-    <agm-map [latitude]="lat" [longitude]="lng">
-     
-      <agm-direction *ngIf="dir" [origin]="dir.origin" [destination]="dir.destination"></agm-direction>
-     
-    </agm-map>
+```html
+<agm-map [latitude]="lat" [longitude]="lng">
+ 
+  <agm-direction *ngIf="dir" [origin]="dir.origin" [destination]="dir.destination"></agm-direction>
+ 
+</agm-map>
+```
 
 別忘了地圖的高度哦：
 
-    agm-map{
-      height: 500px;
-    }
+```css
+agm-map{
+  height: 500px;
+}
+```
 
 ### **IV、TypeScript**
 
-      lat: Number = 24.799448;
-      lng: Number = 120.979021;
-      zoom: Number = 14;
-     
-      dir = undefined;
-     
-      public getDirection() {
-        this.dir = {
-          origin: { lat: 24.799448, lng: 120.979021 },
-          destination: { lat: 24.799524, lng: 120.975017 }
-        }
-      }
+```typescript
+lat: Number = 24.799448;
+  lng: Number = 120.979021;
+  zoom: Number = 14;
+ 
+  dir = undefined;
+ 
+  public getDirection() {
+    this.dir = {
+      origin: { lat: 24.799448, lng: 120.979021 },
+      destination: { lat: 24.799524, lng: 120.975017 }
+    }
+  }
+```
 
 ### **IV、Result**
 
@@ -170,7 +185,9 @@ image: ""
 
 會發生以下錯誤訊息（[Issue](https://github.com/angular/angular/issues/20091)）：
 
-    Angular v5.0.0 is not part of the compilation output. Please check the other error messages for details. #20091
+```bash
+Angular v5.0.0 is not part of the compilation output. Please check the other error messages for details. #20091
+```
 
 此問題屬 Angular5 問題，大多數 Angular4 依賴都會炸開QQ
 

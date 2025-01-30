@@ -25,7 +25,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 當執行完部屬後：
 
-    ng serve
+```bash
+ng serve
+```
 
 從外網看畫面出現了類似如下圖（圖為網路來源）：
 
@@ -55,11 +57,15 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 已經於 [1.0.0-beta.1](https://github.com/angular/angular-cli/releases/tag/v1.0.0-beta.1) 以及之後提供了解決方案：
 
-    ng serve --disable-host-check
+```bash
+ng serve --disable-host-check
+```
 
 摁..看了一下自己的版本：
 
-    ng -v
+```bash
+ng -v
+```
 
 [![1518117100_56284.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-09_Angular%20-%20Invalid%20Host%20Header%20%E5%AE%89%E5%85%A8%E6%80%A7%E8%99%95%E7%90%86/1518117100_56284.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/8edecf87-f737-48a7-9c24-c8cb7d9fe8ba/1518117100_56284.png)
 

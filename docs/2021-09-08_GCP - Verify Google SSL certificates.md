@@ -15,11 +15,15 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 先看看你現在有哪些憑證，如果沒有就先手動建立好吧～
 
-    gcloud compute target-https-proxies list
+```powershell
+gcloud compute target-https-proxies list
+```
 
 找到 Name 之後進行驗證
 
-    gcloud compute target-https-proxies describe TARGET_HTTPS_PROXY_NAME --global --format="get(sslCertificates)"
+```powershell
+gcloud compute target-https-proxies describe TARGET_HTTPS_PROXY_NAME --global --format="get(sslCertificates)"
+```
 
 過一陣子查詢一下憑證就會亮綠燈囉
 

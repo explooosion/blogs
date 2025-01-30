@@ -67,7 +67,9 @@ Actions 推出啦～～趕快來體驗看看！
 
 打開你的 IDE 使用[官方指令](https://github.com/facebook/create-react-app)建置：
 
-    npx create-react-app my-app
+```bash
+npx create-react-app my-app
+```
 
 由於本文 React 不是重點，因此安裝過程不再贅述說明。
 
@@ -85,9 +87,11 @@ Actions 推出啦～～趕快來體驗看看！
 
 \[ package.json \]
 
-    {
-     "homepage": "http://explooosion.github.io/my-app",
-    }
+```json
+{
+ "homepage": "http://explooosion.github.io/my-app",
+}
+```
 
 [![1567746547_21315.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567746547_21315.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567746547_21315.png)
 
@@ -108,45 +112,46 @@ YML 設定檔
 
 \[ main.yml \]
 
-    name: Build and Deploy
-    on:
-      push:
-        branches:
-          - master
-    jobs:
-    
-      install-and-test:
-        runs-on: ubuntu-latest
-        strategy:
-          matrix:
-            node-version: [8.x, 10.x, 12.x]
-        steps:
-        - uses: actions/checkout@master
-        - name: Use Node.js ${{ matrix.node-version }}
-          uses: actions/setup-node@master
-          with:
-            node-version: ${{ matrix.node-version }}
-        - name: Install and Test
-          run: |
-            yarn
-            yarn test
-          env:
-            CI: true
-    
-      build-and-deploy:
-        runs-on: ubuntu-latest
-        steps:
-        - name: Checkout
-          uses: actions/checkout@master
-    
-        - name: Build and Deploy
-          uses: JamesIves/github-pages-deploy-action@master
-          env:
-            ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-            BRANCH: gh-pages
-            FOLDER: build
-            BUILD_SCRIPT: cp .env.example .env.local && yarn && yarn build
-    
+```makefile
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+
+  install-and-test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+    steps:
+    - uses: actions/checkout@master
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@master
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install and Test
+      run: |
+        yarn
+        yarn test
+      env:
+        CI: true
+
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: build
+        BUILD_SCRIPT: cp .env.example .env.local && yarn && yarn build
+```
 
 以下簡述一下設定說明。
 
@@ -206,30 +211,35 @@ BUILD\_SCRIPT: cp .env.example .env.local && yarn && yarn build
 
 \[ main.yml \]
 
-    env:
-            ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-            BRANCH: gh-pages
-            FOLDER: build
-            REACT_APP_TITLE: MY APP
-            BUILD_SCRIPT: cp .env.example .env.local && yarn && yarn build
-    
+```makefile
+env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: build
+        REACT_APP_TITLE: MY APP
+        BUILD_SCRIPT: cp .env.example .env.local && yarn && yarn build
+```
 
 \[ .env.example \]
 
-    REACT_APP_TITLE=
+```makefile
+REACT_APP_TITLE=
+```
 
 \[ public / index.html \]
 
-    <html lang="en">
-      <head>
-        ...
-        <title>%REACT_APP_TITLE%</title>
-        ...
-      </head>
-    
-      ...
-    
-    </html>
+```html
+<html lang="en">
+  <head>
+    ...
+    <title>%REACT_APP_TITLE%</title>
+    ...
+  </head>
+
+  ...
+
+</html>
+```
 
 如果沒使用，則可以直接把指令設定成：
 
@@ -291,12 +301,15 @@ Value 請貼上剛剛複製的 token。
 
 接著終於可以將你的專案 push 上去了！請根據你的專案設定哦～
 
-    git remote add origin https://github.com/explooosion/my-app.git
-    
-
-    git add -A
-
-    git commit -m "Initial commit"
+```bash
+git remote add origin https://github.com/explooosion/my-app.git
+```
+```bash
+git add -A
+```
+```bash
+git commit -m "Initial commit"
+```
 
 你可以直接使用 vscode 內建的 git gui 操作。
 

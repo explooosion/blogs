@@ -65,7 +65,9 @@ _估計未來應該會很多這系列有關坑的文章..._
 
 補充一下 CDN 使用方式：
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+```
 
 進入主題：第三方套件使用
 ------------
@@ -80,7 +82,9 @@ _估計未來應該會很多這系列有關坑的文章..._
 
 在專案的上一層下指令：
 
-    egret create_lib libsrc
+```bash
+egret create_lib libsrc
+```
 
 *   資料夾務必在外面，不可將資料夾放在遊戲專案內
 
@@ -129,28 +133,32 @@ _估計未來應該會很多這系列有關坑的文章..._
 
 修改 package.json
 
-    {
-    	"name": "paho-mqtt",
-    	"version": "5.0.2"
-    }
+```json
+{
+	"name": "paho-mqtt",
+	"version": "5.0.2"
+}
+```
 
 *   name：你的套件名稱
 *   version：egret 使用引擎版本（依個人環境選擇）
 
 修改 tsconfig.json
 
-    {
-    	"compilerOptions": {
-    		"target": "es5",
-    		"noImplicitAny": false,
-    		"sourceMap": false,
-    		"declaration": true,
-    		"outFile": "bin/paho-mqtt.js"
-    	},
-    	"include": [
-    		"src"
-    	]
-    }
+```json
+{
+	"compilerOptions": {
+		"target": "es5",
+		"noImplicitAny": false,
+		"sourceMap": false,
+		"declaration": true,
+		"outFile": "bin/paho-mqtt.js"
+	},
+	"include": [
+		"src"
+	]
+}
+```
 
 *   outFile：輸出的資料夾檔案名稱，本範例就是指 CDN 下載來的檔案。
 *   src： 等待編譯的檔案，由於本範例使用的已經編譯好，其實不需要。
@@ -161,7 +169,9 @@ _估計未來應該會很多這系列有關坑的文章..._
 
 如果你用的套件還沒編譯，請於 libsrc 資料夾中，下指令編譯：
 
-    egret build
+```bash
+egret build
+```
 
 *   編譯成功後可以在 bin 中看到檔案。
 
@@ -175,10 +185,12 @@ _估計未來應該會很多這系列有關坑的文章..._
 
 修改 egretProperties.json
 
-        {
-          "name": "paho-mqtt",
-          "path": "../libsrc"
-        }
+```json
+{
+      "name": "paho-mqtt",
+      "path": "../libsrc"
+    }
+```
 
 *   name：請與 libsrc / bin 的 js 檔案同名。
 *   path：路徑為上一層 ../。
@@ -187,7 +199,9 @@ _估計未來應該會很多這系列有關坑的文章..._
 
 接著使用引入模組的指令，請於遊戲專案資料夾內下指令：
 
-    egret build -e
+```bash
+egret build -e
+```
 
 *   \-e：透過此參數，會在遊戲專案內的 libs / modules 自動產生套件，
 
@@ -201,15 +215,17 @@ _估計未來應該會很多這系列有關坑的文章..._
 
 如果指令成功， manifest.json 檔案內也會自動追加一行：
 
-    {
-    	"initial": [
-    		...
-    		"libs/modules/paho-mqtt/paho-mqtt.js"
-    	],
-    	"game": [
-    		...
-    	]
-    }
+```json
+{
+	"initial": [
+		...
+		"libs/modules/paho-mqtt/paho-mqtt.js"
+	],
+	"game": [
+		...
+	]
+}
+```
 
 ### 8\. 測試結果
 
@@ -217,29 +233,31 @@ _估計未來應該會很多這系列有關坑的文章..._
 
 編輯 Main.ts
 
-    class Main extends egret.DisplayObjectContainer {
-    
-        private mqttClient: Paho.MQTT.Client;
-        private serverAddress: string = 'your_mqtt_server';
-        private serverPort: number = your_port;
-        private clientId: string = 'your_client_id';
-    
-        public constructor() {
-            super();
-            this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
-        }
-    
-        private onAddToStage(event: egret.Event) {
-    
-            this.mqttClient = new Paho.MQTT.Client(this.serverAddress, this.serverPort, this.clientId);
-            const connectionOptions = {
-                keepAliveInterval: 30,
-                onSuccess: (): void => { console.log('onSuccess', 'connecting success.'); },
-                onFailure(message) { console.log('connection failed: ' + message.errorMessage); }
-            }
-            this.mqttClient.connect(connectionOptions);
-        }
+```typescript
+class Main extends egret.DisplayObjectContainer {
+
+    private mqttClient: Paho.MQTT.Client;
+    private serverAddress: string = 'your_mqtt_server';
+    private serverPort: number = your_port;
+    private clientId: string = 'your_client_id';
+
+    public constructor() {
+        super();
+        this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
     }
+
+    private onAddToStage(event: egret.Event) {
+
+        this.mqttClient = new Paho.MQTT.Client(this.serverAddress, this.serverPort, this.clientId);
+        const connectionOptions = {
+            keepAliveInterval: 30,
+            onSuccess: (): void => { console.log('onSuccess', 'connecting success.'); },
+            onFailure(message) { console.log('connection failed: ' + message.errorMessage); }
+        }
+        this.mqttClient.connect(connectionOptions);
+    }
+}
+```
 
 執行結果：
 

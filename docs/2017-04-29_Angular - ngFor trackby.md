@@ -23,25 +23,31 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 【TypeScript】
 
-    private items = [];  
-    　
-    constructor() {
-       this.items= [{ name: 'work' }, { name: 'sport' }, { name: 'learn' }];
-    }
+```typescript
+private items = [];  
+　
+constructor() {
+   this.items= [{ name: 'work' }, { name: 'sport' }, { name: 'learn' }];
+}
+```
 
 【View】
 
-    <ul>
-      <li *ngFor="let item of items">
-      {{ item.name }}
-      </li>
-    </ul>
+```html
+<ul>
+  <li *ngFor="let item of items">
+  {{ item.name }}
+  </li>
+</ul>
+```
 
 【Result 】
 
-    work
-    sport
-    learn
+```html
+work
+sport
+learn
+```
 
 但為什麼要多個\*呢?
 
@@ -51,13 +57,15 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 【View】
 
-    <ul>
-      <template ngFor let-item [ngForOf]="items" [ngForTrackBy]="trackByFn" let-i="index">
-        <li>
-         {{ item.name }}
-        </li>
-      </template>
-    </ul>
+```html
+<ul>
+  <template ngFor let-item [ngForOf]="items" [ngForTrackBy]="trackByFn" let-i="index">
+    <li>
+     {{ item.name }}
+    </li>
+  </template>
+</ul>
+```
 
 ngFor 可以看成三大塊，最前面的部分沒什麼問題，即從 items 集合中取出至 item，
 
@@ -65,17 +73,21 @@ ngFor 可以看成三大塊，最前面的部分沒什麼問題，即從 items �
 
 【View】
 
-    <li>
-    {{ i }} - {{ item.name }}
-    </li>
+```html
+<li>
+{{ i }} - {{ item.name }}
+</li>
+```
 
 就會取得該項次的索引值： 
 
 【Result 】
 
-    0 - work
-    1 - sport
-    2 - learn
+```
+0 - work
+1 - sport
+2 - learn
+```
 
 而 ngForTrackBy 是什麼呢 ?
 
@@ -94,35 +106,38 @@ ngFor 可以看成三大塊，最前面的部分沒什麼問題，即從 items �
 
 【View】
 
-    <ul>
-      <template ngFor let-item [ngForOf]="items" let-i="index">
-        <li>
-         {{ item.name }}
-        </li>
-      </template>
-    </ul>
-    
-    <button (click)="getItems()">Refresh</button>
+```html
+<ul>
+  <template ngFor let-item [ngForOf]="items" let-i="index">
+    <li>
+     {{ item.name }}
+    </li>
+  </template>
+</ul>
+
+<button (click)="getItems()">Refresh</button>
+```
 
 【TypeScript】
 
-    export class TodoItemsComponent {
-    
-      private items = [];
-    
-      constructor() {
-        this.items = [{ name: 'Work' }, { name: 'Sport' }, { name: 'Learn' }];
-      }
-    
-      getItems() {
-        this.items = this.getItemsFromServer();
-      }
-    
-      getItemsFromServer() {
-        return [{ name: 'Work' }, { name: 'Sport' }, { name: 'Learn' }, { name: 'Class' }, { name: 'Game' }, { name: 'Sleep' }, { name: 'Teach' }];
-      }
-    }
-    
+```typescript
+export class TodoItemsComponent {
+
+  private items = [];
+
+  constructor() {
+    this.items = [{ name: 'Work' }, { name: 'Sport' }, { name: 'Learn' }];
+  }
+
+  getItems() {
+    this.items = this.getItemsFromServer();
+  }
+
+  getItemsFromServer() {
+    return [{ name: 'Work' }, { name: 'Sport' }, { name: 'Learn' }, { name: 'Class' }, { name: 'Game' }, { name: 'Sleep' }, { name: 'Teach' }];
+  }
+}
+```
 
 當 click event 觸發，getItems() 會重新取得資料，
 
@@ -149,36 +164,40 @@ ngFor 可以看成三大塊，最前面的部分沒什麼問題，即從 items �
 
 【View】 
 
-    <ul>
-      <template ngFor let-item [ngForOf]="items" [ngForTrackBy]="trackByFn" let-i="index">
-        <li>{{i}} - {{ item.name }}</li>
-      </template>
-    </ul>
-    
-    <button (click)="getItems()">Refresh</button>
+```html
+<ul>
+  <template ngFor let-item [ngForOf]="items" [ngForTrackBy]="trackByFn" let-i="index">
+    <li>{{i}} - {{ item.name }}</li>
+  </template>
+</ul>
+
+<button (click)="getItems()">Refresh</button>
+```
 
 【TypeScript】
 
-    export class TodoItemsComponent {
-    
-      private items = [];
-    
-      constructor() {
-        this.items = [{ name: 'Work' }, { name: 'Sport' }, { name: 'Learn' }];
-      }
-    
-      trackByFn(index, item) {
-        return index; // or item.name
-      }
-    
-      getItems() {
-        this.items = this.getItemsFromServer();
-      }
-    
-      getItemsFromServer() {
-        return [{ name: 'Work' }, { name: 'Sport' }, { name: 'Learn' }, { name: 'Class' }, { name: 'Game' }, { name: 'Sleep' }, { name: 'Teach' }];
-      }
-    }
+```typescript
+export class TodoItemsComponent {
+
+  private items = [];
+
+  constructor() {
+    this.items = [{ name: 'Work' }, { name: 'Sport' }, { name: 'Learn' }];
+  }
+
+  trackByFn(index, item) {
+    return index; // or item.name
+  }
+
+  getItems() {
+    this.items = this.getItemsFromServer();
+  }
+
+  getItemsFromServer() {
+    return [{ name: 'Work' }, { name: 'Sport' }, { name: 'Learn' }, { name: 'Class' }, { name: 'Game' }, { name: 'Sleep' }, { name: 'Teach' }];
+  }
+}
+```
 
 當執行 ngFor 的時候，ngForTrackBy 會執行 function，
 
@@ -207,10 +226,12 @@ ngFor 可以看成三大塊，最前面的部分沒什麼問題，即從 items �
 
 其大同小異，ngForTrackBy 改以使用 trackBy。
 
-    <ul>
-      <li *ngFor="let item of items ; trackBy:trackByFn ; let i=index">{{i}} - {{ item.name }}</li>
-    </ul>
-    <button (click)="getItems()">Refresh</button>
+```html
+<ul>
+  <li *ngFor="let item of items ; trackBy:trackByFn ; let i=index">{{i}} - {{ item.name }}</li>
+</ul>
+<button (click)="getItems()">Refresh</button>
+```
 
 五、結論
 ----

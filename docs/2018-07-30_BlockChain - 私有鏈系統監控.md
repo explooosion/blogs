@@ -49,23 +49,33 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 首先將專案 clone 下來：
 
-    git clone https://github.com/cubedro/eth-netstats.git
+```bash
+git clone https://github.com/cubedro/eth-netstats.git
+```
 
 進入專案。
 
-    cd eth-netstats
+```bash
+cd eth-netstats
+```
 
 安裝依賴模組。
 
-    npm install
+```bash
+npm install
+```
 
 由於專案會使用到 [grunt](https://gruntjs.com/)，因此我們先全域安裝。
 
-    npm install -g grunt-cli
+```bash
+npm install -g grunt-cli
+```
 
 執行腳本佈署。
 
-    grunt
+```bash
+grunt
+```
 
 ![1532951023_10744.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1532951023_10744.png)
 
@@ -77,15 +87,19 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 ［ws\_secret.json］
 
-    {
-        "WS_SECRET": "update"
-    }
+```json
+{
+    "WS_SECRET": "update"
+}
+```
 
 ![1532951077_15995.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1532951077_15995.png)
 
 ### 2\. 啟動
 
-    npm start
+```bash
+npm start
+```
 
 [![1532950999_74486.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1532950999_74486.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1532950999_74486.png)
 
@@ -108,15 +122,21 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 將專案 clone 下來。
 
-    git clone https://github.com/cubedro/eth-net-intelligence-api.git
+```bash
+git clone https://github.com/cubedro/eth-net-intelligence-api.git
+```
 
 進入目錄：
 
-    cd eth-net-intelligence-api
+```bash
+cd eth-net-intelligence-api
+```
 
 安裝模組依賴。
 
-    npm install
+```bash
+npm install
+```
 
 在這邊使用到 [pm2](https://github.com/Unitech/pm2)，它是用於管理 node.js 環境的一個程序管理器。
 
@@ -124,11 +144,15 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 首先安裝該套件：
 
-    npm install -g pm2
+```bash
+npm install -g pm2
+```
 
 利用查看版本來確認是否安裝成功：
 
-    pm2 -v
+```bash
+pm2 -v
+```
 
 ![1532957622_62071.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1532957622_62071.png)
 
@@ -138,31 +162,32 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 ［app.json］
 
-    [
-      {
-        "name"              : "node-app",
-        "script"            : "app.js",
-        "log_date_format"   : "YYYY-MM-DD HH:mm Z",
-        "merge_logs"        : false,
-        "watch"             : false,
-        "max_restarts"      : 10,
-        "exec_interpreter"  : "node",
-        "exec_mode"         : "fork_mode",
-        "env":
-        {
-          "NODE_ENV"        : "production",
-          "RPC_HOST"        : "localhost",
-          "RPC_PORT"        : "8545",
-          "LISTENING_PORT"  : "30303",
-          "INSTANCE_NAME"   : "marginchain",
-          "CONTACT_DETAILS" : "",
-          "WS_SERVER"       : "http://localhost:3000",
-          "WS_SECRET"       : "update",
-          "VERBOSITY"       : 3
-        }
-      }
-    ]
-    
+```json
+[
+  {
+    "name"              : "node-app",
+    "script"            : "app.js",
+    "log_date_format"   : "YYYY-MM-DD HH:mm Z",
+    "merge_logs"        : false,
+    "watch"             : false,
+    "max_restarts"      : 10,
+    "exec_interpreter"  : "node",
+    "exec_mode"         : "fork_mode",
+    "env":
+    {
+      "NODE_ENV"        : "production",
+      "RPC_HOST"        : "localhost",
+      "RPC_PORT"        : "8545",
+      "LISTENING_PORT"  : "30303",
+      "INSTANCE_NAME"   : "marginchain",
+      "CONTACT_DETAILS" : "",
+      "WS_SERVER"       : "http://localhost:3000",
+      "WS_SECRET"       : "update",
+      "VERBOSITY"       : 3
+    }
+  }
+]
+```
 
 *   RPC\_PORT：區塊鏈通訊協定 RPC 使用 8545 port，因此這邊與之相同。
 *   LISTENING\_PORT：區塊鏈所使用的 PORT 為 30303。
@@ -181,13 +206,17 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 ［lib / node.js］－約 590 行處
 
-    // var interv = {};
-    var interv = [];
+```javascript
+// var interv = {};
+var interv = [];
+```
 
 ［lib / node.js］－約 610 行處
 
-    // results = false;
-    results = [];
+```javascript
+// results = false;
+results = [];
+```
 
 [![1532959223_64437.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1532959223_64437.jpg)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1532959223_64437.jpg)
 
@@ -195,7 +224,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 接著我們透過 pm2 掛載剛剛所寫的參數檔案 app.json 去啟動。
 
-    pm2 start app.json
+```bash
+pm2 start app.json
+```
 
 務必區塊鏈以及 eth-netstats 都要保持啟動。
 
@@ -211,7 +242,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 使用 pm2 list 查看運作狀態。
 
-    pm2 list
+```bash
+pm2 list
+```
 
 [![1533019136_78726.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533019136_78726.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019136_78726.png)
 
@@ -219,7 +252,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 使用 pm2 log 查看運作的日誌。
 
-    pm2 log
+```bash
+pm2 log
+```
 
 [![1533019285_35834.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533019285_35834.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019285_35834.png)
 
@@ -233,11 +268,15 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 使用 pm2 restart \[Name\]，就可以重新啟動服務。
 
-    pm2 restart node-app
+```bash
+pm2 restart node-app
+```
 
 或是使用 pm2 restart \[ID\]，這裡的 ID，其實就是 pm2 list 中，項目索引值：
 
-    pm2 restart 0
+```bash
+pm2 restart 0
+```
 
 [![1533019748_75896.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533019748_75896.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019748_75896.png)
 
@@ -247,7 +286,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 使用 pm2 stop \[Name\]，就可以停止服務，同樣也可使用 ID。
 
-    pm2 stop node-app
+```bash
+pm2 stop node-app
+```
 
 [![1533019704_95665.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533019704_95665.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019704_95665.png)
 
@@ -255,7 +296,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 要再次啟用只要輸入 pm2 start \[Name\]：
 
-    pm2 start node-app
+```bash
+pm2 start node-app
+```
 
 [![1533019947_49901.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533019947_49901.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019947_49901.png)
 
@@ -263,7 +306,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 使用 pm2 delete \[Name\]，就可以刪除。
 
-    pm2 delete node-app
+```bash
+pm2 delete node-app
+```
 
 [![1533020281_16587.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533020281_16587.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533020281_16587.png)
 

@@ -51,7 +51,9 @@ II. 事情是這樣的
 
 在多重裝置的啟用上，你可以直接開啟 terminal ，使用官方指令啟動所有裝置：
 
-    flutter run -d all
+```bash
+flutter run -d all
+```
 
 但卻無法在存檔 (Save) 程式碼時，自動更新 (Auto Update)，
 
@@ -90,7 +92,9 @@ III. 開始設定
 
 在設定前，請確保 Flutter 環境是 ok 的：
 
-    flutter doctor
+```bash
+flutter doctor
+```
 
 [![1579515783_90024.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/1579515783_90024.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d4e40a03-8ebb-46c0-8be3-5adc0808f6e6/1579515783_90024.png)
 
@@ -118,34 +122,36 @@ III. 開始設定
 
 將 Setup 內的設定複製起來，全部覆蓋貼上。
 
-    {
-    	"version": "0.2.0",
-    	"configurations": [
-    		{
-    			"name": "Current Device",
-    			"request": "launch",
-    			"type": "dart"
-    		},
-    		{
-    			"name": "Android",
-    			"request": "launch",
-    			"type": "dart",
-    			"deviceId": "android"
-    		},
-    		{
-    			"name": "iPhone",
-    			"request": "launch",
-    			"type": "dart",
-    			"deviceId": "iphone"
-    		},
-    	],
-    	"compounds": [
-    		{
-    			"name": "All Devices",
-    			"configurations": ["Android", "iPhone"],
-    		}
-    	]
-    }
+```json
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Current Device",
+			"request": "launch",
+			"type": "dart"
+		},
+		{
+			"name": "Android",
+			"request": "launch",
+			"type": "dart",
+			"deviceId": "android"
+		},
+		{
+			"name": "iPhone",
+			"request": "launch",
+			"type": "dart",
+			"deviceId": "iphone"
+		},
+	],
+	"compounds": [
+		{
+			"name": "All Devices",
+			"configurations": ["Android", "iPhone"],
+		}
+	]
+}
+```
 
 存！好！就這樣！
 

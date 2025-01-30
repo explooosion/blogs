@@ -27,7 +27,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 更新的方式很簡單：
 
-    npm install npm -g
+```bash
+npm install npm -g
+```
 
 🐞 遭遇戰
 ------
@@ -45,23 +47,33 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 請依照以下處治服用：
 
-    cd %programfiles%/nodejs
+```bash
+cd %programfiles%/nodejs
+```
 
 *   移動到 nodejs 安裝目錄
 
-    rm npm npm.cmd
+```bash
+rm npm npm.cmd
+```
 
 *   移除 npm 與 npm.cmd 檔案
 
-    mv node_modules/npm node_modules/npm2
+```bash
+mv node_modules/npm node_modules/npm2
+```
 
 *   把 npm 目錄改為 npm2
 
-    node node_modules\npm2\bin\npm-cli.js i npm@latest -g
+```bash
+node node_modules\npm2\bin\npm-cli.js i npm@latest -g
+```
 
 *   使用 npm2\\bin\\npm-cli.js 進行版本更新
 
-    rm -rf npm2
+```bash
+rm -rf npm2
+```
 
 *   更新完畢後會產生新的 npm，舊的 npm2 就可以刪除了
 
@@ -71,7 +83,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 試著查看版本：
 
-    npm -v
+```bash
+npm -v
+```
 
 ![1524599373_82596.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-04-25_NPM%20-%20%E7%84%A1%E6%B3%95%E6%9B%B4%E6%96%B0%E5%A5%97%E4%BB%B6%20Refusing%20to%20delete/1524599373_82596.png)
 

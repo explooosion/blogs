@@ -61,21 +61,23 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 本專案使用 [@vue/cli](https://cli.vuejs.org/guide/prototyping.html) 建立
 
-    npm install -g @vue/cli @vue/cli-service-global
-    # or
-    yarn global add @vue/cli @vue/cli-service-global
-
-    vue create hello-world
+```bash
+npm install -g @vue/cli @vue/cli-service-global
+# or
+yarn global add @vue/cli @vue/cli-service-global
+```
+```bash
+vue create hello-world
+```
 
 為了簡單使用 [fontawesome](https://fontawesome.com/)，在 index.html 新增 CDN
 
 \[ public / index.html \]
 
-    
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    
-    
+```html
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+```
 
 * * *
 
@@ -94,38 +96,40 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 \[ Button.vue \]
 
-    <template>
-      <button
-        v-on="$listeners"
-        v-bind="$attrs"
-        :type="type"
-        :style="`font-weight: ${bold ? 'bold' : 'normal'}`"
-        @click="$emit('greet', 'Hello Vue')"
-      >
-        <slot></slot>
-        {{ label }}
-        <slot name="after"></slot>
-      </button>
-    </template>
-    
-
-    export default {
-      name: "Button",
-      props: {
-        type: {
-          type: String,
-          default: "button",
-        },
-        label: {
-          type: String,
-          default: "",
-        },
-        bold: {
-          type: Boolean,
-          default: false,
-        },
-      },
-    };
+```html
+<template>
+  <button
+    v-on="$listeners"
+    v-bind="$attrs"
+    :type="type"
+    :style="`font-weight: ${bold ? 'bold' : 'normal'}`"
+    @click="$emit('greet', 'Hello Vue')"
+  >
+    <slot></slot>
+    {{ label }}
+    <slot name="after"></slot>
+  </button>
+</template>
+```
+```javascript
+export default {
+  name: "Button",
+  props: {
+    type: {
+      type: String,
+      default: "button",
+    },
+    label: {
+      type: String,
+      default: "",
+    },
+    bold: {
+      type: Boolean,
+      default: false,
+    },
+  },
+};
+```
 
 *   type: buttoon type \[ button, submit, reset \]
 *   label: button 的文字
@@ -135,16 +139,18 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 \[ App.vue \]
 
-    <!-- with props -->
-    <Button label="Button" />
-    
-    <!-- with props, default slot -->
-    <Button label="Submit" type="submit" :bold="true">#</Button>
-    
-    <!-- with props, after slot -->
-    <Button label="Reset" type="reset" :bold="true">
-      <template #after>@</template>
-    </Button>
+```html
+<!-- with props -->
+<Button label="Button" />
+
+<!-- with props, default slot -->
+<Button label="Submit" type="submit" :bold="true">#</Button>
+
+<!-- with props, after slot -->
+<Button label="Reset" type="reset" :bold="true">
+  <template #after>@</template>
+</Button>
+```
 
 畫面預覽：
 
@@ -167,51 +173,56 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 \[ ButtonTemplate.vue \]
 
-    <template>
-      <Button :label="label" :type="type" v-on="$listeners" v-bind="$attrs">
-        <template #after><i class="fas fa-redo"></i></template>
-      </Button>
-    </template>
+```html
+<template>
+  <Button :label="label" :type="type" v-on="$listeners" v-bind="$attrs">
+    <template #after><i class="fas fa-redo"></i></template>
+  </Button>
+</template>
+```
+```javascript
+import Button from "./Button";
 
-    import Button from "./Button";
-    
-    export default {
-      name: "ButtonTemplate",
-      components: {
-        Button,
-      },
-      props: {
-        type: {
-          type: String,
-          default: "reset",
-        },
-        label: {
-          type: String,
-          default: "Reset",
-        },
-      },
-    };
+export default {
+  name: "ButtonTemplate",
+  components: {
+    Button,
+  },
+  props: {
+    type: {
+      type: String,
+      default: "reset",
+    },
+    label: {
+      type: String,
+      default: "Reset",
+    },
+  },
+};
+```
 
 三種使用範例：
 
 \[ App.vue \]
 
-    <!-- basic -->
-    <ButtonTemplate @greet="onGreet" />
-    
-    <!-- with props -->
-    <ButtonTemplate
-      label="New Reset"
-      type="reset"
-      :bold="true"
-      @greet="onGreet"
-    />
-    
-    <!-- with slots -->
-    <ButtonTemplate @greet="onGreet">
-      <template><i class="fas fa-sync-alt"></i></template>
-      <template #after><i class="fas fa-sync-alt"></i></template>
-    </ButtonTemplate>
+```html
+<!-- basic -->
+<ButtonTemplate @greet="onGreet" />
+
+<!-- with props -->
+<ButtonTemplate
+  label="New Reset"
+  type="reset"
+  :bold="true"
+  @greet="onGreet"
+/>
+
+<!-- with slots -->
+<ButtonTemplate @greet="onGreet">
+  <template><i class="fas fa-sync-alt"></i></template>
+  <template #after><i class="fas fa-sync-alt"></i></template>
+</ButtonTemplate>
+```
 
 畫面預覽：
 
@@ -237,25 +248,27 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 \[ ButtonTemplate.vue \]
 
-    import Button from "./Button";
-    
-    export default {
-      name: "ButtonTemplate",
-      components: {
-        Button,
-      },
-      props: {
-        ...Button.props, // add here
-        type: {
-          type: String,
-          default: "reset",
-        },
-        label: {
-          type: String,
-          default: "Reset",
-        },
-      },
-    };
+```javascript
+import Button from "./Button";
+
+export default {
+  name: "ButtonTemplate",
+  components: {
+    Button,
+  },
+  props: {
+    ...Button.props, // add here
+    type: {
+      type: String,
+      default: "reset",
+    },
+    label: {
+      type: String,
+      default: "Reset",
+    },
+  },
+};
+```
 
 重新檢視原始碼，就不會被當屬性顯示！
 
@@ -273,16 +286,18 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 \[ ButtonTemplate.vue \]
 
-    <template>
-      <Button
-        :label="label"
-        :type="type"
-        v-on="$listeners"
-        v-bind="[$attrs, $options.propsData]"
-      >
-        <template #after><i class="fas fa-redo"></i></template>
-      </Button>
-    </template>
+```html
+<template>
+  <Button
+    :label="label"
+    :type="type"
+    v-on="$listeners"
+    v-bind="[$attrs, $options.propsData]"
+  >
+    <template #after><i class="fas fa-redo"></i></template>
+  </Button>
+</template>
+```
 
 成功後的畫面：
 
@@ -300,14 +315,16 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 \[ ButtonTemplate.vue \]
 
-    <template>
-      <Button :label="label" :type="type" v-on="$listeners" v-bind="$attrs">
-        <template #after><i class="fas fa-redo"></i></template>
-        <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope">
-          <slot :name="slot" v-bind="scope" />
-        </template>
-      </Button>
+```html
+<template>
+  <Button :label="label" :type="type" v-on="$listeners" v-bind="$attrs">
+    <template #after><i class="fas fa-redo"></i></template>
+    <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope">
+      <slot :name="slot" v-bind="scope" />
     </template>
+  </Button>
+</template>
+```
 
 畫面預覽：
 
@@ -317,39 +334,42 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 \[ ButtonTemplate.vue \]
 
-    <template>
-      <Button
-        :label="label"
-        :type="type"
-        v-on="$listeners"
-        v-bind="[$attrs, $options.propsData]"
-      >
-        <template #after><i class="fas fa-redo"></i></template>
-        <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope">
-          <slot :name="slot" v-bind="scope" />
-        </template>
-      </Button>
+```html
+<template>
+  <Button
+    :label="label"
+    :type="type"
+    v-on="$listeners"
+    v-bind="[$attrs, $options.propsData]"
+  >
+    <template #after><i class="fas fa-redo"></i></template>
+    <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope">
+      <slot :name="slot" v-bind="scope" />
     </template>
+  </Button>
+</template>
+```
+```javascript
+import Button from "./Button";
 
-    import Button from "./Button";
-    
-    export default {
-      name: "ButtonTemplate",
-      components: {
-        Button,
-      },
-      props: {
-        ...Button.props,
-        type: {
-          type: String,
-          default: "reset",
-        },
-        label: {
-          type: String,
-          default: "Reset",
-        },
-      },
-    };
+export default {
+  name: "ButtonTemplate",
+  components: {
+    Button,
+  },
+  props: {
+    ...Button.props,
+    type: {
+      type: String,
+      default: "reset",
+    },
+    label: {
+      type: String,
+      default: "Reset",
+    },
+  },
+};
+```
 
 好處是你可以設定 [name](https://vuejs.org/v2/guide/components-registration.html)，透過 [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 找到你的組件。
 
@@ -374,17 +394,19 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 \[ ButtonFunctional.vue \]
 
-    import Button from "./Button";
-    
-    export default {
-      extends: Button,
-      props: {
-        label: {
-          type: String,
-          default: "Search",
-        },
-      },
-    };
+```javascript
+import Button from "./Button";
+
+export default {
+  extends: Button,
+  props: {
+    label: {
+      type: String,
+      default: "Search",
+    },
+  },
+};
+```
 
 *   label: 在順序上，如果沒有傳遞 props，就會使用 default value
 
@@ -392,22 +414,24 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 \[ App.vue \]
 
-    <!-- basic -->
-    <ButtonFunctional @greet="onGreet" />
-    
-    <!-- with props -->
-    <ButtonFunctional
-      label="New Search"
-      type="button"
-      :bold="true"
-      @greet="onGreet"
-    />
-    
-    <!-- with slots -->
-    <ButtonFunctional @greet="onGreet">
-      <template><i class="fas fa-search-plus"></i></template>
-      <template #after><i class="fas fa-search-plus"></i></template>
-    </ButtonFunctional>
+```html
+<!-- basic -->
+<ButtonFunctional @greet="onGreet" />
+
+<!-- with props -->
+<ButtonFunctional
+  label="New Search"
+  type="button"
+  :bold="true"
+  @greet="onGreet"
+/>
+
+<!-- with slots -->
+<ButtonFunctional @greet="onGreet">
+  <template><i class="fas fa-search-plus"></i></template>
+  <template #after><i class="fas fa-search-plus"></i></template>
+</ButtonFunctional>
+```
 
 畫面預覽：
 
@@ -432,36 +456,38 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 \[ ButtonFunctional.vue \]
 
-    import Button from "./Button";
-    
-    export default {
-      extends: Button,
-      functional: true,
-      props: {
-        label: {
-          type: String,
-          default: "Search",
+```javascript
+import Button from "./Button";
+
+export default {
+  extends: Button,
+  functional: true,
+  props: {
+    label: {
+      type: String,
+      default: "Search",
+    },
+  },
+  render(h, ctx) {
+    return h(
+      "Button",
+      {
+        ...ctx.data,
+        props: {
+          ...ctx.props,
+          /** use props or extend here */
+        },
+        scopedSlots: {
+          ...ctx.scopedSlots,
+          default: () => h("i", { class: ["fas", "fa-search"] }),
+          /** use slots or extend here */
         },
       },
-      render(h, ctx) {
-        return h(
-          "Button",
-          {
-            ...ctx.data,
-            props: {
-              ...ctx.props,
-              /** use props or extend here */
-            },
-            scopedSlots: {
-              ...ctx.scopedSlots,
-              default: () => h("i", { class: ["fas", "fa-search"] }),
-              /** use slots or extend here */
-            },
-          },
-          ...(ctx.children || [])
-        );
-      },
-    };
+      ...(ctx.children || [])
+    );
+  },
+};
+```
 
 *   functional: true。由於我們組件屬於無狀態，又需要接收 props，因此設置為 true，把組件寫成 functinal component。
 *   props: 預設值可寫在最外層的 props，如果寫在 render functions 的 props，則代表強制蓋掉指定的 props
@@ -479,38 +505,42 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 當然你也可以改使用 Functional Component + Vue Template，改寫後跟前面組件 ButtonTemplate 結構類似，如下：
 
-    <template functional>
-      <Button
-        :label="props.label"
-        v-on="$listeners"
-        v-bind="[$attrs, $options.propsData]"
-      >
-        <template><i class="fas fa-search"></i></template>
-        <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope">
-          <slot :name="slot" v-bind="scope" />
-        </template>
-      </Button>
+```html
+<template functional>
+  <Button
+    :label="props.label"
+    v-on="$listeners"
+    v-bind="[$attrs, $options.propsData]"
+  >
+    <template><i class="fas fa-search"></i></template>
+    <template v-for="(_, slot) of $scopedSlots" v-slot:[slot]="scope">
+      <slot :name="slot" v-bind="scope" />
     </template>
+  </Button>
+</template>
+```
+```javascript
+import Button from "./Button";
 
-    import Button from "./Button";
-    
-    export default {
-      extends: Button,
-      props: {
-        label: {
-          type: String,
-          default: "Search",
-        },
-      },
-    };
+export default {
+  extends: Button,
+  props: {
+    label: {
+      type: String,
+      default: "Search",
+    },
+  },
+};
+```
 
 關於 children  範例：
 
-    <ButtonFunctional>
-      child1
-      <span>child2</span>
-    </ButtonFunctional>
-    
+```html
+<ButtonFunctional>
+  child1
+  <span>child2</span>
+</ButtonFunctional>
+```
 
 畫面預覽：
 

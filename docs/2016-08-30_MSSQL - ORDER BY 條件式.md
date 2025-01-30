@@ -18,7 +18,9 @@ MSSQL 針對 ORDER BY 指定條件之筆記。
 預設查詢
 ----
 
-    SELECT * FROM Item
+```sql
+SELECT * FROM Item
+```
 
 id
 
@@ -68,7 +70,9 @@ ItemName
 *      1 -> Last
 *      0 -> First
 
-    SELECT * FROM Item ORDER BY Case WHEN id = 5 THEN 1 END ASC
+```sql
+SELECT * FROM Item ORDER BY Case WHEN id = 5 THEN 1 END ASC
+```
 
 id
 
@@ -118,7 +122,9 @@ ItemName
 1.  這裡要分兩段式，先強制讓 id = 5 為最後一筆並遞減排序
 2.  再將調整後之 id 遞增排序（倒回來）
 
-    SELECT * FROM Item ORDER BY Case WHEN id = 5 THEN 1 END DESC ,id ASC
+```sql
+SELECT * FROM Item ORDER BY Case WHEN id = 5 THEN 1 END DESC ,id ASC
+```
 
 id
 
@@ -168,7 +174,9 @@ ItemName
 1.  這裡一樣分兩段式，先強制讓 id = 5 為第一筆並遞增
 2.  再將調整後之 id 遞減回來排序
 
-    SELECT * FROM Item ORDER BY Case WHEN id = 5 THEN 0 END ASC ,id DESC
+```sql
+SELECT * FROM Item ORDER BY Case WHEN id = 5 THEN 0 END ASC ,id DESC
+```
 
 id
 
@@ -218,7 +226,9 @@ ItemName
 1.  這裡一樣分兩段式，先強制讓 id = 5 為最後一筆
 2.  再將調整後之 id 遞減回來排序
 
-    SELECT * FROM Item ORDER BY Case WHEN id = 5 THEN 1 END DESC ,id DESC
+```sql
+SELECT * FROM Item ORDER BY Case WHEN id = 5 THEN 1 END DESC ,id DESC
+```
 
 id
 

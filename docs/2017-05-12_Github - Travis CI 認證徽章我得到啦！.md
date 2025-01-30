@@ -85,19 +85,21 @@ Travis 提供了自動化部屬與測試功能，
 
 本篇以 node.js 為例子，如果你使用的是不同語言，可以參考官方的文件 [Geting started](https://docs.travis-ci.com/user/getting-started/)。
 
-    language: node_js
-    node_js:
-      - "6"
-    notifications:
-        email:
-            recipients:
-                - ta7382@gmail.com
-            on_success: always
-            on_failure: always
-    install:
-        - npm install
-    script:
-        - npm start
+```markdown
+language: node_js
+node_js:
+  - "6"
+notifications:
+    email:
+        recipients:
+            - ta7382@gmail.com
+        on_success: always
+        on_failure: always
+install:
+    - npm install
+script:
+    - npm start
+```
 
 language：為宣告本專案主要佈署建置的語言
 

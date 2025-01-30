@@ -45,17 +45,23 @@ Git 最大特點就是屬於[分散式管理](https://git-scm.com/book/zh-tw/v1/
 
 利用 Git 指令設定名字，記得請加上雙引號。
 
-    git config --global user.name "YourName"
+```bash
+git config --global user.name "YourName"
+```
 
 設定個人Email。
 
-    git config --global user.email "youremail@gmail.com"
+```bash
+git config --global user.email "youremail@gmail.com"
+```
 
 然後利用【 [cd](http://lnpcd.blogspot.tw/2012/07/05.html) 】移動路徑到您要建立的專案位置，到該目錄底下後，
 
 將剛剛建立好的 repository clone 於此。
 
-    git clone https://github.com/explooosion/MyProject.git
+```bash
+git clone https://github.com/explooosion/MyProject.git
+```
 
 如果有下載失敗，可到系統槽使用者帳戶底下，刪除【.gitconfig】設定，並重新安裝試試看。
 
@@ -63,23 +69,31 @@ Git 最大特點就是屬於[分散式管理](https://git-scm.com/book/zh-tw/v1/
 
 下載完畢後，利用指令 cd 進入該目錄，可下指令查看當前狀態，會告訴你目前於 master 主幹上。
 
-    git status
+```bash
+git status
+```
 
 ![1460816970_83976.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-17_Git%EF%BC%8D%E5%88%9D%E5%A7%8B%E5%AE%89%E8%A3%9D%20%26%20GitHub%20%E7%B0%A1%E6%98%93%E6%95%99%E5%AD%B8/1460816970_83976.png)
 
 在該目錄中我們先建立一個新的 branch 名為 v1。
 
-    git branch v1
+```bash
+git branch v1
+```
 
 然後切換分枝到 v1。
 
-    git checkout v1
+```bash
+git checkout v1
+```
 
 ![1460818750_50905.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-17_Git%EF%BC%8D%E5%88%9D%E5%A7%8B%E5%AE%89%E8%A3%9D%20%26%20GitHub%20%E7%B0%A1%E6%98%93%E6%95%99%E5%AD%B8/1460818750_50905.png)
 
 重新鍵入 git status，會告訴你目前在 v1 這個 branch 上： On branch v1
 
-    git status
+```bash
+git status
+```
 
 ![1460819730_49998.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-17_Git%EF%BC%8D%E5%88%9D%E5%A7%8B%E5%AE%89%E8%A3%9D%20%26%20GitHub%20%E7%B0%A1%E6%98%93%E6%95%99%E5%AD%B8/1460819730_49998.png)
 
@@ -87,19 +101,25 @@ Git 最大特點就是屬於[分散式管理](https://git-scm.com/book/zh-tw/v1/
 
 PS. 請務必先有檔案出現，再鍵入 git add，這不是先有雞還是先有蛋的問題（搖頭）。 
 
-    git add test.txt
+```bash
+git add test.txt
+```
 
 ![1460817127_14803.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-17_Git%EF%BC%8D%E5%88%9D%E5%A7%8B%E5%AE%89%E8%A3%9D%20%26%20GitHub%20%E7%B0%A1%E6%98%93%E6%95%99%E5%AD%B8/1460817127_14803.png)
 
 完成加入後可利用剛剛 git status 查看狀態。
 
-    git status
+```bash
+git status
+```
 
 可以發現在 branch v1 上，有新檔案的加入：　new file![1460820345_59326.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-17_Git%EF%BC%8D%E5%88%9D%E5%A7%8B%E5%AE%89%E8%A3%9D%20%26%20GitHub%20%E7%B0%A1%E6%98%93%E6%95%99%E5%AD%B8/1460820345_59326.png)
 
 此時我們輸入常常聽到人家口中說的 commit 。
 
-    git commit
+```bash
+git commit
+```
 
 輸入後會出現編輯模式，Windows 系統為 vim 編輯器，
 
@@ -112,7 +132,9 @@ PS. 請務必先有檔案出現，再鍵入 git add，這不是先有雞還是�
 
 鍵入  i ，進入 vim 編輯模式，可看到左下角提示 【 --  INSERT -- 】，然後將註姊 （欸） 拿掉。
 
-    i
+```bash
+i
+```
 
 ![1460817634_14111.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-17_Git%EF%BC%8D%E5%88%9D%E5%A7%8B%E5%AE%89%E8%A3%9D%20%26%20GitHub%20%E7%B0%A1%E6%98%93%E6%95%99%E5%AD%B8/1460817634_14111.png)
 
@@ -126,25 +148,33 @@ PS. 請務必先有檔案出現，再鍵入 git add，這不是先有雞還是�
 
 若想不儲存離開（即強迫關閉），請輸入【:q!】 （含分號）
 
-    :wq
+```bash
+:wq
+```
 
 ![1460817983_18757.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-17_Git%EF%BC%8D%E5%88%9D%E5%A7%8B%E5%AE%89%E8%A3%9D%20%26%20GitHub%20%E7%B0%A1%E6%98%93%E6%95%99%E5%AD%B8/1460817983_18757.png)
 
 退出 vim 後，切換到 master （主要）上。
 
-    git checkout master
+```bash
+git checkout master
+```
 
 ![1460820633_94501.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-17_Git%EF%BC%8D%E5%88%9D%E5%A7%8B%E5%AE%89%E8%A3%9D%20%26%20GitHub%20%E7%B0%A1%E6%98%93%E6%95%99%E5%AD%B8/1460820633_94501.png)
 
 將本次建立的 v1 merge 起來，系統會以【+】表示本次加入的檔案。
 
-    git merge v1
+```bash
+git merge v1
+```
 
 ![1460820853_9881.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-17_Git%EF%BC%8D%E5%88%9D%E5%A7%8B%E5%AE%89%E8%A3%9D%20%26%20GitHub%20%E7%B0%A1%E6%98%93%E6%95%99%E5%AD%B8/1460820853_9881.png)
 
 push 到 GitHub 上。
 
-    git push
+```bash
+git push
+```
 
 此時會彈出登入視窗，為連入 github ，輸入好後【確定】。
 
@@ -166,15 +196,20 @@ PS. 僅有第一次使用才需要登入。
 
 前面步驟一樣，先切換至 v1，利用指令【 rm 】，對檔案進行刪除即可。
 
-    git checkout v1
-
-    git rm test.txt
+```bash
+git checkout v1
+```
+```bash
+git rm test.txt
+```
 
 之後再進行 commit，切換到 master 並 merge 一起。（[以上請至上面步驟參考](#merge)）
 
 最後 push 即可。
 
-    git push
+```bash
+git push
+```
 
 以上相關教學為參考：[Git 筆記 - Git初始設定 & Github入門](http://tech.marsw.tw/blog/2013/08/16/git-notes-github)
 

@@ -73,11 +73,15 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 建立 myapp 資料夾，然後進入該目錄。
 
-    mkdir myapp && cd myapp
+```bash
+mkdir myapp && cd myapp
+```
 
 接著初始 npm 設定。 
 
-    npm init -y
+```bash
+npm init -y
+```
 
 本環境須於 Node.js 環境下運行。
 
@@ -109,33 +113,41 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 依序安裝。
 
-    npm install -D stylelint 
-    npm install -D stylelint-config-prettier
-    npm install -D stylelint-config-sass-guidelines
-    npm install -D stylelint-config-standard
-    npm install -D stylelint-order
-    npm install -D stylelint-scss
-    npm install -D pre-commit
+```bash
+npm install -D stylelint 
+npm install -D stylelint-config-prettier
+npm install -D stylelint-config-sass-guidelines
+npm install -D stylelint-config-standard
+npm install -D stylelint-order
+npm install -D stylelint-scss
+npm install -D pre-commit
+```
 
 一鍵安裝。
 
-    npm install -D stylelint stylelint-config-prettier stylelint-config-sass-guidelines stylelint-config-standard stylelint-order stylelint-scss pre-commit
+```bash
+npm install -D stylelint stylelint-config-prettier stylelint-config-sass-guidelines stylelint-config-standard stylelint-order stylelint-scss pre-commit
+```
 
 #### [Yarn](https://yarnpkg.com/zh-Hans/)
 
 依序安裝。
 
-    yarn add -D stylelint
-    yarn add -D stylelint-config-prettier
-    yarn add -D stylelint-config-sass-guidelines
-    yarn add -D stylelint-config-standard
-    yarn add -D stylelint-order
-    yarn add -D stylelint-scss
-    yarn add -D pre-commit
+```bash
+yarn add -D stylelint
+yarn add -D stylelint-config-prettier
+yarn add -D stylelint-config-sass-guidelines
+yarn add -D stylelint-config-standard
+yarn add -D stylelint-order
+yarn add -D stylelint-scss
+yarn add -D pre-commit
+```
 
 一鍵安裝。
 
-    yarn add -D stylelint stylelint-config-prettier stylelint-config-sass-guidelines stylelint-config-standard stylelint-order stylelint-scss pre-commit
+```bash
+yarn add -D stylelint stylelint-config-prettier stylelint-config-sass-guidelines stylelint-config-standard stylelint-order stylelint-scss pre-commit
+```
 
 你知道嗎？ pre-commit 主要是應用於 git commit 的前處理。
 
@@ -152,102 +164,103 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 \[ .stylelintrc.json \]
 
-    {
-        "extends": [
-            "stylelint-config-standard",
-            "stylelint-config-prettier",
-            "stylelint-config-sass-guidelines"
+```json
+{
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-prettier",
+        "stylelint-config-sass-guidelines"
+    ],
+    "plugins": [
+        "stylelint-scss",
+        "stylelint-order"
+    ],
+    "rules": {
+        "max-nesting-depth": null,
+        "no-empty-source": null,
+        "no-descending-specificity": null,
+        "order/properties-alphabetical-order": null,
+        "order/properties-order": [
+            "position",
+            "top",
+            "bottom",
+            "right",
+            "left",
+            "display",
+            "align-items",
+            "justify-content",
+            "float",
+            "clear",
+            "overflow",
+            "overflow-x",
+            "overflow-y",
+            "margin",
+            "margin-top",
+            "margin-right",
+            "margin-bogttom",
+            "margin-left",
+            "padding",
+            "padding-top",
+            "padding-right",
+            "padding-bottom",
+            "padding-left",
+            "width",
+            "min-width",
+            "max-width",
+            "height",
+            "min-height",
+            "max-height",
+            "font-size",
+            "font-family",
+            "font-weight",
+            "text-align",
+            "text-justify",
+            "text-indent",
+            "text-overflow",
+            "text-decoration",
+            "white-space",
+            "color",
+            "background",
+            "background-position",
+            "background-repeat",
+            "background-size",
+            "background-color",
+            "background-clip",
+            "border",
+            "border-style",
+            "border-width",
+            "border-color",
+            "border-top-style",
+            "border-top-width",
+            "border-top-color",
+            "border-right-style",
+            "border-right-width",
+            "border-right-color",
+            "border-bottom-style",
+            "border-bottom-width",
+            "border-bottom-color",
+            "border-left-style",
+            "border-left-width",
+            "border-left-color",
+            "border-radius",
+            "opacity",
+            "filter",
+            "list-style",
+            "outline",
+            "visibility",
+            "z-index",
+            "box-shadow",
+            "text-shadow",
+            "resize",
+            "transition"
         ],
-        "plugins": [
-            "stylelint-scss",
-            "stylelint-order"
-        ],
-        "rules": {
-            "max-nesting-depth": null,
-            "no-empty-source": null,
-            "no-descending-specificity": null,
-            "order/properties-alphabetical-order": null,
-            "order/properties-order": [
-                "position",
-                "top",
-                "bottom",
-                "right",
-                "left",
-                "display",
-                "align-items",
-                "justify-content",
-                "float",
-                "clear",
-                "overflow",
-                "overflow-x",
-                "overflow-y",
-                "margin",
-                "margin-top",
-                "margin-right",
-                "margin-bogttom",
-                "margin-left",
-                "padding",
-                "padding-top",
-                "padding-right",
-                "padding-bottom",
-                "padding-left",
-                "width",
-                "min-width",
-                "max-width",
-                "height",
-                "min-height",
-                "max-height",
-                "font-size",
-                "font-family",
-                "font-weight",
-                "text-align",
-                "text-justify",
-                "text-indent",
-                "text-overflow",
-                "text-decoration",
-                "white-space",
-                "color",
-                "background",
-                "background-position",
-                "background-repeat",
-                "background-size",
-                "background-color",
-                "background-clip",
-                "border",
-                "border-style",
-                "border-width",
-                "border-color",
-                "border-top-style",
-                "border-top-width",
-                "border-top-color",
-                "border-right-style",
-                "border-right-width",
-                "border-right-color",
-                "border-bottom-style",
-                "border-bottom-width",
-                "border-bottom-color",
-                "border-left-style",
-                "border-left-width",
-                "border-left-color",
-                "border-radius",
-                "opacity",
-                "filter",
-                "list-style",
-                "outline",
-                "visibility",
-                "z-index",
-                "box-shadow",
-                "text-shadow",
-                "resize",
-                "transition"
-            ],
-            "property-no-vendor-prefix": null,
-            "selector-max-compound-selectors": null,
-            "scss/at-import-partial-extension-blacklist": null,
-            "value-no-vendor-prefix": null
-        }
+        "property-no-vendor-prefix": null,
+        "selector-max-compound-selectors": null,
+        "scss/at-import-partial-extension-blacklist": null,
+        "value-no-vendor-prefix": null
     }
-    
+}
+```
 
 眼尖的您也許會發現 order/properties-order 的參數如此多，
 
@@ -273,15 +286,17 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 \[ package.json \]
 
-    {
-     "scripts": {
-        "lint": "stylelint app/scss/**/*.scss --syntax scss",
-        "lint:fix": "stylelint app/scss/**/*.scss --syntax scss --fix"
-      },
-      "pre-commit": [
-        "lint"
-      ],
-    }
+```json
+{
+ "scripts": {
+    "lint": "stylelint app/scss/**/*.scss --syntax scss",
+    "lint:fix": "stylelint app/scss/**/*.scss --syntax scss --fix"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+}
+```
 
 *   lint：語法為 stylelint \[目錄\] --syntax \[語法種類\]，也可以直接省略 --syntax 不寫，自動偵測檔案。
 *   目錄其實可以根據您的環境進行修改，由於避免目錄很多層而漏掉，因此用了許多 /\*\*/。
@@ -303,24 +318,25 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 \[ index.scss \]
 
-    .myapp {
-      transition: all .2s ease-in-out;
-      display: block;
-      text-align: center;
-      background: #f00;
-      color: #0ff;
-      font-weight: bold;
-      width: 5rem;
-      padding: 2rem 0;
-      height: 2rem;
-      font-size: 1rem;
-      margin: 0 2rem;
-    
-      &:hover{
-        color: #f0f;
-      }
-    }
-    
+```scss
+.myapp {
+  transition: all .2s ease-in-out;
+  display: block;
+  text-align: center;
+  background: #f00;
+  color: #0ff;
+  font-weight: bold;
+  width: 5rem;
+  padding: 2rem 0;
+  height: 2rem;
+  font-size: 1rem;
+  margin: 0 2rem;
+
+  &:hover{
+    color: #f0f;
+  }
+}
+```
 
 這時候你應該會發現**滿江紅**。
 
@@ -328,7 +344,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 這時候你依然不理會他，並執行語法檢測。
 
-    yarn lint # 或是 npm run lint
+```bash
+yarn lint # 或是 npm run lint
+```
 
 然後你就會被各種不符合規定的訊息噴滿臉。
 
@@ -342,7 +360,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 如果您已經是老練的設計師，則可以試著使用自動修正的指令處理。
 
-    yarn lint:fix # 或是 npm run lint:fix
+```bash
+yarn lint:fix # 或是 npm run lint:fix
+```
 
 如果你是老練的設計師，就更不該犯這些錯喇！🤮
 

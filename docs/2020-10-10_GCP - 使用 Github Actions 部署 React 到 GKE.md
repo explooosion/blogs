@@ -51,22 +51,26 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 內容結構如下：
 
-    {
-      "type": "service_account",
-      "project_id": "project-id",
-      "private_key_id": "key-id",
-      "private_key": "-----BEGIN PRIVATE KEY-----\nprivate-key\n-----END PRIVATE KEY-----\n",
-      "client_email": "service-account-email",
-      "client_id": "client-id",
-      "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-      "token_uri": "https://accounts.google.com/o/oauth2/token",
-      "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-      "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-account-email"
-    }
+```json
+{
+  "type": "service_account",
+  "project_id": "project-id",
+  "private_key_id": "key-id",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nprivate-key\n-----END PRIVATE KEY-----\n",
+  "client_email": "service-account-email",
+  "client_id": "client-id",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-account-email"
+}
+```
 
 你也可以選擇使用 gcloud 命令方式取得金鑰：
 
-    gcloud iam service-accounts keys create ./key.json --iam-account  --iam-account <sa-name>@<project-id>.iam.gserviceaccount.com
+```bash
+gcloud iam service-accounts keys create ./key.json --iam-account  --iam-account <sa-name>@<project-id>.iam.gserviceaccount.com
+```
 
 2.  建立 Kubernetes 叢集
 --------------------
@@ -86,7 +90,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 接著可以建立專案：
 
-    npx create-react-app my-app
+```
+npx create-react-app my-app
+```
 
 如果你會使用 Docker 部署環境，那麼你可以替換成你想部署的專案。
 
@@ -97,98 +103,104 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 可根據自己的專案撰寫，此專案筆者將專案 build 後放置於 nginx html。
 
-    FROM node:10 AS Builder
-    
-    ENV NPM_CONFIG_LOGLEVEL info
-    
-    RUN mkdir -p /usr/src/app
-    WORKDIR /usr/src/app
-    
-    COPY . .
-    
-    ARG GENERATE_SOURCEMAP=false
-    
-    RUN yarn install && yarn build
-    
-    FROM nginx:1.13.3-alpine
-    
-    RUN rm -rf /usr/share/nginx/html/*
-    COPY --from=Builder /usr/src/app/build /usr/share/nginx/html
+```
+FROM node:10 AS Builder
+
+ENV NPM_CONFIG_LOGLEVEL info
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+COPY . .
+
+ARG GENERATE_SOURCEMAP=false
+
+RUN yarn install && yarn build
+
+FROM nginx:1.13.3-alpine
+
+RUN rm -rf /usr/share/nginx/html/*
+COPY --from=Builder /usr/src/app/build /usr/share/nginx/html
+```
 
 \[ [.dockerignore](https://github.com/explooosion/react-gcp-deploy-example/blob/master/.dockerignore) \]
 
 加入一點忽略規則。
 
-    Dockerfile
-    README.md
-    node_modules
-    npm-debug.log
+```
+Dockerfile
+README.md
+node_modules
+npm-debug.log
+```
 
 \[ .github / workflows / main.yml \]
 
 建立 workflows，內容參考 [gke](https://github.com/GoogleCloudPlatform/github-actions/tree/master/example-workflows/gke)。
 
-    name: Build and Deploy to GKE
-    
-    on:
-      push:
-        branches:
-        - master
-    
-    env:
-      PROJECT_ID: ${{ secrets.GKE_PROJECT }}
-      GKE_CLUSTER: cluster-1    # TODO: update to cluster name
-      GKE_ZONE: asia-east1-a   # TODO: update to cluster zone
-      DEPLOYMENT_NAME: gke-app # TODO: update to deployment name
-      IMAGE: my-image
-    
-    jobs:
-      setup-build-publish-deploy:
-        name: Setup, Build, Publish, and Deploy
-        runs-on: ubuntu-latest
-    
-        steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-    
-        # Setup gcloud CLI
-        - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
-          with:
-            version: '290.0.1'
-            service_account_key: ${{ secrets.GKE_SA_KEY }}
-            project_id: ${{ secrets.GKE_PROJECT }}
-    
-        # Configure Docker to use the gcloud command-line tool as a credential
-        # helper for authentication
-        - run: |-
-            gcloud --quiet auth configure-docker
-        # Get the GKE credentials so we can deploy to the cluster
-        - run: |-
-            gcloud container clusters get-credentials "$GKE_CLUSTER" --zone "$GKE_ZONE"
-        # Build the Docker image
-        - name: Build
-          run: |-
-            docker build \
-              --tag "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA" \
-              --build-arg GITHUB_SHA="$GITHUB_SHA" \
-              --build-arg GITHUB_REF="$GITHUB_REF" \
-              .
-        # Push the Docker image to Google Container Registry
-        - name: Publish
-          run: |-
-            docker push "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA"
-        # Set up kustomize
-        - name: Set up Kustomize
-          run: |-
-            curl -sfLo kustomize https://github.com/kubernetes-sigs/kustomize/releases/download/v3.1.0/kustomize_3.1.0_linux_amd64
-            chmod u+x ./kustomize
-        # Deploy the Docker image to the GKE cluster
-        - name: Deploy
-          run: |-
-            ./kustomize edit set image gcr.io/PROJECT_ID/IMAGE:TAG=gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
-            ./kustomize build . | kubectl apply -f -
-            kubectl rollout status deployment/$DEPLOYMENT_NAME
-            kubectl get services -o wide
+```
+name: Build and Deploy to GKE
+
+on:
+  push:
+    branches:
+    - master
+
+env:
+  PROJECT_ID: ${{ secrets.GKE_PROJECT }}
+  GKE_CLUSTER: cluster-1    # TODO: update to cluster name
+  GKE_ZONE: asia-east1-a   # TODO: update to cluster zone
+  DEPLOYMENT_NAME: gke-app # TODO: update to deployment name
+  IMAGE: my-image
+
+jobs:
+  setup-build-publish-deploy:
+    name: Setup, Build, Publish, and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    # Setup gcloud CLI
+    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        version: '290.0.1'
+        service_account_key: ${{ secrets.GKE_SA_KEY }}
+        project_id: ${{ secrets.GKE_PROJECT }}
+
+    # Configure Docker to use the gcloud command-line tool as a credential
+    # helper for authentication
+    - run: |-
+        gcloud --quiet auth configure-docker
+    # Get the GKE credentials so we can deploy to the cluster
+    - run: |-
+        gcloud container clusters get-credentials "$GKE_CLUSTER" --zone "$GKE_ZONE"
+    # Build the Docker image
+    - name: Build
+      run: |-
+        docker build \
+          --tag "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA" \
+          --build-arg GITHUB_SHA="$GITHUB_SHA" \
+          --build-arg GITHUB_REF="$GITHUB_REF" \
+          .
+    # Push the Docker image to Google Container Registry
+    - name: Publish
+      run: |-
+        docker push "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA"
+    # Set up kustomize
+    - name: Set up Kustomize
+      run: |-
+        curl -sfLo kustomize https://github.com/kubernetes-sigs/kustomize/releases/download/v3.1.0/kustomize_3.1.0_linux_amd64
+        chmod u+x ./kustomize
+    # Deploy the Docker image to the GKE cluster
+    - name: Deploy
+      run: |-
+        ./kustomize edit set image gcr.io/PROJECT_ID/IMAGE:TAG=gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
+        ./kustomize build . | kubectl apply -f -
+        kubectl rollout status deployment/$DEPLOYMENT_NAME
+        kubectl get services -o wide
+```
 
 在 yml 中，使用了幾個需要在 github 建立 secret 的參數：
 
@@ -209,17 +221,21 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 或者使用指令查看：
 
-    gcloud container clusters list
+```bash
+gcloud container clusters list
+```
 
 \[ kustomization.yml \]
 
 在專案根目錄建立 kustomization 設定檔。
 
-    apiVersion: kustomize.config.k8s.io/v1beta1
-    kind: Kustomization
-    resources:
-    - deployment.yml
-    - service.yml
+```
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- deployment.yml
+- service.yml
+```
 
 \[ deployment.yml \]
 
@@ -229,36 +245,37 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 並且加上 spec.selector.matchLabels.app: gke-app
 
-    apiVersion: apps/v1
-    kind: Deployment
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gke-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gke-app
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 5
+  template:
     metadata:
-      name: gke-app
+      labels:
+        app: gke-app
     spec:
-      replicas: 1
-      selector:
-        matchLabels:
-          app: gke-app
-      strategy:
-        rollingUpdate:
-          maxSurge: 1
-          maxUnavailable: 1
-      minReadySeconds: 5
-      template:
-        metadata:
-          labels:
-            app: gke-app
-        spec:
-          containers:
-          - name: gke-app
-            image: gcr.io/PROJECT_ID/IMAGE:TAG
-            ports:
-            - containerPort: 80
-            resources:
-              requests:
-                cpu: 100m
-              limits:
-                cpu: 100m
-    
+      containers:
+      - name: gke-app
+        image: gcr.io/PROJECT_ID/IMAGE:TAG
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 100m
+          limits:
+            cpu: 100m
+```
 
 *   containerPort：是指容器內部要映射的 port
 
@@ -266,17 +283,19 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 建立 [Service 與 Ingress](https://console.cloud.google.com/kubernetes/discovery) 部署設定檔。
 
-    apiVersion: v1
-    kind: Service
-    metadata:
-      name: gke-app-service
-    spec:
-      type: LoadBalancer
-      ports:
-        - port: 80
-          targetPort: 80
-      selector:
-        app: gke-react-app
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: gke-app-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    app: gke-react-app
+```
 
 接著就可以 git push，看看跑完的結果吧～ 
 

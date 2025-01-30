@@ -201,34 +201,38 @@ Github：EgretTutorial - [EgretAnimate](https://github.com/explooosion/EgretTu
 
 \[ Game / GameContainer.ts \]
 
-    module Game {
-        export class GameContainer extends egret.DisplayObjectContainer {
-    
-            public constructor() {
-                super();
-                this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
-            }
-    
-            private onAddToStage(event: egret.Event) {
-                this.removeEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
-                this.createGameScene();
-            }
-    
-            private createGameScene(): void {
-    
-            }
+```typescript
+module Game {
+    export class GameContainer extends egret.DisplayObjectContainer {
+
+        public constructor() {
+            super();
+            this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
+        }
+
+        private onAddToStage(event: egret.Event) {
+            this.removeEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
+            this.createGameScene();
+        }
+
+        private createGameScene(): void {
+
         }
     }
+}
+```
 
 \[ Game / Player.ts \]
 
-    module Game {
-        export class Player extends egret.DisplayObjectContainer {
-            public constructor() {
-                super();
-            }
+```typescript
+module Game {
+    export class Player extends egret.DisplayObjectContainer {
+        public constructor() {
+            super();
         }
     }
+}
+```
 
 ### 資源載入
 
@@ -252,8 +256,10 @@ Github：EgretTutorial - [EgretAnimate](https://github.com/explooosion/EgretTu
 
 \[ Game / Player.ts \]
 
-    private playerFactorty: egret.MovieClipDataFactory;
-    private player: egret.MovieClip;
+```typescript
+private playerFactorty: egret.MovieClipDataFactory;
+private player: egret.MovieClip;
+```
 
 *   [MovieClipDataFactory](http://developer.egret.com/cn/apidoc/index/name/egret.MovieClipDataFactory)：提供動畫影片的工廠。
 *   [MovieClip](http://developer.egret.com/cn/apidoc/index/name/egret.MovieClip)：動畫影片的剪輯，本身擁有一個時間軸。
@@ -266,13 +272,15 @@ Github：EgretTutorial - [EgretAnimate](https://github.com/explooosion/EgretTu
 
 \[ Game / Player.ts \]
 
-    public constructor(texture_json: egret.Texture, texture_png: egret.Texture) {
-        super();
-        this.playerFactorty = new egret.MovieClipDataFactory(texture_json, texture_png);
-        this.player = new egret.MovieClip(this.playerFactorty.generateMovieClipData('girl'));
-        this.addChild(this.player);
-        this.player.play(-1);
-    }
+```typescript
+public constructor(texture_json: egret.Texture, texture_png: egret.Texture) {
+    super();
+    this.playerFactorty = new egret.MovieClipDataFactory(texture_json, texture_png);
+    this.player = new egret.MovieClip(this.playerFactorty.generateMovieClipData('girl'));
+    this.addChild(this.player);
+    this.player.play(-1);
+}
+```
 
 *   generateMovieClipData：為開始建立時的「[項目名稱](#item_name)」
 *   play：默認數字為０播放一次；<0 則不斷地播放；\>0 則為設定播放次數
@@ -283,10 +291,12 @@ Github：EgretTutorial - [EgretAnimate](https://github.com/explooosion/EgretTu
 
 \[ Game / GameContainer.ts \]
 
-    private createGameScene(): void {
-        this.player = new Game.Player(RES.getRes('girl_json'), RES.getRes('girl_png'));
-        this.addChild(this.player);
-    }
+```typescript
+private createGameScene(): void {
+    this.player = new Game.Player(RES.getRes('girl_json'), RES.getRes('girl_png'));
+    this.addChild(this.player);
+}
+```
 
 RES.getRes：裡面的字串請依 default.res.json 的 Name 設定
 
@@ -302,70 +312,33 @@ RES.getRes：裡面的字串請依 default.res.json 的 Name 設定
 
 \[ src / Main.ts \]
 
-    class Main extends egret.DisplayObjectContainer {
-    
-        public constructor() {
-            super();
-            this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
-        }
-    
-        private onAddToStage(event: egret.Event) {
-    
-            //初始化Resource资源加载库
-            //initiate Resource loading library
-            RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
-            RES.loadConfig("resource/default.res.json", "resource/");
-        }
-    
-        /**
-         * 配置文件加载完成,开始预加载preload资源组。
-         * configuration file loading is completed, start to pre-load the preload resource group
-         */
-        private onConfigComplete(event: RES.ResourceEvent): void {
-            RES.removeEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
-            RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
-            RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
-            RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
-            RES.loadGroup("preload");
-        }
-    
-        /**
-         * preload资源组加载完成
-         * Preload resource group is loaded
-         */
-        private onResourceLoadComplete(event: RES.ResourceEvent) {
-            if (event.groupName == "preload") {
-                RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
-                RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
-                RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
-            }
-        }
-    
-        /**
-         * 资源组加载出错
-         *  The resource group loading failed
-         */
-        private onItemLoadError(event: RES.ResourceEvent) {
-            console.warn("Url:" + event.resItem.url + " has failed to load");
-        }
-    
-        /**
-         * 资源组加载出错
-         *  The resource group loading failed
-         */
-        private onResourceLoadError(event: RES.ResourceEvent) {
-            //TODO
-            console.warn("Group:" + event.groupName + " has failed to load");
-            //忽略加载失败的项目
-            //Ignore the loading failed projects
-            this.onResourceLoadComplete(event);
-        }
-    
+```typescript
+class Main extends egret.DisplayObjectContainer {
+
+    public constructor() {
+        super();
+        this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
     }
 
-接著在資源載入完畢 ( onResourceLoadComplete ) 的時候，建構我們定義好的遊戲容器。
+    private onAddToStage(event: egret.Event) {
 
-\[ src / Main.ts \]
+        //初始化Resource资源加载库
+        //initiate Resource loading library
+        RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
+        RES.loadConfig("resource/default.res.json", "resource/");
+    }
+
+    /**
+     * 配置文件加载完成,开始预加载preload资源组。
+     * configuration file loading is completed, start to pre-load the preload resource group
+     */
+    private onConfigComplete(event: RES.ResourceEvent): void {
+        RES.removeEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
+        RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
+        RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
+        RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
+        RES.loadGroup("preload");
+    }
 
     /**
      * preload资源组加载完成
@@ -376,12 +349,53 @@ RES.getRes：裡面的字串請依 default.res.json 的 Name 設定
             RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
             RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
             RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
-    
-            // 遊戲建構
-            var gameContainer: Game.GameContainer = new Game.GameContainer();
-            this.addChild(gameContainer);
         }
     }
+
+    /**
+     * 资源组加载出错
+     *  The resource group loading failed
+     */
+    private onItemLoadError(event: RES.ResourceEvent) {
+        console.warn("Url:" + event.resItem.url + " has failed to load");
+    }
+
+    /**
+     * 资源组加载出错
+     *  The resource group loading failed
+     */
+    private onResourceLoadError(event: RES.ResourceEvent) {
+        //TODO
+        console.warn("Group:" + event.groupName + " has failed to load");
+        //忽略加载失败的项目
+        //Ignore the loading failed projects
+        this.onResourceLoadComplete(event);
+    }
+
+}
+```
+
+接著在資源載入完畢 ( onResourceLoadComplete ) 的時候，建構我們定義好的遊戲容器。
+
+\[ src / Main.ts \]
+
+```typescript
+/**
+ * preload资源组加载完成
+ * Preload resource group is loaded
+ */
+private onResourceLoadComplete(event: RES.ResourceEvent) {
+    if (event.groupName == "preload") {
+        RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
+        RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
+        RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
+
+        // 遊戲建構
+        var gameContainer: Game.GameContainer = new Game.GameContainer();
+        this.addChild(gameContainer);
+    }
+}
+```
 
 ### 編譯結果
 
@@ -402,13 +416,15 @@ MovieClip 提供 gotoAndPlay，可指定到動作幀進行播放。
 
 \[ Game / Player.ts \]
 
-    public constructor(texture_json: egret.Texture, texture_png: egret.Texture) {
-        super();
-        this.playerFactorty = new egret.MovieClipDataFactory(texture_json, texture_png);
-        this.player = new egret.MovieClip(this.playerFactorty.generateMovieClipData('metal'));
-        this.addChild(this.player);
-        this.player.gotoAndPlay('stand', -1);
-    }
+```typescript
+public constructor(texture_json: egret.Texture, texture_png: egret.Texture) {
+    super();
+    this.playerFactorty = new egret.MovieClipDataFactory(texture_json, texture_png);
+    this.player = new egret.MovieClip(this.playerFactorty.generateMovieClipData('metal'));
+    this.addChild(this.player);
+    this.player.gotoAndPlay('stand', -1);
+}
+```
 
 *   將原本的 play 改成 gotoAndPlay
 *   gotoAndPlay：參數為（幀名稱 , 播放模式）
@@ -427,28 +443,30 @@ MovieClip 提供 gotoAndPlay，可指定到動作幀進行播放。
 
 \[ Game / Player.ts \]
 
-    public constructor(texture_json: egret.Texture, texture_png: egret.Texture) {
-        super();
-        this.playerFactorty = new egret.MovieClipDataFactory(texture_json, texture_png);
-        this.player = new egret.MovieClip(this.playerFactorty.generateMovieClipData('metal'));
-    
-        this.player.touchEnabled = true;
-        this.player.addEventListener(egret.TouchEvent.TOUCH_TAP, this.touchHandler, this);
-        this.player.addEventListener(egret.MovieClipEvent.COMPLETE, this.loopComplete, this);
-    
-        this.addChild(this.player);
-        this.player.gotoAndPlay('stand', -1);
-    }
-    
-    private touchHandler(event: egret.TouchEvent) {
-        this.player.gotoAndPlay('eat', 1);
-        this.player.touchEnabled = false;
-    }
-    
-    private loopComplete(event: egret.MovieClipEvent) {
-        this.player.gotoAndPlay('stand', -1);
-        this.player.touchEnabled = true;
-    }
+```typescript
+public constructor(texture_json: egret.Texture, texture_png: egret.Texture) {
+    super();
+    this.playerFactorty = new egret.MovieClipDataFactory(texture_json, texture_png);
+    this.player = new egret.MovieClip(this.playerFactorty.generateMovieClipData('metal'));
+
+    this.player.touchEnabled = true;
+    this.player.addEventListener(egret.TouchEvent.TOUCH_TAP, this.touchHandler, this);
+    this.player.addEventListener(egret.MovieClipEvent.COMPLETE, this.loopComplete, this);
+
+    this.addChild(this.player);
+    this.player.gotoAndPlay('stand', -1);
+}
+
+private touchHandler(event: egret.TouchEvent) {
+    this.player.gotoAndPlay('eat', 1);
+    this.player.touchEnabled = false;
+}
+
+private loopComplete(event: egret.MovieClipEvent) {
+    this.player.gotoAndPlay('stand', -1);
+    this.player.touchEnabled = true;
+}
+```
 
 *   [egret.TouchEvent.TOUCH\_TAP](http://developer.egret.com/cn/apidoc/index/name/egret.TouchEvent)：監聽圖片點擊接觸的事件
 *   [egret.MovieClipEvent.COMPLETE](http://edn.egret.com/cn/article/index/id/596)：監聽圖片播放完畢的事件，由於播放 eat 的時候，我們設定次數為1，播放結束後就會觸發該事件

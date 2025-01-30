@@ -31,20 +31,22 @@ Nginx 405 not allowed 解決方式
 
 \[ default.conf \]
 
-    server {
-    
-        listen 80;
-        listen [::]:80;
-    
-        return 301 https://$host$request_uri;
-    }
-    
-    server {
-    
-        # ...
-    
-        error_page 405 =200 https://$host$request_uri;
-    }
+```code
+server {
+
+    listen 80;
+    listen [::]:80;
+
+    return 301 https://$host$request_uri;
+}
+
+server {
+
+    # ...
+
+    error_page 405 =200 https://$host$request_uri;
+}
+```
 
 參考
 --

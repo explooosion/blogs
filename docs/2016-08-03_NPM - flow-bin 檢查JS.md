@@ -22,41 +22,52 @@ flow-bin 快速檢查你的 JavaScript，之除蟲大師。
 
 使用說明： [GitHub - flow](https://github.com/explooosion/flow)
 
-    git clone https://github.com/explooosion/flow.git
+```bash
+git clone https://github.com/explooosion/flow.git
+```
 
 套件安裝
 ----
 
-    npm install --save-dev flow-bin
+```bash
+npm install --save-dev flow-bin
+```
 
 或全域安裝
 
-    npm install --global flow-bin
+```bash
+npm install --global flow-bin
+```
 
 建立參數
 ----
 
 進入 node\_modules/.bin 目錄。
 
-    cd node_modules/.bin
+```bash
+cd node_modules/.bin
+```
 
 建立設定檔案，輸入後會產生 .flowconfig 檔案，將他移動到專案目錄底下。
 
-    flow init
+```bash
+flow init
+```
 
 編輯設定檔案
 ------
 
 編輯 .flowconfig，使其忽略 node\_modules 裡面的資料夾。
 
-    [ignore]
-    <PROJECT_ROOT>/node_modules/.*
-    [include]
-    
-    [libs]
-    
-    [options]
-    
+```
+[ignore]
+<PROJECT_ROOT>/node_modules/.*
+[include]
+
+[libs]
+
+[options]
+```
 
 編輯指令
 ----
@@ -65,31 +76,38 @@ flow-bin 快速檢查你的 JavaScript，之除蟲大師。
 
 如果直接輸入 flow check || exit 0 .... 會跳出視窗，故我們建立 script
 
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "flow_check": "flow check || exit 0"
-      },
+```json
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "flow_check": "flow check || exit 0"
+  },
+```
 
 建立測試檔案
 ------
 
 我們任意建立 js 檔案（index.js），在檔案第一列加入，表示將透過 flow-bin 進行檢核。
 
-    /* @flow */
+```javascript
+/* @flow */
+```
 
 任意編輯錯誤的內容： 
 
-    /* @flow */
-    const a = 1;
-    a = a + 1;
-    
+```javascript
+/* @flow */
+const a = 1;
+a = a + 1;
+```
 
 *   const 為 es6 之常數宣告，當然不可以改變囉！
 
 進行檢核
 ----
 
-    npm run flow_check
+```bash
+npm run flow_check
+```
 
 Found 1 error，成功找到一個錯誤，
 

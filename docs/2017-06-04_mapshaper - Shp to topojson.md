@@ -22,11 +22,15 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 安裝
 
-    npm install -g topojson
+```
+npm install -g topojson
+```
 
 命令
 
-    c:\> topojson -o export.json -p --shapefile-encoding big5 input.shp
+```
+c:\> topojson -o export.json -p --shapefile-encoding big5 input.shp
+```
 
 總會出現找不到此命令。
 
@@ -69,7 +73,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 直接從 npm 進行全域安裝。
 
-    npm install -g mapshaper
+```
+npm install -g mapshaper
+```
 
 **四、命令**
 --------
@@ -80,13 +86,17 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 **轉換格式**
 
-    mapshaper [Input] -o [Output]
+```
+mapshaper [Input] -o [Output]
+```
 
 *   **\-o 表示格式轉換**
 
 實際範例：
 
-    mapshaper COUNTY.shp -o COUNTY.json
+```bash
+mapshaper COUNTY.shp -o COUNTY.json
+```
 
 成功畫面：
 
@@ -98,21 +108,28 @@ JSON 格式
 
 而 json 部分，我們可以指定輸出類型：[geojson](http://geojson.org/)、[topojson](https://github.com/topojson/topojson) 兩種。
 
-    mapshaper COUNTY.shp -o format=geojson  COUNTY.json
-
-    mapshaper COUNTY.shp -o format=topojson COUNTY.json
+```
+mapshaper COUNTY.shp -o format=geojson  COUNTY.json
+```
+```
+mapshaper COUNTY.shp -o format=topojson COUNTY.json
+```
 
 *   format=\[格式\]
 
 編碼
 
-    mapshaper COUNTY.shp encoding=big5 -o COUNTY.json
+```
+mapshaper COUNTY.shp encoding=big5 -o COUNTY.json
+```
 
 *   編碼可轉換許多種，如果含有中文，則可使用 big5
 
 指定 JSON 格式且轉換編碼
 
-    mapshaper COUNTY.shp -o encoding=big5 format=topojson COUNTY.json
+```
+mapshaper COUNTY.shp -o encoding=big5 format=topojson COUNTY.json
+```
 
 **四、結語**
 --------

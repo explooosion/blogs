@@ -37,21 +37,23 @@ PixiJS  是個很龐大的 2D 渲染引擎，使用後，你會發現更多美�
 
 如果你為它寫一個 pointertap 觸碰事件，會發生什麼事？
 
-    const app = new PIXI.Application({
-      width: 200,
-      height: 200,
-    });
-    document.body.appendChild(app.view);
-    
-    const sprite = PIXI.Sprite.from('https://pixijs.io/examples/examples/assets/flowerTop.png');
-    sprite.buttonMode = true;
-    sprite.interactive = true;
-    
-    sprite.addListener('pointertap', () => {
-      alert('Hola');
-    });
-    
-    app.stage.addChild(sprite);
+```javascript
+const app = new PIXI.Application({
+  width: 200,
+  height: 200,
+});
+document.body.appendChild(app.view);
+
+const sprite = PIXI.Sprite.from('https://pixijs.io/examples/examples/assets/flowerTop.png');
+sprite.buttonMode = true;
+sprite.interactive = true;
+
+sprite.addListener('pointertap', () => {
+  alert('Hola');
+});
+
+app.stage.addChild(sprite);
+```
 
 *   buttonMode：為了方便辨識，在此設定讓滑鼠移入可觸發範圍時的指標為 pointer 樣式
 
@@ -114,17 +116,19 @@ PixiJS  是個很龐大的 2D 渲染引擎，使用後，你會發現更多美�
 
 它是由數個多邊形組合而成的喲！
 
-    { 
-        
-        "flowerTop": [
-            {
-                "shape": [ 27.5,145, 32.5,138, 30.5,152, 27.5,149 ]
-            },
-            {
-                "shape": [ 41.5,176, 32.5,138, 89.5,141, 92.5,150, 90.5,152, 61.5,176, 54,180.5, 44,180.5 ]
-            },
-        ]
-    }
+```json
+{ 
+    
+    "flowerTop": [
+        {
+            "shape": [ 27.5,145, 32.5,138, 30.5,152, 27.5,149 ]
+        },
+        {
+            "shape": [ 41.5,176, 32.5,138, 89.5,141, 92.5,150, 90.5,152, 61.5,176, 54,180.5, 44,180.5 ]
+        },
+    ]
+}
+```
 
 *   flowerTop：根據你的圖片而命名。
 *   shape：該集合為其中一個多邊形的座標點。
@@ -136,15 +140,19 @@ PixiJS  是個很龐大的 2D 渲染引擎，使用後，你會發現更多美�
 
 ### 3.1 安裝
 
-    npm install --save pixi.js hitarea-shapes
-    
-    # 或者
-    
-    yarn add pixi.js hitarea-shapes
+```bash
+npm install --save pixi.js hitarea-shapes
+
+# 或者
+
+yarn add pixi.js hitarea-shapes
+```
 
 當然，你也可以在 html 中使用 CDN：
 
-    <script src="https://unpkg.com/hitarea-shapes"></script>
+```html
+<script src="https://unpkg.com/hitarea-shapes"></script>
+```
 
 如果你不想使用該套件，你可以參考 [pixi-poly](https://github.com/eXponenta/pixi-poly) 是如何實踐出輪廓問題的。
 
@@ -154,8 +162,10 @@ PixiJS  是個很龐大的 2D 渲染引擎，使用後，你會發現更多美�
 
 如果你是以模組化架構開發，那就直接 import 或 require 進來～
 
-    import HitAreaShapes from 'hitarea-shapes';
-    import data from 'flowerTop.json';
+```javascript
+import HitAreaShapes from 'hitarea-shapes';
+import data from 'flowerTop.json';
+```
 
 如果你的環境選擇使用 cdn，也沒有 babel ，
 
@@ -167,13 +177,14 @@ PixiJS  是個很龐大的 2D 渲染引擎，使用後，你會發現更多美�
 
 直接把 sprite.hitArea 設為剛剛建立好的實例即可！
 
-    // Your sprite
-    // ...
-    
-    const hitAreaShapes = new HitAreaShapes(data);
-    
-    sprite.hitArea = hitAreaShapes;
-    
+```javascript
+// Your sprite
+// ...
+
+const hitAreaShapes = new HitAreaShapes(data);
+
+sprite.hitArea = hitAreaShapes;
+```
 
 ### 3.4 結果
 

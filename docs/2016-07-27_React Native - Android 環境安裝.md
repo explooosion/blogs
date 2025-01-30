@@ -26,7 +26,9 @@ React Native 套件安裝
 
 讓我們先安裝 react native （-g 全域安裝）套件吧~
 
-    npm install -g react-native-cli
+```bash
+npm install -g react-native-cli
+```
 
 如還沒安裝，可參考此篇教學　[Node.js - Install（nvm）](https://dotblogs.com.tw/explooosion/2016/06/12/112558)
 
@@ -73,7 +75,9 @@ Windows 環境設定
 
 新增一個系統變數：
 
-    ANDROID_HOME
+```bash
+ANDROID_HOME
+```
 
 「變數值」請指定安裝時候 sdk 的位置，為了方便，我把 sdk另外安裝在 D:\\
 
@@ -81,7 +85,9 @@ Windows 環境設定
 
 編輯 Path 系統變數，增加以下內容
 
-    ;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
+```bash
+;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
+```
 
 [![1469549309_5982.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-07-27_React%20Native%20-%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D/1469549309_5982.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/af563a5d-5efa-4900-8cbb-16882971d96e/1469549309_5982.png)
 
@@ -92,11 +98,15 @@ Windows 環境設定
 
 建立一份專案，命為 myapp，建立約數分鐘，**耐心等候**。
 
-    react-native init myapp
+```bash
+react-native init myapp
+```
 
 完成後進入目錄
 
-    cd myapp
+```bash
+cd myapp
+```
 
 裡面可看見已經幫我們部屬好 android、ios 的環境了，
 
@@ -106,11 +116,15 @@ index.android.js 則為 app 開啟時的主畫面內容（Main）
 
 環境執行、安裝
 
-    react-native run-android
+```bash
+react-native run-android
+```
 
 或是 debug 模式
 
-    react-native run-android -debug
+```bash
+react-native run-android -debug
+```
 
 此時你可透過模擬器或是實體外接手機進行執行安裝
 

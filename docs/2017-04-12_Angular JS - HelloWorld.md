@@ -39,10 +39,12 @@ Angular 載入
 新增內文
 ----
 
-    <h1>Angular1 - Hello World</h1>
-    <p>AngularJS say hello to {{yourname || 'everyone'}}!</p>
-    <label>Input your name，Angular will say hello to you</label>
-    <input type="text" ng-model="yourname">
+```html
+<h1>Angular1 - Hello World</h1>
+<p>AngularJS say hello to {{yourname || 'everyone'}}!</p>
+<label>Input your name，Angular will say hello to you</label>
+<input type="text" ng-model="yourname">
+```
 
 1.  在 p 標籤當中我們可以看到由中括弧包住的文字，yourname為自訂變數，|| 為「否則」，意思就是說當變數沒設定時，將以字串　’everyone’ 顯示。
 2.  在文字方塊當中，我們使用到 ng-model，如果有接觸過 angular2 的朋友一定會很熟悉，即為資料綁定，

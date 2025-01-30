@@ -65,15 +65,20 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 或是直接打開 Terminal 輸入：
 
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 
 
 接著開始安裝 Docker。
 
-    brew update
-
-    brew cask install docker
+```bash
+brew update
+```
+```bash
+brew cask install docker
+```
 
 安裝完畢後開啟應用程式，就可以看到 Docker.app。
 
@@ -81,9 +86,12 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 試著使用指令，驗證看看安裝成功與否。
 
-    docker -v
-
-    docker-compose -v
+```bash
+docker -v
+```
+```bash
+docker-compose -v
+```
 
 畫面結果。
 
@@ -96,21 +104,30 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 首先安裝 generator。
 
-    npm install -g express-generator@4
+```bash
+npm install -g express-generator@4
+```
 
 建立專案，例如「docker-express-demo」。
 
-    express docker-express-demo
+```bash
+express docker-express-demo
+```
 
 接著進入目錄。
 
-    cd docker-express-demo
+```bash
+cd docker-express-demo
+```
 
 安裝套件並啟動。
 
-    npm install
-
-    npm start
+```bash
+npm install
+```
+```bash
+npm start
+```
 
 如果順利，應該可於 [http://localhost:3000/](http://localhost:3000/) 看到網站。
 
@@ -139,15 +156,17 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 \[ Dockerfile \]
 
-    FROM node:8-alpine
-    
-    COPY . /workspace
-    WORKDIR /workspace
-    RUN npm install
-    
-    EXPOSE 3000
-    
-    CMD npm start
+```makefile
+FROM node:8-alpine
+
+COPY . /workspace
+WORKDIR /workspace
+RUN npm install
+
+EXPOSE 3000
+
+CMD npm start
+```
 
 *   FROM：這裡的 node:8-alpine，來自 [Docker Hub](https://hub.docker.com/) 的 [node](https://hub.docker.com/_/node/)。你想用到的容器，都可以在這邊找到，這個映像檔包含了 nodejs。
 *   COPY：複製當前目錄到容器中的 /workspace。用意是將程式碼，複製到容器中執行。
@@ -171,7 +190,9 @@ docker 的運作流程首先要建立映像檔 image，
 
 ### 1\. 建立映像檔
 
-    docker build -t demo/myapp .
+```bash
+docker build -t demo/myapp .
+```
 
 利用 docker build 就可以建立出指定容器，
 
@@ -187,7 +208,9 @@ docker 的運作流程首先要建立映像檔 image，
 
 我們可以利用 docker images 來查看現有容器映像。
 
-    docker images
+```bash
+docker images
+```
 
 這時候應該可以看到剛剛建立好的 demo/myapp，
 
@@ -199,7 +222,9 @@ docker 的運作流程首先要建立映像檔 image，
 
 接著就可以啟動容器了。
 
-    docker run -p 8080:3000 --name myapp -d demo/myapp
+```bash
+docker run -p 8080:3000 --name myapp -d demo/myapp
+```
 
 *   docker run：執行某個容器使用 run。
 *   \-p 8080:3000：是指將內部的 3000 port 映射到本地的 8080 port，因為 express 預設 3000 port。
@@ -216,7 +241,9 @@ docker 的運作流程首先要建立映像檔 image，
 
 我們可以查看當前運作的容器狀況。
 
-    docker ps -a
+```bash
+docker ps -a
+```
 
 查詢結果如下：
 
@@ -236,11 +263,15 @@ docker 的運作流程首先要建立映像檔 image，
 
 停止容器。
 
-    docker stop myapp
+```bash
+docker stop myapp
+```
 
 啟動容器。
 
-    docker start myapp
+```bash
+docker start myapp
+```
 
 ### 6\. 移除容器
 
@@ -248,11 +279,15 @@ docker 的運作流程首先要建立映像檔 image，
 
 則我們可以使用 rm 進行移除。
 
-    docker rm myapp
+```bash
+docker rm myapp
+```
 
 或是移除所有容器。
 
-    docker rm $(docker ps -a -q)
+```bash
+docker rm $(docker ps -a -q)
+```
 
 由於 docker ps -a -q 會顯示所有容器的 ID，因此可以如此搭配使用。
 
@@ -260,7 +295,9 @@ docker 的運作流程首先要建立映像檔 image，
 
 如果你想查看一些運作日誌，你可以使用以下指令。
 
-    docker logs myapp
+```bash
+docker logs myapp
+```
 
 通常啟動失敗了話，建議翻閱日誌紀錄進行除錯。
 
@@ -299,28 +336,28 @@ docker 的運作流程首先要建立映像檔 image，
 
 \[ default.conf \]
 
-    server {
-        listen 80 default_server;
-        listen [::]:80 default_server;
-        server_tokens off;
-        client_max_body_size 15M;
-    
-        if ($http_x_forwarded_proto = "http") {
-            return 301 https://$host$request_uri;
-        }
-    
-        location / {
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header Host $http_host;
-            proxy_set_header X-NginX-Proxy true;
-    
-            proxy_pass http://node:3000;
-            proxy_redirect off;
-        }
+```nginx
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    server_tokens off;
+    client_max_body_size 15M;
+
+    if ($http_x_forwarded_proto = "http") {
+        return 301 https://$host$request_uri;
     }
-    
-    
+
+    location / {
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-NginX-Proxy true;
+
+        proxy_pass http://node:3000;
+        proxy_redirect off;
+    }
+}
+```
 
 內容幾乎沒變，我們新增了 proxy\_pass。
 
@@ -340,20 +377,21 @@ docker 的運作流程首先要建立映像檔 image，
 
 \[ docker-compose.yml \]
 
-    version: "3"
-    services:
-      nginx:
-        image: nginx:alpine
-        volumes:
-          - ./nginx:/etc/nginx/conf.d
-        links:
-          - node
-        ports:
-          - 80:80
-      node:
-        build:
-          context: ./server
-    
+```makefile
+version: "3"
+services:
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    links:
+      - node
+    ports:
+      - 80:80
+  node:
+    build:
+      context: ./server
+```
 
 *   nginx：這個名字與 node 一樣，是可以自由取的。
 *   node：在剛剛 default.confg 中的 node 就是指此，綁定它在 nginx 容器中所分配到的 ip。
@@ -371,7 +409,9 @@ docker 的運作流程首先要建立映像檔 image，
 
 執行以下指令，就可以同時啟動 nginx server 以及 node express 兩個容器了。
 
-    docker-compose up -d
+```bash
+docker-compose up -d
+```
 
 *   \-d：用意是讓指令背景執行，否則你的終端機會一直顯示 log
 
@@ -387,13 +427,17 @@ docker 的運作流程首先要建立映像檔 image，
 
 我們可以利用 down 將容器停止運作。
 
-    docker-compose down
+```bash
+docker-compose down
+```
 
 ### 6\. 重新部署容器
 
 這樣的動作會重新執行 Dockerfile 的指令。
 
-    docker-compose up -d --build
+```bash
+docker-compose up -d --build
+```
 
 以上恭喜你順利完成 docker 以及 docker-compose 的初體驗了。
 

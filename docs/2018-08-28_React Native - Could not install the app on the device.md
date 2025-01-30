@@ -18,7 +18,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 正要運行專案時：
 
-    react-native run-android
+```bash
+react-native run-android
+```
 
 結果不幸的噴出以下訊息：
 
@@ -32,7 +34,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 仔細看看錯誤可以發現它執行了一行指令：
 
-    cd android && ./gradlew installDebug
+```bash
+cd android && ./gradlew installDebug
+```
 
 剩下的 1% 是你忘了連接設備，或啟動模擬器。
 
@@ -45,13 +49,17 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 進入 android 目錄。
 
-    cd android
+```bash
+cd android
+```
 
 ### 如果你是 Windows
 
 請到 [Cmder.net](http://cmder.net/) 下載 [Cmder](https://github.com/cmderdev/cmder/releases/download/v1.3.6/cmder.zip)，執行並輸入：
 
-    chmod +x gradlew
+```bash
+chmod +x gradlew
+```
 
 更多關於 Cmder 介紹請查看 - [介紹好用工具：Cmder ( 具有 Linux 溫度的 Windows 命令提示字元工具 )](https://blog.miniasp.com/post/2015/09/27/Useful-tool-Cmder.aspx)
 
@@ -61,14 +69,18 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 直接在終端機上輸入：
 
-    chmod +x gradlew
+```bash
+chmod +x gradlew
+```
 
 三、快樂的出帆
 -------
 
 再次啟動專案。
 
-    react-native run-android
+```bash
+react-native run-android
+```
 
 沒意外等個一分鐘：
 

@@ -39,7 +39,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 首先在你 fork 出來的專案中，查詢遠端版本的來源：
 
-    git remote -v
+```bash
+git remote -v
+```
 
 [![1533750937_50136.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-09_Git%20-%20%E6%9B%B4%E6%96%B0%20fork%20%E5%87%BA%E4%BE%86%E7%9A%84%20repository/1533750937_50136.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/415de9a6-e73c-4666-bf42-4d54099f7538/1533750937_50136.png)
 
@@ -49,14 +51,18 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 為了取得來源的資訊，我們加入原始來源的版本控制。
 
-    git remote add upstream https://github.com/Mindmapp/mindmapp.git
+```bash
+git remote add upstream https://github.com/Mindmapp/mindmapp.git
+```
 
 *   add：新增遠端控制。
 *   upstream：新增遠端控制的別名，可自行命名。
 
 接著再次查看目前專案的遠端控制來源：
 
-    git remote -v
+```bash
+git remote -v
+```
 
 [![1533751207_84599.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-09_Git%20-%20%E6%9B%B4%E6%96%B0%20fork%20%E5%87%BA%E4%BE%86%E7%9A%84%20repository/1533751207_84599.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/415de9a6-e73c-4666-bf42-4d54099f7538/1533751207_84599.png)
 
@@ -67,7 +73,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 接下來假設我要更新主線 master 的專案，就切換到主線上：
 
-    git checkout master
+```bash
+git checkout master
+```
 
 *   checkout：切換分支或主線
 
@@ -77,7 +85,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 接著透過 pull 指令，指定名為 upstream 上的主線 master：
 
-    git pull upstream master
+```bash
+git pull upstream master
+```
 
 [![1533751726_55079.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-09_Git%20-%20%E6%9B%B4%E6%96%B0%20fork%20%E5%87%BA%E4%BE%86%E7%9A%84%20repository/1533751726_55079.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/415de9a6-e73c-4666-bf42-4d54099f7538/1533751726_55079.png)
 
@@ -89,7 +99,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 如果你的主線上有個人的 commit 狀態，使用 rebase，就不會產生 merge：
 
-    git pull --rebase upstream master
+```bash
+git pull --rebase upstream master
+```
 
 在 [vscode](https://code.visualstudio.com/) 中，若有更新檔案，下方可以看到貼心地提醒更新個數：
 
@@ -97,7 +109,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 拉好最新檔案後，我們就可以將這些檔案重新 push 到我們自己的版控上：
 
-    git push origin master
+```bash
+git push origin master
+```
 
 ![1533752534_25063.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-09_Git%20-%20%E6%9B%B4%E6%96%B0%20fork%20%E5%87%BA%E4%BE%86%E7%9A%84%20repository/1533752534_25063.png)
 

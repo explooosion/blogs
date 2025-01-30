@@ -87,33 +87,35 @@ Workers 這葛 [serverless](https://en.wikipedia.org/wiki/Serverless_computing)
 
 那你就得想辦法把網站程式碼全部塞進 JS 裡面：
 
-    async function handleRequest(request) {
-      const init = {
-        headers: {
-          'content-type': 'text/html;charset=UTF-8',
-        },
-      }
-      return new Response(someHTML, init)
-    }
-    addEventListener('fetch', event => {
-      return event.respondWith(handleRequest(event.request))
-    })
-    const someHTML =  `<!DOCTYPE html>
-    <html>
-      <body>
-      <h1>Hello World</h1>
-      <p>This is all generated using a Worker</p>
-      <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-      ></iframe>
-      </body>
-    </html>
-    `
+```javascript
+async function handleRequest(request) {
+  const init = {
+    headers: {
+      'content-type': 'text/html;charset=UTF-8',
+    },
+  }
+  return new Response(someHTML, init)
+}
+addEventListener('fetch', event => {
+  return event.respondWith(handleRequest(event.request))
+})
+const someHTML =  `<!DOCTYPE html>
+<html>
+  <body>
+  <h1>Hello World</h1>
+  <p>This is all generated using a Worker</p>
+  <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+  ></iframe>
+  </body>
+</html>
+`
+```
 
 上述的作法，其實就是 SSR、isomorphic 的概念，
 
@@ -265,13 +267,17 @@ steep-dawn-7db4 只是我的 Worker Name。
 
 ### 4.1 下載套件
 
-    npm install -g @cloudflare/wrangler
+```bash
+npm install -g @cloudflare/wrangler
+```
 
 注意：不支援 32 位元... 原本想在工作的時候測試 CLI... QQ
 
 ### 4.2 初次要在 local 設定金鑰
 
-    wrangler config
+```bash
+wrangler config
+```
 
 只有第一次要設定哦！
 
@@ -332,29 +338,38 @@ Email address
 
 接著開始初始 Worker 專案
 
-    wrangler generate my-worker
+```bash
+wrangler generate my-worker
+```
 
 你也可以使用現成 Github 的專案
 
-    wrangler generate my-router-app https://github.com/cloudflare/worker-template-router
+```bash
+wrangler generate my-router-app https://github.com/cloudflare/worker-template-router
+```
 
 進入目錄
 
-    cd my-worker
+```bash
+cd my-worker
+```
 
 用 VScode 打開，或任何你喜歡的編輯器。
 
-    code .
+```bash
+code .
+```
 
 \[ wrangler.toml \]
 
-    account_id = ""
-    name = "my-worker"
-    type = "webpack"
-    route = ""
-    workers_dev = true
-    zone_id = ""
-    
+```
+account_id = ""
+name = "my-worker"
+type = "webpack"
+route = ""
+workers_dev = true
+zone_id = ""
+```
 
 *   account\_id：在 cloudflare dashboard 下方可以找到，上文也有提到，用於辨別帳號的
 *   name：發佈後的 Worker 名稱
@@ -367,7 +382,9 @@ Email address
 
 \[ wrangler.toml \]
 
-    webpack_config = "webpack.config.js"
+```
+webpack_config = "webpack.config.js"
+```
 
 *   webpack\_config：指定你的檔案路徑與檔名
 
@@ -375,55 +392,60 @@ Email address
 
 \[ webpack.config.js \]
 
-    const Dotenv = require('dotenv-webpack');
-    const path = require('path');
-    const HtmlWebpackPlugin = require('html-webpack-plugin');
-    
-    module.exports = {
-        mode: 'production',
-        entry: 'index.js',
-        module: {
-            rules: [
-                {
-                    test: /\.html$/i,
-                    use: 'raw-loader',
-                },
-                {
-                    test: /\.js$/,
-                    exclude: /node_modules/,
-                    use: 'babel-loader'
-                },
-            ],
-        },
-        plugins: [
-            new Dotenv(),
-            new HtmlWebpackPlugin(),
+```javascript
+const Dotenv = require('dotenv-webpack');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = {
+    mode: 'production',
+    entry: 'index.js',
+    module: {
+        rules: [
+            {
+                test: /\.html$/i,
+                use: 'raw-loader',
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: 'babel-loader'
+            },
         ],
-    };
+    },
+    plugins: [
+        new Dotenv(),
+        new HtmlWebpackPlugin(),
+    ],
+};
+```
 
 \[ index.js \]
 
 這葛，就不解釋惹，官網文件看看，有很多範例應用，建議讀者要具備 [HTTP headers](https://developer.mozilla.org/zh-TW/docs/Web/HTTP/Headers) 的知識。
 
-    addEventListener('fetch', event => {
-      event.respondWith(handleRequest(event.request))
-    })
-    /**
-     * Respond with hello worker text
-     * @param {Request} request
-     */
-    async function handleRequest(request) {
-      return new Response('Hello worker!', {
-        headers: { 'content-type': 'text/plain' },
-      })
-    }
-    
+```javascript
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event.request))
+})
+/**
+ * Respond with hello worker text
+ * @param {Request} request
+ */
+async function handleRequest(request) {
+  return new Response('Hello worker!', {
+    headers: { 'content-type': 'text/plain' },
+  })
+}
+```
 
 ### 4.4 預覽專案
 
 接著可以預覽畫面。
 
-    wrangler preview --watch
+```bash
+wrangler preview --watch
+```
 
 [![1572305324_1316.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572305324_1316.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572305324_1316.png)
 
@@ -435,7 +457,9 @@ Email address
 
 調適好之後，就可以建置專案。
 
-    wrangler build
+```bash
+wrangler build
+```
 
 [![1572305786_5931.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572305786_5931.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572305786_5931.png)
 
@@ -443,7 +467,9 @@ Email address
 
 最後再將你的 Worker 發佈到 Cloudflare 上即可。
 
-    wrangler publish
+```bash
+wrangler publish
+```
 
 [![1572305887_65647.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572305887_65647.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572305887_65647.png)
 
@@ -465,26 +491,30 @@ Email address
 
 \[ wrangler.toml \]
 
-    account_id = ""
-    name = "my-worker"
-    type = "webpack"
-    webpack_config = "webpack.config.js"
-    workers_dev = true
-    entry-point = "workers-site"
-    
-    [env.production]
-    zone_id = ""
-    route = "https://your-website/*"
-    
-    
+```
+account_id = ""
+name = "my-worker"
+type = "webpack"
+webpack_config = "webpack.config.js"
+workers_dev = true
+entry-point = "workers-site"
+
+[env.production]
+zone_id = ""
+route = "https://your-website/*"
+```
 
 當使用 publish 指令，則 \[ env.production \] 的 zone\_id, route 會被忽略。
 
-    wrangler publish
+```bash
+wrangler publish
+```
 
 當使用 publish --env production 指令，則 \[ env.production \] 的 zone\_id, route 會被帶入。
 
-    wrangler publish --env production
+```bash
+wrangler publish --env production
+```
 
 #### _以上小小心得，各位邊緣仔也快去邊緣化吧！_
 

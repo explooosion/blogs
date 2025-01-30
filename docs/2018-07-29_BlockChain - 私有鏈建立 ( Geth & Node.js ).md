@@ -73,7 +73,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 輸入[指令幫助](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options)，測試是否安裝成功。
 
-    geth -h
+```bash
+geth -h
+```
 
 [![1532883254_73769.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883254_73769.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532883254_73769.png)
 
@@ -92,23 +94,25 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 ［genesis.json］
 
-    {
-        "config": {
-            "chainId": 123456,
-            "homesteadBlock": 0,
-            "eip155Block": 0,
-            "eip158Block": 0
-        },
-        "nonce": "0x0000000000000042",
-        "difficulty": "0x020",
-        "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "coinbase": "0x0000000000000000000000000000000000000000",
-        "timestamp": "0x00",
-        "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "gasLimit": "0xffffff",
-        "alloc": {}
-    }
+```json
+{
+    "config": {
+        "chainId": 123456,
+        "homesteadBlock": 0,
+        "eip155Block": 0,
+        "eip158Block": 0
+    },
+    "nonce": "0x0000000000000042",
+    "difficulty": "0x020",
+    "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "coinbase": "0x0000000000000000000000000000000000000000",
+    "timestamp": "0x00",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "extraData": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "gasLimit": "0xffffff",
+    "alloc": {}
+}
+```
 
 *   chaindId：區塊鏈的識別 ID。
 *   difiiculty：難度參數。
@@ -119,14 +123,18 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 如果要初始帳號與金額，可參考以下範例：
 
-    "alloc": {
-      "0x0000000000000000000000000000000000000001": {"balance": "111111111"},
-      "0x0000000000000000000000000000000000000002": {"balance": "222222222"}
-    }
+```javascript
+"alloc": {
+  "0x0000000000000000000000000000000000000001": {"balance": "111111111"},
+  "0x0000000000000000000000000000000000000002": {"balance": "222222222"}
+}
+```
 
 接著我們輸入指令，建立我們偉大的創始區塊：
 
-    geth --datadir data init genesis.json
+```bash
+geth --datadir data init genesis.json
+```
 
 *   \--datadir：區塊會儲存在 data 資料夾中。
 *   init：初始參數所使用的配置檔案 genesis.json
@@ -141,7 +149,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 完成初始後，接著啟動私有鏈。
 
-    geth --datadir data --networkid 123456 --rpc --rpccorsdomain "*" --nodiscover --rpcapi="db,eth,net,web3,personal" console
+```bash
+geth --datadir data --networkid 123456 --rpc --rpccorsdomain "*" --nodiscover --rpcapi="db,eth,net,web3,personal" console
+```
 
 *   \--networkid：設定鏈的 ID。
 *   \--rpc：啟動 rpc 通訊協定功能，如果要佈署「智慧合約」，請務必加入。
@@ -174,7 +184,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 更多說明可查看 [Management-APIs#list-of-management-apis](https://github.com/ethereum/go-ethereum/wiki/Management-APIs#list-of-management-apis)
 
-    admin.nodeInfo
+```bash
+admin.nodeInfo
+```
 
 [![1532881391_84028.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532881391_84028.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532881391_84028.png)
 
@@ -184,7 +196,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 完整的指令說明可到 [Managing-your-accounts#creating-accounts](https://github.com/ethereum/go-ethereum/wiki/Managing-your-accounts#creating-accounts) 查看。
 
-    personal.newAccount()
+```bash
+personal.newAccount()
+```
 
 然後接著輸入密碼，以及確認密碼，完成建置後會顯示帳號位址。
 
@@ -192,25 +206,33 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 你也可以在建立時直接預設密碼：
 
-    personal.newAccount("654321")
+```bash
+personal.newAccount("654321")
+```
 
 ![1532883342_69688.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883342_69688.png)
 
 ### 3.3 查詢所有帳號
 
-    eth.accounts
+```bash
+eth.accounts
+```
 
 [![1532883101_16537.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883101_16537.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532883101_16537.png)
 
 由於 accounts 是個陣列集合，其實也可以查詢第 N 個索引用戶：
 
-    eth.accounts[0]
+```bash
+eth.accounts[0]
+```
 
 ![1532883076_80988.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883076_80988.png)
 
 ### 3.4 查詢帳號錢包
 
-    eth.getBalance(eth.accounts[0])
+```bash
+eth.getBalance(eth.accounts[0])
+```
 
 ![1532883063_19279.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883063_19279.png)
 
@@ -222,13 +244,17 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 你也可以使用 web3 的 CLI 命令，去查詢帳號地址的錢：
 
-    web3.fromWei(eth.getBalance(eth.accounts[0]), "ether")
+```bash
+web3.fromWei(eth.getBalance(eth.accounts[0]), "ether")
+```
 
 ### 3.5 查詢與設定當前礦工帳號
 
 系統預設礦工帳號會是第一個帳號。
 
-    eth.coinbase
+```bash
+eth.coinbase
+```
 
 [![1532883644_35553.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883644_35553.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532883644_35553.png)
 
@@ -240,7 +266,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 在每一次交易的時候，例如匯款等，都需要解鎖帳號。
 
-    personal.unlockAccount(eth.accounts[0])
+```bash
+personal.unlockAccount(eth.accounts[0])
+```
 
 unlockAccount() 也是個 function，裡面放入帳號地址。
 
@@ -252,17 +280,23 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
 查詢區塊數量：
 
-    eth.blockNumber
+```bash
+eth.blockNumber
+```
 
 利用索引值，查詢指定的區塊資訊：
 
-    eth.getBlock(0)
+```bash
+eth.getBlock(0)
+```
 
 [![1532884509_63282.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532884509_63282.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532884509_63282.png)
 
 利用交易地址查詢區塊（本範例為假地址）：
 
-    eth.getTransaction("0x0c59f431068937cbe9e230483bc79f59bd7146edc8ff5ec37fea6710adcab825")
+```bash
+eth.getTransaction("0x0c59f431068937cbe9e230483bc79f59bd7146edc8ff5ec37fea6710adcab825")
+```
 
 ### 3.8 轉帳交易
 
@@ -270,7 +304,9 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
 這部分算是很重要的指令，我們使用 sendTranscation 指令進行交易：
 
-    eth.sendTransaction({from:eth.accounts[0],to:"0x1222ca94a9064039ac2e892d2ee7ecf955019c0b",value:web3.toWei(3,"ether")})
+```bash
+eth.sendTransaction({from:eth.accounts[0],to:"0x1222ca94a9064039ac2e892d2ee7ecf955019c0b",value:web3.toWei(3,"ether")})
+```
 
 *   from：來源帳號地址，你可以使用 eth.accounts 指令查詢，或是直接帶入帳號地址。
 *   to：交易對象，即為你的目的地址。
@@ -278,11 +314,15 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
 以下範例為全使用 eth.accounts 的帳號方式進行交易：
 
-    eth.sendTransaction({from:eth.accounts[0],to:eth.accounts[1],value:web3.toWei(3,"ether")})
+```bash
+eth.sendTransaction({from:eth.accounts[0],to:eth.accounts[1],value:web3.toWei(3,"ether")})
+```
 
 當發送交易後，可以使用 txpool 查看所有交易狀況：
 
-    txpool.status
+```bash
+txpool.status
+```
 
 ![1532886571_08902.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532886571_08902.png)
 
@@ -296,7 +336,9 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
 輸入以下指令即可開始挖礦人生：
 
-    miner.start(1)
+```bash
+miner.start(1)
+```
 
 *   參數為 CPU 使用數
 
@@ -304,7 +346,9 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
 #### 3.9.2 停止挖礦
 
-    miner.stop()
+```bash
+miner.stop()
+```
 
 [![1532885447_10375.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532885447_10375.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532885447_10375.png)
 
@@ -318,7 +362,9 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
 當挖了不少後，重新查詢區塊，數量也會確實增加！
 
-    eth.blockNumber
+```bash
+eth.blockNumber
+```
 
 ![1532885748_99924.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532885748_99924.png)
 
@@ -333,7 +379,9 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
 因此從現在開始，放置 Play 三分鐘，開始挖礦，以便後續能練習實際交易。
 
-    miner.start(4)
+```bash
+miner.start(4)
+```
 
 做到這邊，建議您起個身子，泡杯咖啡，上個廁所，鏟鏟貓屎。
 
@@ -353,7 +401,9 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
 我們將轉帳 3 ether，從「帳號1」到「帳號0」
 
-    eth.sendTransaction({from:eth.accounts[1],to:eth.accounts[0],value:web3.toWei(3,"ether")})
+```bash
+eth.sendTransaction({from:eth.accounts[1],to:eth.accounts[0],value:web3.toWei(3,"ether")})
+```
 
 你也許應該是從「帳號0」到「帳號1」，如果你沒動到預設礦工帳號。
 
@@ -363,15 +413,20 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
 因此繼續我們的挖礦之旅。
 
-    miner.start(4)
+```bash
+miner.start(4)
+```
 
 ### 4.4 驗證交易
 
 很快的，我們暫停一下挖礦來查看交易是否成功。
 
-    miner.stop()
-
-    txpool.status
+```bash
+miner.stop()
+```
+```bash
+txpool.status
+```
 
 所有的準備工作與佇列都為 0，代表完成工作了～
 
@@ -379,7 +434,9 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
 接著查看「帳號0」的錢包：
 
-    eth.getBalance(eth.accounts[0])
+```bash
+eth.getBalance(eth.accounts[0])
+```
 
 ![1532888804_90652.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532888804_90652.png)
 

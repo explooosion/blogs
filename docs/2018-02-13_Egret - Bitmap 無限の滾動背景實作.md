@@ -37,8 +37,10 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 合成背景的張數主要依據容器的尺寸進行計算：
 
-    // 張數 = Math.ceil( 容器寬度 / 圖片寬度 ) +1
-    this.rowCount = Math.ceil(this.stageW / this.textureWidth) + 1;
+```typescript
+// 張數 = Math.ceil( 容器寬度 / 圖片寬度 ) +1
+this.rowCount = Math.ceil(this.stageW / this.textureWidth) + 1;
+```
 
 *   [Math.ceil](http://www.w3school.com.cn/jsref/jsref_ceil.asp)：取得大於或等於的整數（處理小數問題）。
 *   +1：要確保最少張數 > 2，避免偵測的時候，沒有遞補的圖片。
@@ -53,20 +55,23 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 計算出最少張數後，使用迴圈將每張圖組合起來：
 
-    // 組合好的圖其實就是利用陣列拼貼起來
-    private bmpArr: egret.Bitmap[];
+```typescript
+// 組合好的圖其實就是利用陣列拼貼起來
+private bmpArr: egret.Bitmap[];
+```
+```typescript
+// 初始化清空陣列
+this.bmpArr = [];
 
-    // 初始化清空陣列
-    this.bmpArr = [];
-    
-    for (var i: number = 0; i < this.rowCount; i++) {
-    
-        var bgBmp: egret.Bitmap = 背景圖;
-    
-        // 當前座標依圖片寬度去乘以張數
-        bgBmp.x = this.textureWidth * i;
-        ...
-    }
+for (var i: number = 0; i < this.rowCount; i++) {
+
+    var bgBmp: egret.Bitmap = 背景圖;
+
+    // 當前座標依圖片寬度去乘以張數
+    bgBmp.x = this.textureWidth * i;
+    ...
+}
+```
 
 假設最少張為三張圖，而素材圖片寬度為 30，
 
@@ -84,12 +89,16 @@ x軸座標利用 i，即索引（index），去乘背景圖寬度：
 
 因此公式判定為：
 
-    // 當前陣列元素.X軸 <= -1 * 圖片寬度
-    this.bmpArr[index].x <= -1 * this.textureWidth
+```typescript
+// 當前陣列元素.X軸 <= -1 * 圖片寬度
+this.bmpArr[index].x <= -1 * this.textureWidth
+```
 
 畫面移動的過程中，當 x軸 超出容器邊界時，就將該元素移除於陣列外。
 
-    this.bmpArr.shift();
+```typescript
+this.bmpArr.shift();
+```
 
 *   利用 [shift](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) 從陣列中移除**第一個**元素。
 
@@ -99,14 +108,16 @@ x軸座標利用 i，即索引（index），去乘背景圖寬度：
 
 當然要讓圖片黏在一起接續下去，因此 x軸為：
 
-    // 首先 clone 一個元素
-    var bgBmp: egret.Bitmap = this.bmpArr[index]
-    
-    // 新元素x軸 = 陣列中最後一個元素.x軸 + 圖片寬度 
-    bgBmp.x = this.bmpArr[this.rowCount - 1].x + this.textureWidth;
-    
-    // 利用 push 方式推進陣列中
-    this.bmpArr.push(bgBmp);
+```typescript
+// 首先 clone 一個元素
+var bgBmp: egret.Bitmap = this.bmpArr[index]
+
+// 新元素x軸 = 陣列中最後一個元素.x軸 + 圖片寬度 
+bgBmp.x = this.bmpArr[this.rowCount - 1].x + this.textureWidth;
+
+// 利用 push 方式推進陣列中
+this.bmpArr.push(bgBmp);
+```
 
 *    利用 [push](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/push) 添加該元素至陣列的末端。
 
@@ -137,34 +148,40 @@ x軸座標利用 i，即索引（index），去乘背景圖寬度：
 
 mygame / GameContainer.ts
 
-    module mygame {
-        export class GameContainer extends egret.DisplayObjectContainer {
-    
-        }
+```typescript
+module mygame {
+    export class GameContainer extends egret.DisplayObjectContainer {
+
     }
+}
+```
 
 mygame / BgMap.ts
 
-    module mygame {
-        export class BgMap extends egret.DisplayObjectContainer {
-    
-        }
+```typescript
+module mygame {
+    export class BgMap extends egret.DisplayObjectContainer {
+
     }
+}
+```
 
 utils / GameUtil.ts
 
-    module mygame {
-    
-        /**
-         * 根據name關鍵字建立一個Bitmap對象。name屬性請參考resources/default.res.json配置文件的內容。
-         */
-        export function createBitmapByName(name: string): egret.Bitmap {
-            var result: egret.Bitmap = new egret.Bitmap();
-            var texture: egret.Texture = RES.getRes(name);
-            result.texture = texture;
-            return result;
-        }
+```typescript
+module mygame {
+
+    /**
+     * 根據name關鍵字建立一個Bitmap對象。name屬性請參考resources/default.res.json配置文件的內容。
+     */
+    export function createBitmapByName(name: string): egret.Bitmap {
+        var result: egret.Bitmap = new egret.Bitmap();
+        var texture: egret.Texture = RES.getRes(name);
+        result.texture = texture;
+        return result;
     }
+}
+```
 
 ### 圖片資源新增
 
@@ -196,23 +213,25 @@ utils / GameUtil.ts
 
 mygame / BgMap.ts
 
-    // 存放由圖片合併而成的大圖(底片
-    private bmpArr: egret.Bitmap[];
-    
-    // 圖片數量
-    private rowCount: number;
-    
-    // 容器寬
-    private stageW: number;
-    
-    // 容器高
-    private stageH: number;
-    
-    // 圖片來源寬
-    private textureWidth: number;
-    
-    // 場景移動速度
-    private speed: number = 10;
+```typescript
+// 存放由圖片合併而成的大圖(底片
+private bmpArr: egret.Bitmap[];
+
+// 圖片數量
+private rowCount: number;
+
+// 容器寬
+private stageW: number;
+
+// 容器高
+private stageH: number;
+
+// 圖片來源寬
+private textureWidth: number;
+
+// 場景移動速度
+private speed: number = 10;
+```
 
 於舞台（STAGE）建立階段讀取資源，
 
@@ -220,61 +239,64 @@ mygame / BgMap.ts
 
 mygame / BgMap.ts
 
-    public constructor() {
-        super();
-        this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
+```typescript
+public constructor() {
+    super();
+    this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
+}
+
+private onAddToStage(event: egret.Event) {
+
+    this.removeEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
+
+    this.stageW = this.stage.stageWidth;
+    this.stageH = this.stage.stageHeight;
+    var texture: egret.Texture = RES.getRes("bg_jpg");
+
+    this.textureWidth = texture.textureWidth;
+
+   　// 計算當前容器(或螢幕), 需要多少張圖片才能填滿
+    this.rowCount = Math.ceil(this.stageW / this.textureWidth) + 1;
+    this.bmpArr = [];
+    
+    // 將圖片並列在一起
+    for (var i: number = 0; i < this.rowCount; i++) {
+        var bgBmp: egret.Bitmap = mygame.createBitmapByName("bg_jpg");
+        bgBmp.x = this.textureWidth * i;
+        console.log(bgBmp.x);
+        this.bmpArr.push(bgBmp);
+        this.addChild(bgBmp);
     }
-    
-    private onAddToStage(event: egret.Event) {
-    
-        this.removeEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
-    
-        this.stageW = this.stage.stageWidth;
-        this.stageH = this.stage.stageHeight;
-        var texture: egret.Texture = RES.getRes("bg_jpg");
-    
-        this.textureWidth = texture.textureWidth;
-    
-       　// 計算當前容器(或螢幕), 需要多少張圖片才能填滿
-        this.rowCount = Math.ceil(this.stageW / this.textureWidth) + 1;
-        this.bmpArr = [];
-        
-        // 將圖片並列在一起
-        for (var i: number = 0; i < this.rowCount; i++) {
-            var bgBmp: egret.Bitmap = mygame.createBitmapByName("bg_jpg");
-            bgBmp.x = this.textureWidth * i;
-            console.log(bgBmp.x);
-            this.bmpArr.push(bgBmp);
-            this.addChild(bgBmp);
-        }
-    }
-    
+}
+```
 
 建立基於幀數的開始與停止事件，當開始時，會執行 enterFrameHandler 。
 
 mygame / BgMap.ts
 
-    /**
-     * 開始滾動
-     */
-    public start(): void {
-        this.removeEventListener(egret.Event.ENTER_FRAME, this.enterFrameHandler, this);
-        this.addEventListener(egret.Event.ENTER_FRAME, this.enterFrameHandler, this);
-    }
-    
-    /**
-     * 滾動 - ENTER_FRAME
-     */
-    private enterFrameHandler(event: egret.Event) {
-    
-    }
-    
-    /**
-     * 暫停滾動
-     */
-    public pause(): void {
-        this.removeEventListener(egret.Event.ENTER_FRAME, this.enterFrameHandler, this);
-    }
+```typescript
+/**
+ * 開始滾動
+ */
+public start(): void {
+    this.removeEventListener(egret.Event.ENTER_FRAME, this.enterFrameHandler, this);
+    this.addEventListener(egret.Event.ENTER_FRAME, this.enterFrameHandler, this);
+}
+
+/**
+ * 滾動 - ENTER_FRAME
+ */
+private enterFrameHandler(event: egret.Event) {
+
+}
+
+/**
+ * 暫停滾動
+ */
+public pause(): void {
+    this.removeEventListener(egret.Event.ENTER_FRAME, this.enterFrameHandler, this);
+}
+```
 
 在滾動的事件中，利用迴圈，將所有圖片不斷地向左移動，
 
@@ -282,30 +304,32 @@ mygame / BgMap.ts
 
 mygame / BgMap.ts
 
-    /**
-     * 滾動 - ENTER_FRAME
-     */
-    private enterFrameHandler(event: egret.Event) {
-    
-        for (var i: number = 0; i < this.rowCount; i++) {
-    
-            if (this.bmpArr[i].x <= -1 * this.textureWidth) {
-    
-                var bgBmp: egret.Bitmap = this.bmpArr[i];
-                bgBmp.x = this.bmpArr[this.rowCount - 1].x + this.textureWidth;
-    
-                this.bmpArr.shift();
-                this.bmpArr.push(bgBmp);
-    
-                // 處理位置跳格問題
-                this.bmpArr.forEach(bmp => {
-                    bmp.x += this.speed;
-                });
-    
-            }
-            this.bmpArr[i].x -= this.speed;
+```typescript
+/**
+ * 滾動 - ENTER_FRAME
+ */
+private enterFrameHandler(event: egret.Event) {
+
+    for (var i: number = 0; i < this.rowCount; i++) {
+
+        if (this.bmpArr[i].x <= -1 * this.textureWidth) {
+
+            var bgBmp: egret.Bitmap = this.bmpArr[i];
+            bgBmp.x = this.bmpArr[this.rowCount - 1].x + this.textureWidth;
+
+            this.bmpArr.shift();
+            this.bmpArr.push(bgBmp);
+
+            // 處理位置跳格問題
+            this.bmpArr.forEach(bmp => {
+                bmp.x += this.speed;
+            });
+
         }
+        this.bmpArr[i].x -= this.speed;
     }
+}
+```
 
 ### 將滾動背景加入於遊戲容器中
 
@@ -313,7 +337,9 @@ mygame / BgMap.ts
 
 mygame / GameContainer.ts
 
-    private bg: mygame.BgMap;
+```typescript
+private bg: mygame.BgMap;
+```
 
 於遊戲容器的舞台（STAGE）建構階段，將背景加入，
 
@@ -321,23 +347,25 @@ mygame / GameContainer.ts
 
 mygame / GameContainer.ts
 
-    public constructor() {
-        super();
-        this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
-    }
-    
-    private onAddToStage(event: egret.Event) {
-        this.removeEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
-        this.createGameScene();
-    }
-    
-    private createGameScene(): void {
-        this.bg = new mygame.BgMap();
-        this.addChild(this.bg);
-    
-        // 背景開始滾動
-        this.bg.start();
-    }
+```typescript
+public constructor() {
+    super();
+    this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
+}
+
+private onAddToStage(event: egret.Event) {
+    this.removeEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
+    this.createGameScene();
+}
+
+private createGameScene(): void {
+    this.bg = new mygame.BgMap();
+    this.addChild(this.bg);
+
+    // 背景開始滾動
+    this.bg.start();
+}
+```
 
 ### 將該遊戲容器加入於主體容器
 
@@ -349,62 +377,64 @@ mygame / GameContainer.ts
 
 Main.ts
 
-    public constructor() {
-        super();
-        this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
+```typescript
+public constructor() {
+    super();
+    this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
+}
+
+private onAddToStage(event: egret.Event) {
+
+    //初始化Resource资源加载库
+    //initiate Resource loading library
+    RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
+    RES.loadConfig("resource/default.res.json", "resource/");
+}
+
+/**
+ * 配置文件加载完成,开始预加载preload资源组。
+ * configuration file loading is completed, start to pre-load the preload resource group
+ */
+private onConfigComplete(event: RES.ResourceEvent): void {
+    RES.removeEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
+    RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
+    RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
+    RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
+    RES.loadGroup("preload");
+}
+
+/**
+ * preload资源组加载完成
+ * Preload resource group is loaded
+ */
+private onResourceLoadComplete(event: RES.ResourceEvent) {
+    if (event.groupName == "preload") {
+        RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
+        RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
+        RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
     }
-    
-    private onAddToStage(event: egret.Event) {
-    
-        //初始化Resource资源加载库
-        //initiate Resource loading library
-        RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
-        RES.loadConfig("resource/default.res.json", "resource/");
-    }
-    
-    /**
-     * 配置文件加载完成,开始预加载preload资源组。
-     * configuration file loading is completed, start to pre-load the preload resource group
-     */
-    private onConfigComplete(event: RES.ResourceEvent): void {
-        RES.removeEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
-        RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
-        RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
-        RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
-        RES.loadGroup("preload");
-    }
-    
-    /**
-     * preload资源组加载完成
-     * Preload resource group is loaded
-     */
-    private onResourceLoadComplete(event: RES.ResourceEvent) {
-        if (event.groupName == "preload") {
-            RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
-            RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
-            RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
-        }
-    }
-    
-    /**
-     * 资源组加载出错
-     *  The resource group loading failed
-     */
-    private onItemLoadError(event: RES.ResourceEvent) {
-        console.warn("Url:" + event.resItem.url + " has failed to load");
-    }
-    
-    /**
-     * 资源组加载出错
-     *  The resource group loading failed
-     */
-    private onResourceLoadError(event: RES.ResourceEvent) {
-        //TODO
-        console.warn("Group:" + event.groupName + " has failed to load");
-        //忽略加载失败的项目
-        //Ignore the loading failed projects
-        this.onResourceLoadComplete(event);
-    }
+}
+
+/**
+ * 资源组加载出错
+ *  The resource group loading failed
+ */
+private onItemLoadError(event: RES.ResourceEvent) {
+    console.warn("Url:" + event.resItem.url + " has failed to load");
+}
+
+/**
+ * 资源组加载出错
+ *  The resource group loading failed
+ */
+private onResourceLoadError(event: RES.ResourceEvent) {
+    //TODO
+    console.warn("Group:" + event.groupName + " has failed to load");
+    //忽略加载失败的项目
+    //Ignore the loading failed projects
+    this.onResourceLoadComplete(event);
+}
+```
 
 在 onResourceLoadComplete 中，當載入完畢的群組等於 preload，
 
@@ -412,15 +442,17 @@ Main.ts
 
 Main.ts
 
-    if (event.groupName == "preload") {
-        RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
-        RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
-        RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
-    
-        //游戏的主类开始实例化
-        var gameContainer: mygame.GameContainer = new mygame.GameContainer();
-        this.addChild(gameContainer);
-    }
+```typescript
+if (event.groupName == "preload") {
+    RES.removeEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
+    RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
+    RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
+
+    //游戏的主类开始实例化
+    var gameContainer: mygame.GameContainer = new mygame.GameContainer();
+    this.addChild(gameContainer);
+}
+```
 
 為什麼是 preload？
 
@@ -428,21 +460,23 @@ Main.ts
 
 可以看到系統預設建立名為 preload 的群組（groups）：
 
-    {
-     "groups": [
-      {
-       "name": "preload",
-       "keys": "bg_jpg"
-      }
-     ],
-     "resources": [
-      {
-       "name": "bg_jpg",
-       "type": "image",
-       "url": "bg.jpg"
-      }
-     ]
-    }
+```json
+{
+ "groups": [
+  {
+   "name": "preload",
+   "keys": "bg_jpg"
+  }
+ ],
+ "resources": [
+  {
+   "name": "bg_jpg",
+   "type": "image",
+   "url": "bg.jpg"
+  }
+ ]
+}
+```
 
 ### 編譯執行結果
 

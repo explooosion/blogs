@@ -39,9 +39,11 @@ css calc 搭配變數的各種奇淫技巧！
 
 \[ Foo.css \]
 
-    div {
-      height: calc(100vh - 50px);
-    }
+```css
+div {
+  height: calc(100vh - 50px);
+}
+```
 
 你知道嗎？筆者尊重性別平等，因此「男人...」這句話不代表本人立場。
 
@@ -53,13 +55,15 @@ css calc 搭配變數的各種奇淫技巧！
 
 \[ Foo.css \]
 
-    :root {
-      --head: 50px;
-    }
-    
-    div {
-      height: calc(100vh - var(--head));
-    }
+```css
+:root {
+  --head: 50px;
+}
+
+div {
+  height: calc(100vh - var(--head));
+}
+```
 
 你知道嗎？在 :root 內定義的屬性名稱，必須是 \-- 開頭，例如：\--head。
 
@@ -78,13 +82,15 @@ css calc 搭配變數的各種奇淫技巧！
 
 \[ Foo.scss \]
 
-    :root {
-      --head: 50px;
-    }
-    
-    div {
-      height: calc(100vh - var(--head));
-    }
+```css
+:root {
+  --head: 50px;
+}
+
+div {
+  height: calc(100vh - var(--head));
+}
+```
 
 你知道嗎？不少 css framework 經常使用 :root 來定義設計模式。
 
@@ -96,21 +102,25 @@ css calc 搭配變數的各種奇淫技巧！
 
 \[ Foo.scss \]
 
-    $head: 50px;
-    
-    div {
-      height: calc(100vh - #{$head});
-    }
+```scss
+$head: 50px;
+
+div {
+  height: calc(100vh - #{$head});
+}
+```
 
 三、styled-components
 -------------------
 
 當專案使用 react ＋ styled-components，除了元素的主樣式會寫在 js 內：
 
-    const Main = styled.main`
-      width: 100px;
-      color: #f00;
-    `;
+```javascript
+const Main = styled.main`
+  width: 100px;
+  color: #f00;
+`;
+```
 
 你可能也會有 scss 資料夾存放各類模組，例如：
 
@@ -138,19 +148,21 @@ css calc 搭配變數的各種奇淫技巧！
 
 \[ Foo.js \]
 
-    const head = '50px';
-    
-    const Foo = styled.div`
-      height: calc(100vh - ${head});
-    `;
-    
-    const Bar = styled.div`
-      height: ${() => `calc(100vh - ${head})`};
-    `;
-    
-    const App = styled.div`
-      height: ${`calc(100vh - ${head})`};
-    `;
+```javascript
+const head = '50px';
+
+const Foo = styled.div`
+  height: calc(100vh - ${head});
+`;
+
+const Bar = styled.div`
+  height: ${() => `calc(100vh - ${head})`};
+`;
+
+const App = styled.div`
+  height: ${`calc(100vh - ${head})`};
+`;
+```
 
 ### 2. 從 ThemeProvider 載入 scss 模組中的變數
 
@@ -158,9 +170,11 @@ css calc 搭配變數的各種奇淫技巧！
 
 \[ Foo.js \]
 
-    const Main = styled.main`
-      height: ${p => `calc(100vh - ${p.theme.head})`};
-    `;
+```javascript
+const Main = styled.main`
+  height: ${p => `calc(100vh - ${p.theme.head})`};
+`;
+```
 
 ### 3\. 從 ThemeProvider 載入 scss 模組中的 :root
 
@@ -168,9 +182,11 @@ css calc 搭配變數的各種奇淫技巧！
 
 \[ Foo.js \]
 
-    const Main = styled.main`
-      height: calc(100vh - var(--head));
-    `;
+```javascript
+const Main = styled.main`
+  height: calc(100vh - var(--head));
+`;
+```
 
 ### 4. 不經過 ThemeProvider ，載入 scss 的變數
 
@@ -184,20 +200,23 @@ css calc 搭配變數的各種奇淫技巧！
 
 \[ Foo.scss \]
 
-    $head: 50px;
-    
-    :export {
-      head: $head;
-    }
-    
+```scss
+$head: 50px;
+
+:export {
+  head: $head;
+}
+```
 
 \[ Foo.js \]
 
-    import { head } from './Foo.scss';
-    
-    const Main = styled.div`
-      height: calc(100vh - ${head});
-    `;
+```javascript
+import { head } from './Foo.scss';
+
+const Main = styled.div`
+  height: calc(100vh - ${head});
+`;
+```
 
 ### 5\. 不經過 ThemeProvider ，載入 scss 的 :root
 
@@ -205,17 +224,21 @@ css calc 搭配變數的各種奇淫技巧！
 
 \[ Foo.scss \]
 
-    :root {
-      --head: 50px;
-    }
+```css
+:root {
+  --head: 50px;
+}
+```
 
 \[ Foo.js \]
 
-    import './Foo.scss';
-    
-    const Main = styled.main`
-      height: calc(100vh - var(--head));
-    `;
+```javascript
+import './Foo.scss';
+
+const Main = styled.main`
+  height: calc(100vh - var(--head));
+`;
+```
 
 以上整理一些 calc 讀取變數的方式，
 

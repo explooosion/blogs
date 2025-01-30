@@ -51,19 +51,25 @@ QAQ 時間過好快！！！
 
 接著使用系統管理員開啟終端機輸入：
 
-    @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+```bash
+@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+```
 
 上述指令可於官網直接複製。
 
 確認安裝是否成功：
 
-    choco -v
+```bash
+choco -v
+```
 
 ![1534006571_85758.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534006571_85758.png)
 
 更新 chocolatey。
 
-    choco upgrade chocolatey
+```bash
+choco upgrade chocolatey
+```
 
 安裝成功後最好重開終端機，以確保吃到設定。
 
@@ -71,13 +77,17 @@ QAQ 時間過好快！！！
 
 安裝 nodejs﹑python2、jdk：
 
-    choco install -y nodejs.install python2 jdk8
+```bash
+choco install -y nodejs.install python2 jdk8
+```
 
 請依據個人電腦所缺少的套件進行安裝，
 
 由於筆者環境已經有 node.js，因此指令為：
 
-    choco install -y python2 jdk8
+```bash
+choco install -y python2 jdk8
+```
 
 用 choco 安裝好處就是可以省掉很多環境設定的步驟！！！
 
@@ -89,11 +99,15 @@ QAQ 時間過好快！！！
 
 接著安裝 CLI：
 
-    npm install -g react-native-cli
+```bash
+npm install -g react-native-cli
+```
 
 確認是否安裝成功：
 
-    react-native -v
+```bash
+react-native -v
+```
 
 [![1534006526_46709.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534006526_46709.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534006526_46709.png)
 
@@ -130,7 +144,9 @@ QAQ 時間過好快！！！
 
 筆者是放在：
 
-    C:\Android\sdk
+```bash
+C:\Android\sdk
+```
 
 我知道官方這麼寫著：
 
@@ -179,15 +195,20 @@ QAQ 時間過好快！！！
 
 新增環境變數，變數值請根據 sdk 所在目錄。
 
-    #變數名稱
-    ANDROID_HOME
-
-    #變數值
-    C:\Android\sdk
+```bash
+#變數名稱
+ANDROID_HOME
+```
+```bash
+#變數值
+C:\Android\sdk
+```
 
 如果你沒更改過 sdk 目錄，預設應該會是在：
 
-    c:\Users\YOUR_USERNAME\AppData\Local\Android\Sdk
+```bash
+c:\Users\YOUR_USERNAME\AppData\Local\Android\Sdk
+```
 
 給文組的圖解步驟如下：
 
@@ -225,15 +246,21 @@ QAQ 時間過好快！！！
 
 有了模擬器後，就可建立一個範例專案，隨意取名為「AwesomeProject」。
 
-    react-native init AwesomeProject
+```bash
+react-native init AwesomeProject
+```
 
 進入目錄。 
 
-    cd AwesomeProject
+```bash
+cd AwesomeProject
+```
 
 啟動 APP 專案，並以 Android 環境啟動。
 
-    react-native run-android
+```bash
+react-native run-android
+```
 
 記得要啟動手機模擬器
 
@@ -266,27 +293,37 @@ QAQ 時間過好快！！！
 
 platform-tools 位於你的 sdk 所在位置。
 
-    C:\Android\sdk\platform-tools
+```bash
+C:\Android\sdk\platform-tools
+```
 
 ![1534012255_71578.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534012255_71578.png)
 
 執行以下指令：
 
-    adb reverse tcp:8081 tcp:8081
+```bash
+adb reverse tcp:8081 tcp:8081
+```
 
 接著再去執行一次看看：
 
-    react-native run-android
+```bash
+react-native run-android
+```
 
 等待.....
 
 如果又失敗，則改執行以下指令，並請於專案當前目錄執行：
 
-    chmod 755 android/gradlew
+```bash
+chmod 755 android/gradlew
+```
 
 或是：
 
-    chmod 755 .
+```bash
+chmod 755 .
+```
 
 如果你不能使用 chmod，請下載 [cmder](http://cmder.net/)。
 
@@ -323,32 +360,36 @@ platform-tools 位於你的 sdk 所在位置。
 
 完整範例如下（主要改那兩個版本即可）：
 
-    {
-      "name": "AwesomeProject",
-      "version": "0.0.1",
-      "private": true,
-      "scripts": {
-        "start": "node node_modules/react-native/local-cli/cli.js start",
-        "test": "jest"
-      },
-      "dependencies": {
-        "react": "16.4.1",
-        "react-native": "0.55.2"
-      },
-      "devDependencies": {
-        "babel-jest": "23.4.2",
-        "babel-preset-react-native": "4",
-        "jest": "23.5.0",
-        "react-test-renderer": "16.4.1"
-      },
-      "jest": {
-        "preset": "react-native"
-      }
-    }
+```json
+{
+  "name": "AwesomeProject",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.4.1",
+    "react-native": "0.55.2"
+  },
+  "devDependencies": {
+    "babel-jest": "23.4.2",
+    "babel-preset-react-native": "4",
+    "jest": "23.5.0",
+    "react-test-renderer": "16.4.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
+```
 
 接著重新安裝：
 
-    yarn install
+```bash
+yarn install
+```
 
 [![1534014038_61958.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534014038_61958.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534014038_61958.png)
 
@@ -358,7 +399,9 @@ platform-tools 位於你的 sdk 所在位置。
 
 降級後，讓我們重新啟動吧～
 
-    react-native run-android
+```bash
+react-native run-android
+```
 
 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈！
 
@@ -376,11 +419,15 @@ platform-tools 位於你的 sdk 所在位置。
 
 你應該會很熟悉，就是剛剛的指令：
 
-    adb reverse tcp:8081 tcp:8081
+```bash
+adb reverse tcp:8081 tcp:8081
+```
 
 接著我們再重新啟動：
 
-    react-native run-android
+```bash
+react-native run-android
+```
 
 太港動喇～～～～～
 
@@ -399,19 +446,27 @@ platform-tools 位於你的 sdk 所在位置。
 
 將專案 clone 下來。
 
-    git clone https://github.com/mcnamee/react-native-starter-kit.git
+```bash
+git clone https://github.com/mcnamee/react-native-starter-kit.git
+```
 
 進入專案。
 
-    cd react-native-starter-kit
+```bash
+cd react-native-starter-kit
+```
 
 安裝依賴，或使用 npm install（宗教問題）。
 
-    yarn install
+```bash
+yarn install
+```
 
 啟動專案。
 
-    yarn start
+```bash
+yarn start
+```
 
 出現提示畫面時，我們按下 a
 

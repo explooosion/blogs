@@ -38,13 +38,17 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 首先進行安裝，目前版本為 1.0.0 beta版。
 
-    npm install @agm/core --save
+```
+npm install @agm/core --save
+```
 
 [![1500298386_86971.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500298386_86971.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500298386_86971.png)
 
 到 src/app/app.module.ts  中引入 AGM 模組。
 
-    import { AgmCoreModule } from '@agm/core';
+```javascript
+import { AgmCoreModule } from '@agm/core';
+```
 
 在 @NgModule 中，imports 加入 AgmCoreModule，
 
@@ -54,21 +58,23 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 ［app.module.ts］
 
-    @NgModule({
-      imports: [
-        BrowserModule,
-        CommonModule,
-        FormsModule,
-        AgmCoreModule.forRoot({
-          apiKey: 'YOUR_KEY',
-          language: 'zh-TW'
-        })
-      ],
-      providers: [],
-      declarations: [ AppComponent ],
-      bootstrap: [ AppComponent ]
+```typescript
+@NgModule({
+  imports: [
+    BrowserModule,
+    CommonModule,
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'YOUR_KEY',
+      language: 'zh-TW'
     })
-    export class AppModule {}
+  ],
+  providers: [],
+  declarations: [ AppComponent ],
+  bootstrap: [ AppComponent ]
+})
+export class AppModule {}
+```
 
 *   language：在此填入 zh-TW，其實也可以將此屬性省略。
 *   apiKey：google map api key
@@ -80,19 +86,21 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 ［app.component.ts］
 
-    import { Component } from '@angular/core';
-    
-    @Component({
-      selector: 'app-root',
-      templateUrl: './app.component.html',
-      styleUrls: ['./app.component.css']
-    })
-    export class AppComponent {
-      title: string = 'Angular4 AGM Demo';
-      lat: number = 24.1504536;
-      lng: number = 120.68325279999999;
-      zoomValue: number = 15;
-    }
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title: string = 'Angular4 AGM Demo';
+  lat: number = 24.1504536;
+  lng: number = 120.68325279999999;
+  zoomValue: number = 15;
+}
+```
 
 *   lat：緯度（number 數字型別）
 *   lng：經度（number 數字型別）
@@ -105,8 +113,10 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 ［app.component.html］
 
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue">
-    </agm-map>
+```html
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue">
+</agm-map>
+```
 
 *   agm-map  API：[AgmMap](https://angular-maps.com/api-docs/agm-core/components/AgmMap.html)
 
@@ -118,9 +128,11 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 ［app.component.css］
 
-    agm-map {
-        height: 80vh;
-    }
+```css
+agm-map {
+    height: 80vh;
+}
+```
 
 Demo
 
@@ -135,22 +147,26 @@ Demo
 
 ［app.component.html］
 
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue">
-      <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="iconUrl"></agm-marker>
-    </agm-map>
+```html
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue">
+  <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="iconUrl"></agm-marker>
+</agm-map>
+```
 
 *    agm-marker API：[AgmMarker](https://angular-maps.com/api-docs/agm-core/directives/AgmMarker.html)
 *   iconUrl：標記點的圖片，若無設定，則預設（我們平常看到的那種）
 
 ［app.component.ts］
 
-    export class AppComponent {
-      title: string = 'Angular4 AGM Demo';
-      lat: number = 24.1504536;
-      lng: number = 120.68325279999999;
-      zoomValue: number = 15;
-      iconUrl: string = 'http://i.imgur.com/0TctIfY.png';
-    }
+```typescript
+export class AppComponent {
+  title: string = 'Angular4 AGM Demo';
+  lat: number = 24.1504536;
+  lng: number = 120.68325279999999;
+  zoomValue: number = 15;
+  iconUrl: string = 'http://i.imgur.com/0TctIfY.png';
+}
+```
 
 Demo（無自訂圖案）：
 
@@ -171,13 +187,15 @@ Demo（自訂圖案）：
 
 ［app.component.html］
 
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue">
-      <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="iconUrl" (markerClick)="markerClick()"></agm-marker>
-      <agm-info-window [latitude]="lat+0.0005" [longitude]="lng" [isOpen]="isOpen">
-        <h5>國立臺中科技大學</h5>
-        <p>National Taichung University of Science and Technology.</p>
-      </agm-info-window>
-    </agm-map>
+```html
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue">
+  <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="iconUrl" (markerClick)="markerClick()"></agm-marker>
+  <agm-info-window [latitude]="lat+0.0005" [longitude]="lng" [isOpen]="isOpen">
+    <h5>國立臺中科技大學</h5>
+    <p>National Taichung University of Science and Technology.</p>
+  </agm-info-window>
+</agm-map>
+```
 
 *   agm-info-window API：[AgmInfoWindow](https://angular-maps.com/api-docs/agm-core/components/AgmInfoWindow.html)
 *   infowindow：在屬性上故意利用 lat+0.0005，因為我們希望訊息顯示在點位偏上，否則會導致重疊不清楚。
@@ -188,11 +206,13 @@ Demo（自訂圖案）：
 
 ［app.component.ts］
 
-      isOpen: boolean = false;
-    
-      public markerClick(e) {
-        this.isOpen = true;
-      }
+```typescript
+isOpen: boolean = false;
+
+  public markerClick(e) {
+    this.isOpen = true;
+  }
+```
 
 ![1500303373_67957.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500303373_67957.png)
 
@@ -206,23 +226,27 @@ Demo（自訂圖案）：
 
 ［app.component.html］
 
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue">
-      <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="iconUrl" (markerClick)="markerClick(infowindow)"></agm-marker>
-      <agm-info-window #infowindow [latitude]="lat+0.0005" [longitude]="lng" [isOpen]="isOpen">
-        <h5>國立臺中科技大學</h5>
-        <p>National Taichung University of Science and Technology.</p>
-      </agm-info-window>
-    </agm-map>
+```html
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue">
+  <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="iconUrl" (markerClick)="markerClick(infowindow)"></agm-marker>
+  <agm-info-window #infowindow [latitude]="lat+0.0005" [longitude]="lng" [isOpen]="isOpen">
+    <h5>國立臺中科技大學</h5>
+    <p>National Taichung University of Science and Technology.</p>
+  </agm-info-window>
+</agm-map>
+```
 
 修改一下 click 事件，利用 InfoWindow API 中的 open() 方法打開他。
 
 ［app.component.ts］
 
-      public markerClick(e) {
-        console.log(e);
-        e.open();
-        this.isOpen = true;
-      }
+```typescript
+public markerClick(e) {
+    console.log(e);
+    e.open();
+    this.isOpen = true;
+  }
+```
 
 打開瀏覽器開發者模式，透過 console.log 就可看到物件資訊
 
@@ -239,14 +263,16 @@ Demo（自訂圖案）：
 
 ［app.component.html］
 
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue">
-      <agm-circle [latitude]="lat" [longitude]="lng" [radius]="radius" [fillColor]="fillColor"></agm-circle>
-      <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="iconUrl" (markerClick)="markerClick(infowindow)"></agm-marker>
-      <agm-info-window #infowindow [latitude]="lat+0.0005" [longitude]="lng" [isOpen]="isOpen">
-        <h5>國立臺中科技大學</h5>
-        <p>National Taichung University of Science and Technology.</p>
-      </agm-info-window>
-    </agm-map>
+```html
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue">
+  <agm-circle [latitude]="lat" [longitude]="lng" [radius]="radius" [fillColor]="fillColor"></agm-circle>
+  <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="iconUrl" (markerClick)="markerClick(infowindow)"></agm-marker>
+  <agm-info-window #infowindow [latitude]="lat+0.0005" [longitude]="lng" [isOpen]="isOpen">
+    <h5>國立臺中科技大學</h5>
+    <p>National Taichung University of Science and Technology.</p>
+  </agm-info-window>
+</agm-map>
+```
 
 *   agm-circle API：[AgmCircle](https://angular-maps.com/api-docs/agm-core/directives/AgmCircle.html)
 *   radius：圓形半徑（公尺）
@@ -257,8 +283,10 @@ Demo（自訂圖案）：
 
 ［app.component.ts］
 
-      radius: number = 500;
-      fillColor: string = 'rgba(194,60,172,1)';
+```typescript
+radius: number = 500;
+  fillColor: string = 'rgba(194,60,172,1)';
+```
 
 *   radius：其實就是500公尺唷！
 *   fillColor：給個粉紅色好了～
@@ -285,14 +313,18 @@ _覺得還蠻幸運的，還好有紀錄，否則就要在這採坑一段時間�
 
 在 AGM 中，我們要將圖資轉為 [geojson](http://geojson.org/)：[](http://geojson.org/)
 
-    npm install -g mapshaper
-    mapshaper county.shp -o encoding=big5 format=geojson  county.json
+```
+npm install -g mapshaper
+mapshaper county.shp -o encoding=big5 format=geojson  county.json
+```
 
 首先我們先建立一個 Service，程式碼才不會雜亂，
 
 而該服務會讀取JSON，並回傳解析後程式：
 
-    ng g service service/layer
+```
+ng g service service/layer
+```
 
 [![1500305812_63058.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500305812_63058.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500305812_63058.png)
 
@@ -302,15 +334,14 @@ _覺得還蠻幸運的，還好有紀錄，否則就要在這採坑一段時間�
 
 ［app.module.ts］
 
-    
-    import { HttpModule, JsonpModule } from '@angular/http';
-    
-      imports: [
-        HttpModule,
-        JsonpModule,
-        ...
-    
-    
+```typescript
+import { HttpModule, JsonpModule } from '@angular/http';
+
+  imports: [
+    HttpModule,
+    JsonpModule,
+    ...
+```
 
 完成後開始撰寫 layerService，
 
@@ -320,10 +351,12 @@ _覺得還蠻幸運的，還好有紀錄，否則就要在這採坑一段時間�
 
 ［layer.service.ts］
 
-    import { Injectable } from '@angular/core';
-    import { Http, Response } from '@angular/http';
-    
-    import 'rxjs/add/operator/map';
+```typescript
+import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+
+import 'rxjs/add/operator/map';
+```
 
 注入 http 模組，並設定檔案路徑。
 
@@ -331,20 +364,24 @@ _覺得還蠻幸運的，還好有紀錄，否則就要在這採坑一段時間�
 
 ［layer.service.ts］ 
 
-    public url: string = 'assets/county.json'
-    
-    constructor(private http: Http) { }
+```typescript
+public url: string = 'assets/county.json'
+
+constructor(private http: Http) { }
+```
 
 建立一個讀取資料的方法。
 
 ［layer.service.ts］
 
-    public getGeoJsonLayer() {
-        return this.http.get(this.url)
-          .map((res) => {
-            return res.json() || {}
-        });
-    }
+```typescript
+public getGeoJsonLayer() {
+    return this.http.get(this.url)
+      .map((res) => {
+        return res.json() || {}
+    });
+}
+```
 
 *   map：為 rx.js 中的方法之一
 *   res.json：回傳 JSON 格式
@@ -357,18 +394,22 @@ _覺得還蠻幸運的，還好有紀錄，否則就要在這採坑一段時間�
 
 ［app.component.ts］
 
-    import { Component, OnInit } from '@angular/core';
-    
-    import { LayerService } from './service/layer.service';
+```javascript
+import { Component, OnInit } from '@angular/core';
+
+import { LayerService } from './service/layer.service';
+```
 
 注入 LayerService 服務：
 
 ［app.component.ts］
 
-    @Component({
-      ...
-      providers: [LayerService]
-    })
+```typescript
+@Component({
+  ...
+  providers: [LayerService]
+})
+```
 
 在最上方我們讓 AppComponent 使用 [Lifecycle hooks](http://ithelp.ithome.com.tw/articles/10188047) 中的 OnInit 。
 
@@ -376,9 +417,11 @@ _覺得還蠻幸運的，還好有紀錄，否則就要在這採坑一段時間�
 
 ［app.component.ts］
 
-    export class AppComponent implements OnInit {
-      ...[省略]
-    }
+```typescript
+export class AppComponent implements OnInit {
+  ...[省略]
+}
+```
 
 在建構式中，宣告 layerService，同時建立一個 Object 存放資料。
 
@@ -386,29 +429,33 @@ _覺得還蠻幸運的，還好有紀錄，否則就要在這採坑一段時間�
 
 ［app.component.ts］
 
-      geoJson: Object = null;
-    
-      constructor(private layerService: LayerService) { }
-    
-      ngOnInit() {
-        this.layerService.getGeoJsonLayer()
-          .subscribe(
-          result => {
-            this.geoJson = result;
-          });
-      }
+```typescript
+geoJson: Object = null;
+
+  constructor(private layerService: LayerService) { }
+
+  ngOnInit() {
+    this.layerService.getGeoJsonLayer()
+      .subscribe(
+      result => {
+        this.geoJson = result;
+      });
+  }
+```
 
 最最最最後！我們只要加入 agm-data-layer 就完成惹！
 
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue">
-      <agm-data-layer [geoJson]="geoJson"></agm-data-layer>
-      <agm-circle [latitude]="lat" [longitude]="lng" [radius]="radius" [fillColor]="fillColor"></agm-circle>
-      <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="iconUrl" (markerClick)="markerClick(infowindow)"></agm-marker>
-      <agm-info-window #infowindow [latitude]="lat+0.0005" [longitude]="lng" [isOpen]="isOpen">
-        <h5>國立臺中科技大學</h5>
-        <p>National Taichung University of Science and Technology.</p>
-      </agm-info-window>
-    </agm-map>
+```html
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue">
+  <agm-data-layer [geoJson]="geoJson"></agm-data-layer>
+  <agm-circle [latitude]="lat" [longitude]="lng" [radius]="radius" [fillColor]="fillColor"></agm-circle>
+  <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="iconUrl" (markerClick)="markerClick(infowindow)"></agm-marker>
+  <agm-info-window #infowindow [latitude]="lat+0.0005" [longitude]="lng" [isOpen]="isOpen">
+    <h5>國立臺中科技大學</h5>
+    <p>National Taichung University of Science and Technology.</p>
+  </agm-info-window>
+</agm-map>
+```
 
 *   agm-data-layer API：[AgmDataLayer](https://angular-maps.com/api-docs/agm-core/directives/AgmDataLayer.html)
 *   geoJson：圖資須為 GeoJson 格式
@@ -436,16 +483,20 @@ Demo：
 
 ［app.component.html］
 
-    <agm-data-layer [geoJson]="geoJson" [style]="style"></agm-data-layer>
+```html
+<agm-data-layer [geoJson]="geoJson" [style]="style"></agm-data-layer>
+```
 
 ［app.component.ts］ 
 
-      public style() {
-        return {
-          fillColor: 'green',
-          strokeColor: 'green',
-        };
-      }
+```typescript
+public style() {
+    return {
+      fillColor: 'green',
+      strokeColor: 'green',
+    };
+  }
+```
 
 始終是無效的，為什麼會這樣呢？
 
@@ -461,18 +512,22 @@ Demo：
 
 ［app.component.html］
 
-    <agm-data-layer *ngIf="geoJsonReady" [geoJson]="geoJson" [style]="style"></agm-data-layer>
+```html
+<agm-data-layer *ngIf="geoJsonReady" [geoJson]="geoJson" [style]="style"></agm-data-layer>
+```
 
 ［app.component.ts］
 
-      ngOnInit() {
-        this.layerService.getGeoJsonLayer()
-          .subscribe(
-          result => {
-            this.geoJson = result;
-            this.geoJsonReady = true;
-          });
-      }
+```typescript
+ngOnInit() {
+    this.layerService.getGeoJsonLayer()
+      .subscribe(
+      result => {
+        this.geoJson = result;
+        this.geoJsonReady = true;
+      });
+  }
+```
 
 ### 解法二：
 
@@ -482,14 +537,18 @@ Demo：
 
 ［app.component.html］
 
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue" (mapReady)="onReady($event)">
+```html
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoomValue" (mapReady)="onReady($event)">
+```
 
 *   mapReady：地圖載入完畢時執行的方法
 
   
 ［app.component.ts］
 
-      map: any = null;
+```typescript
+map: any = null;
+```
 
 把傳入的 map 指定給 this.map ，
 
@@ -499,20 +558,22 @@ Demo：
 
 ［app.component.ts］
 
-      onReady(map) {
-        this.map = map;
-      }
-    
-      ngOnInit() {
-        console.log('Start: ' + new Date());
-        this.layerService.getGeoJsonLayer()
-          .subscribe(
-          result => {
-            this.geoJson = result;
-            this.map.data.addGeoJson(this.geoJson);
-            this.map.data.setStyle(feature => this.style());
-          });
-      }
+```typescript
+onReady(map) {
+    this.map = map;
+  }
+
+  ngOnInit() {
+    console.log('Start: ' + new Date());
+    this.layerService.getGeoJsonLayer()
+      .subscribe(
+      result => {
+        this.geoJson = result;
+        this.map.data.addGeoJson(this.geoJson);
+        this.map.data.setStyle(feature => this.style());
+      });
+  }
+```
 
 兩者效能上沒有什麼差異，誤差值１秒內。
 
@@ -545,20 +606,28 @@ Demo：
 
 下載
 
-    git clone https://github.com/explooosion/Angular-AGM.git
+```
+git clone https://github.com/explooosion/Angular-AGM.git
+```
 
 安裝
 
-    cd an-agm
-    npm install
+```
+cd an-agm
+npm install
+```
 
 視環境可能會安裝到
 
-    npm install -g @angular/cli
+```
+npm install -g @angular/cli
+```
 
 啟動
 
-    ng serve
+```
+ng serve
+```
 
 感謝閱讀，獻給對於 angular gmap 需求者。
 

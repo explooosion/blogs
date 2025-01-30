@@ -69,7 +69,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 #### 1.1.2 從 Homebrew 安裝
 
-    brew cask install docker
+```bash
+brew cask install docker
+```
 
 什麼是 [Homebrew](https://brew.sh/index_zh-tw) ?
 
@@ -108,7 +110,9 @@ SQL Server 最低需求配置為 **3.25 GB**，
 
 下載映像檔。 
 
-    docker pull microsoft/mssql-server-linux
+```bash
+docker pull microsoft/mssql-server-linux
+```
 
 你知道嗎！不需要擔憂存放 Images 的路徑而切換目錄，因為會以 global 方式存取。
 
@@ -119,17 +123,21 @@ SQL Server 最低需求配置為 **3.25 GB**，
 
 下載完畢後，利用 docker images 可以查看本地擁有的映像檔。
 
-    docker images
+```bash
+docker images
+```
 
 [![1541855887_69839.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541855887_69839.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541855887_69839.png)
 
 所以檔案在哪？我真的很擔心怎麼辦？
 
-    docker inspect [IMAGE ID | REPOSITORY]
-
-    # docker inspect 4095d6d460cd
-    # docker inspect microsoft/mssql-server-linux
-    
+```bash
+docker inspect [IMAGE ID | REPOSITORY]
+```
+```bash
+# docker inspect 4095d6d460cd
+# docker inspect microsoft/mssql-server-linux
+```
 
 參考連結：[Where are images stored on Mac OS X?](https://forums.docker.com/t/where-are-images-stored-on-mac-os-x/17165)
 
@@ -137,9 +145,11 @@ SQL Server 最低需求配置為 **3.25 GB**，
 
 接著我們將利用剛剛的映像檔建立一個虛擬容器，並且在背景中運行。
 
-    docker run -d --name sql_server_demo -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=reallyStrongPwd123' -p 1433:1433 microsoft/mssql-server-linux
-    
-    # 我是閱讀好幫手
+```bash
+docker run -d --name sql_server_demo -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=reallyStrongPwd123' -p 1433:1433 microsoft/mssql-server-linux
+
+# 我是閱讀好幫手
+```
 
 *   **\-d**：表示該指令將於背景中運行，如果沒使用，你的終端機會整個卡住。
 *   **\--name**：sql\_server\_demo 為自訂的別名，當要指某個容器時，除了ID、也可以使用這個別名。
@@ -152,7 +162,9 @@ SQL Server 最低需求配置為 **3.25 GB**，
 
 利用 docker ps 查看執行中的容器。
 
-    docker ps -a
+```bash
+docker ps -a
+```
 
 *   **\-a**：將所有容器顯示，包含未啟動的。
 
@@ -166,7 +178,9 @@ SQL Server 最低需求配置為 **3.25 GB**，
 
 如果您要停止服務，即停止容器運作，利用 docker stop 即可。
 
-    docker stop sql_server_demo
+```bash
+docker stop sql_server_demo
+```
 
 *   **sql\_server\_demo**：這是容器的別名 NAME，你也可以使用 CONTAINER ID。
 
@@ -174,7 +188,9 @@ SQL Server 最低需求配置為 **3.25 GB**，
 
 參照 2.5 的步驟，如果停止了，只要使用 docker start 就可以啟動。
 
-    docker start sql_server_demo
+```bash
+docker start sql_server_demo
+```
 
 *   **sql\_server\_demo**：這是容器的別名 NAME，你也可以使用 CONTAINER ID。
 
@@ -184,7 +200,9 @@ SQL Server 最低需求配置為 **3.25 GB**，
 
 利用 docker rm 指令，就可以刪除。
 
-    docker rm sql_server_demo
+```bash
+docker rm sql_server_demo
+```
 
 *   **sql\_server\_demo**：這是容器的別名 NAME，你也可以使用 CONTAINER ID。
 
@@ -192,7 +210,9 @@ SQL Server 最低需求配置為 **3.25 GB**，
 
 剛剛下載的映像檔，使用 docker rmi 指令就可以刪除它。
 
-    docker rmi microsoft/mssql-server-linux
+```bash
+docker rmi microsoft/mssql-server-linux
+```
 
 由於筆者要留著... 就不真的執行刪除惹！
 
@@ -205,11 +225,15 @@ SQL Server 最低需求配置為 **3.25 GB**，
 
 安裝 [sql-cli](https://www.npmjs.com/package/sql-cli) 套件。
 
-    npm install -g sql-cli
+```bash
+npm install -g sql-cli
+```
 
 接著試著連線看看。
 
-    mssql -u sa -p reallyStrongPwd123
+```bash
+mssql -u sa -p reallyStrongPwd123
+```
 
 *   **\-u**：使用者名稱。
 *   **\-p**：密碼。
@@ -220,19 +244,25 @@ SQL Server 最低需求配置為 **3.25 GB**，
 
 試試軟體版本查詢。
 
-    select @@version
+```sql
+select @@version
+```
 
 [![1541913526_22207.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541913526_22207.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541913526_22207.png)
 
 試著建立資料庫。
 
-    CREATE DATABASE test
+```sql
+CREATE DATABASE test
+```
 
 ![1541913932_26426.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541913932_26426.png)
 
 試著查詢現有資料庫。
 
-    .databases
+```sql
+.databases
+```
 
 ![1541913967_04991.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541913967_04991.png)
 

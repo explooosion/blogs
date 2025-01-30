@@ -20,17 +20,23 @@ sublime【套件應用篇】新手教學之 HTML/CSS/JS Prettify 應用，請�
 
 開啟命令列。
 
-    Ctrl + Shift + p
+```bash
+Ctrl + Shift + p
+```
 
 安裝。
 
-    install
+```bash
+install
+```
 
 選擇 Package Control: Install Package。
 
 安裝  HTML/CSS/JS Prettify
 
-    HTML/CSS/JS Prettify
+```bash
+HTML/CSS/JS Prettify
+```
 
 套件設定
 ----
@@ -43,7 +49,9 @@ Preferences > Package Setting > HTML/CS/JS Prettify
 
 到 "JS": 區塊，將 "e4x" 設定為 true。
 
-    "e4x": true, // Pass E4X xml literals through untouched
+```json
+"e4x": true, // Pass E4X xml literals through untouched
+```
 
 套件使用
 ----
@@ -52,7 +60,9 @@ Hot Key 可於 Preferences > Package Setting > HTML/CS/JS Prettify
 
 找到 【Prettify Code】，即可進行 Format。
 
-    Ctrl + Shift + H
+```bash
+Ctrl + Shift + H
+```
 
 [![1464398982_36159.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-05-28_Sublime%E3%80%90Package%20Control%E3%80%91%20-%20HTMLCSSJS%20Prettify%20-%20JSX/1464398982_36159.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/cb63a3af-8845-4b2d-ade8-39498917cf4c/1464398982_36159.png)
 

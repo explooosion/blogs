@@ -96,9 +96,12 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 下載好 [google-cloud-sdk-313.0.1-darwin-x86\_64.tar.gz](https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-313.0.1-darwin-x86_64.tar.gz) 並解壓縮後，以指令安裝。
 
-    ./google-cloud-sdk/install.sh
-
-    ./google-cloud-sdk/bin/gcloud init
+```bash
+./google-cloud-sdk/install.sh
+```
+```bash
+./google-cloud-sdk/bin/gcloud init
+```
 
 接著可能會跳出網頁要你登入、並且選擇你的專案。
 
@@ -106,15 +109,21 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 可參考 [Initializing Cloud SDK](https://cloud.google.com/sdk/docs/initializing)。
 
-    gcloud auth login
+```bash
+gcloud auth login
+```
 
 你可以嘗試確認現在電腦已授權登入的 google 帳戶
 
-    gcloud auth list
+```bash
+gcloud auth list
+```
 
 你可以嘗試確認電腦 gCloud 環境狀態
 
-    gcloud info
+```bash
+gcloud info
+```
 
 後續會我們會讓 Github Actions 嘗試呼叫 gcloud info
 
@@ -179,25 +188,29 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 這份金鑰我們會用在 Github Actions 的 [Secrets](https://docs.github.com/en/free-pro-team@latest/rest/reference/actions#secrets) 中
 
-    {
-      "type": "service_account",
-      "project_id": "project-id",
-      "private_key_id": "key-id",
-      "private_key": "-----BEGIN PRIVATE KEY-----\nprivate-key\n-----END PRIVATE KEY-----\n",
-      "client_email": "service-account-email",
-      "client_id": "client-id",
-      "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-      "token_uri": "https://accounts.google.com/o/oauth2/token",
-      "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-      "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-account-email"
-    }
+```json
+{
+  "type": "service_account",
+  "project_id": "project-id",
+  "private_key_id": "key-id",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nprivate-key\n-----END PRIVATE KEY-----\n",
+  "client_email": "service-account-email",
+  "client_id": "client-id",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/service-account-email"
+}
+```
 
 4.  建立 CRA 專案 ( [Create React App](https://zh-hant.reactjs.org/docs/create-a-new-react-app.html#create-react-app) )
 -------------------------------------------------------------------------------------------------------------------
 
 接著可以建立專案了：
 
-    npx create-react-app my-app
+```bash
+npx create-react-app my-app
+```
 
 如果你會使用 Docker 部署環境，那麼你可以替換成你想部署的專案。
 
@@ -208,34 +221,36 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 \[ .github / workflows / main.yml \]
 
-    name: Build and Deploy to Cloud Run
-    
-    on:
-      push:
-        branches:
-        - master
-    
-    jobs:
-      setup-build-deploy:
-        name: Setup, Build, and Deploy
-        runs-on: ubuntu-latest
-    
-        steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-    
-        # Setup gcloud CLI
-        - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
-          with:
-            version: '286.0.0'
-            service_account_email: ${{ secrets.GCP_SA_EMAIL }}
-            service_account_key: ${{ secrets.GCP_SA_KEY }}
-            project_id: ${{ secrets.GCP_PROJECT_ID }}
-            export_default_credentials: true
-            
-        # Print gcloud info
-        - name: Info
-          run: gcloud info
+```
+name: Build and Deploy to Cloud Run
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  setup-build-deploy:
+    name: Setup, Build, and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    # Setup gcloud CLI
+    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        version: '286.0.0'
+        service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
+        export_default_credentials: true
+        
+    # Print gcloud info
+    - name: Info
+      run: gcloud info
+```
 
 *   根據說明，checkout@v2 務必使用 v2 
 *   secrets.GCP\_SA\_EMAIL：到時候要到 github 建立 secrets
@@ -315,85 +330,91 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 可根據自己的專案撰寫，此專案筆者將專案 build 後放置於 nginx html。
 
-    FROM node:10 AS Builder
-    
-    ENV NPM_CONFIG_LOGLEVEL info
-    
-    RUN mkdir -p /usr/src/app
-    WORKDIR /usr/src/app
-    
-    COPY . .
-    
-    ARG GENERATE_SOURCEMAP=false
-    
-    RUN yarn install && yarn build
-    
-    FROM nginx:1.13.3-alpine
-    
-    RUN rm -rf /usr/share/nginx/html/*
-    COPY --from=Builder /usr/src/app/build /usr/share/nginx/html
+```
+FROM node:10 AS Builder
+
+ENV NPM_CONFIG_LOGLEVEL info
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+COPY . .
+
+ARG GENERATE_SOURCEMAP=false
+
+RUN yarn install && yarn build
+
+FROM nginx:1.13.3-alpine
+
+RUN rm -rf /usr/share/nginx/html/*
+COPY --from=Builder /usr/src/app/build /usr/share/nginx/html
+```
 
 \[ [.dockerignore](https://github.com/explooosion/react-gcp-deploy-example/blob/master/.dockerignore) \]
 
 加入一點忽略規則。
 
-    Dockerfile
-    README.md
-    node_modules
-    npm-debug.log
+```
+Dockerfile
+README.md
+node_modules
+npm-debug.log
+```
 
 \[ .github / workflows / main.yml \]
 
-    name: Build and Deploy to Cloud Run
-    
-    on:
-      push:
-        branches:
-        - master
-    
-    env:
-      PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-      SERVICE_NAME: create-react-app
-      RUN_REGION: us-central1
-    
-    jobs:
-      setup-build-deploy:
-        name: Setup, Build, and Deploy
-        runs-on: ubuntu-latest
-    
-        steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-    
-        # Setup gcloud CLI
-        - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
-          with:
-            version: '286.0.0'
-            service_account_email: ${{ secrets.GCP_SA_EMAIL }}
-            service_account_key: ${{ secrets.GCP_SA_KEY }}
-            project_id: ${{ secrets.GCP_PROJECT_ID }}
-            export_default_credentials: true
-            
-        # Print gcloud info
-        - name: Info
-          run: gcloud info
-    
-        # Build and push image to Google Container Registry
-        - name: Build
-          run: |-
-            gcloud builds submit \
-              --quiet \
-              --tag "gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA"
-        # Deploy image to Cloud Run
-        - name: Deploy
-          run: |-
-            gcloud run deploy "$SERVICE_NAME" \
-              --quiet \
-              --region "$RUN_REGION" \
-              --image "gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA" \
-              --platform "managed" \
-              --port 80 \
-              --allow-unauthenticated
+```
+name: Build and Deploy to Cloud Run
+
+on:
+  push:
+    branches:
+    - master
+
+env:
+  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  SERVICE_NAME: create-react-app
+  RUN_REGION: us-central1
+
+jobs:
+  setup-build-deploy:
+    name: Setup, Build, and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    # Setup gcloud CLI
+    - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        version: '286.0.0'
+        service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
+        export_default_credentials: true
+        
+    # Print gcloud info
+    - name: Info
+      run: gcloud info
+
+    # Build and push image to Google Container Registry
+    - name: Build
+      run: |-
+        gcloud builds submit \
+          --quiet \
+          --tag "gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA"
+    # Deploy image to Cloud Run
+    - name: Deploy
+      run: |-
+        gcloud run deploy "$SERVICE_NAME" \
+          --quiet \
+          --region "$RUN_REGION" \
+          --image "gcr.io/$PROJECT_ID/$SERVICE_NAME:$GITHUB_SHA" \
+          --platform "managed" \
+          --port 80 \
+          --allow-unauthenticated
+```
 
 *   env 的參數是要給後面 gcloud 指令使用
 *   PROJECT\_ID：是你原專案名稱，使用 secret 的 ${{ secrets.GCP\_PROJECT\_ID }} 即可

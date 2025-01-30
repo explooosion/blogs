@@ -24,7 +24,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 筆者在安裝全域套件 ( global package  ) 時，噴了一些錯誤導致安裝失敗。
 
-    npm install <package-name> -g
+```bash
+npm install <package-name> -g
+```
 
 粗估，應該是被守門員阻擋住 ...
 
@@ -59,13 +61,17 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 根據錯誤訊息，可以知道套件安裝的目錄位置在：
 
-    /usr/local/lib/node_modules
+```bash
+/usr/local/lib/node_modules
+```
 
 注意：此目錄為使用官網 [Node.js](https://nodejs.org/en/) 下載後的預設安裝路徑。
 
 因此開啟 terminal，於任意目錄，輸入指令修改該目錄權限即可：
 
-    sudo chown -R $USER /usr/local/lib/node_modules
+```bash
+sudo chown -R $USER /usr/local/lib/node_modules
+```
 
 由於修改存取權限等行為需要管理員身份，
 

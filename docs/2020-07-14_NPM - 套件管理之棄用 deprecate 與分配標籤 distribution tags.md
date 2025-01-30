@@ -64,7 +64,9 @@ npm 套件管理中的棄用與分配標籤應用。
 
 利用指令 [npm-deprecate](https://docs.npmjs.com/cli/deprecate) 將 0.8.1 進行棄用聲明：
 
-    npm deprecate agm-direction@0.8.1 "critical bug fixed in v0.8.1"
+```bash
+npm deprecate agm-direction@0.8.1 "critical bug fixed in v0.8.1"
+```
 
 完成後可以在 [npm 頁面](https://www.npmjs.com/package/agm-direction/v/0.8.1)上看到有 deprecated 警語：
 
@@ -78,7 +80,9 @@ npm 套件管理中的棄用與分配標籤應用。
 
 利用指令 [npm-dist-tag](https://docs.npmjs.com/cli/dist-tag) 將 0.8.0 設置為 latest 版本：
 
-    npm dist-tag add agm-direction@0.8.0
+```bash
+npm dist-tag add agm-direction@0.8.0
+```
 
 由於最後的參數 \[<tag>\] 我們並沒有使用，
 

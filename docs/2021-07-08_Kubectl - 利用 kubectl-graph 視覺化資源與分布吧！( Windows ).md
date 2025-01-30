@@ -56,7 +56,9 @@ steveteuber/kubectl-graph
 
 確認是否安裝成功：
 
-    kubectl krew version
+```powershell
+kubectl krew version
+```
 
 ### 2\. 安裝 graphviz
 
@@ -74,7 +76,9 @@ steveteuber/kubectl-graph
 
 確認是否安裝成功 ( -V 為大寫 )：
 
-    dot -V 
+```powershell
+dot -V
+```
 
 ### 3\. 安裝 cypher-shell
 
@@ -96,24 +100,32 @@ steveteuber/kubectl-graph
 
 確認是否安裝成功：
 
-    cypher -v 
+```powershell
+cypher -v
+```
 
 ### 4\. 安裝 kubectl-graph
 
 終於可以安裝我們的主角了！
 
-    kubectl krew install graph
+```powershell
+kubectl krew install graph
+```
 
 確認是否安裝成功：
 
-    kubectl graph -h 
+```powershell
+kubectl graph -h
+```
 
 使用教學 - SVG
 ----------
 
 ### 將 pods 資訊輸出給 dot 建立 SVG 圖檔
 
-    kubectl graph pods --field-selector status.phase=Running -n kube-system | dot -T svg -o pods.svg
+```powershell
+kubectl graph pods --field-selector status.phase=Running -n kube-system | dot -T svg -o pods.svg
+```
 
 *   kube-system：這是 Kubernetes 系統的 namesapce，你可以改成其他 namesapce
 
@@ -124,7 +136,9 @@ steveteuber/kubectl-graph
 
 在這裡先利用 docker 安裝 [image](https://neo4j.com/developer/docker-run-neo4j/) 並啟動：
 
-    docker run --rm -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=none neo4j
+```powershell
+docker run --rm -p 7474:7474 -p 7687:7687 -e NEO4J_AUTH=none neo4j
+```
 
 *   NEO4J\_AUTH：環境變數直接給 none 就可以了，或者你有自己的[密碼設置](https://neo4j.com/docs/operations-manual/current/docker/introduction/#docker-auth)
 
@@ -142,13 +156,17 @@ steveteuber/kubectl-graph
 
 接著我們就可以利用指令將節點資訊匯入資料庫了：
 
-    kubectl graph all -n kube-system -o cypher | cypher-shell
+```powershell
+kubectl graph all -n kube-system -o cypher | cypher-shell
+```
 
 *   kube-system：你可以改成其他 namesapce
 
 如果剛剛 neo4j 資料庫有設置帳號密碼，可以參考 [Syntax](https://neo4j.com/docs/operations-manual/current/tools/cypher-shell/)
 
-    kubectl graph all -n loki -o cypher | cypher-shell -u neo4j -p secret
+```powershell
+kubectl graph all -n loki -o cypher | cypher-shell -u neo4j -p secret
+```
 
 *   cypher-shell \[-u USERNAME, --username USERNAME\]
 

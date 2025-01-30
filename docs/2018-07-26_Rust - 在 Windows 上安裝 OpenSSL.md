@@ -78,7 +78,9 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 
 接著「新增」－瀏覽我們剛剛安裝 OpenSSL 目錄中的 bin 資料夾並確定，就完成啦。
 
-    C:\OpenSSL-Win64\bin
+```bash
+C:\OpenSSL-Win64\bin
+```
 
 [![1532546173_78822.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532546173_78822.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532546173_78822.png)
 
@@ -88,11 +90,13 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 
 點選「新增」－輸入「變數名稱」－「OPENSSL\_DIR」－接著「瀏覽目錄」，選擇後確定即可。
 
-    # 變數名稱
-    OPENSSL_DIR
-    
-    # 變數值
-    C:\OpenSSL-Win64
+```bash
+# 變數名稱
+OPENSSL_DIR
+
+# 變數值
+C:\OpenSSL-Win64
+```
 
 [![1532546541_18586.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532546541_18586.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532546541_18586.png)
 
@@ -112,11 +116,15 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 
 別問原因，別問我家鄉，官方建議，Just Do It。
 
-    C:\OpenSSL-Win64\certs
+```bash
+C:\OpenSSL-Win64\certs
+```
 
 檔案名稱應該預設如下：
 
-    cacert.pem
+```bash
+cacert.pem
+```
 
 #### 2.2 環境變數
 
@@ -124,11 +132,13 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 
 接著同前面步驟，設定環境變數「SSL\_CERT\_FILE」，
 
-    # 變數名稱
-    SSL_CERT_FILE
-    
-    # 變數值
-    C:\OpenSSL-Win64\certs\cacert.pem
+```bash
+# 變數名稱
+SSL_CERT_FILE
+
+# 變數值
+C:\OpenSSL-Win64\certs\cacert.pem
+```
 
 [![1532547306_56676.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532547306_56676.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532547306_56676.png)
 
@@ -157,17 +167,22 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 
 執行軟體更新（她應該會詢問是否安裝，屆時輸入 -y 就好）：
 
-    pacman -Syu
-
-    pacman -Su
+```bash
+pacman -Syu
+```
+```bash
+pacman -Su
+```
 
 更新完畢後安裝 openssl：
 
-    # 32-bit
-    pacman -S mingw-w64-i686-openssl
-    
-    # 64-bit
-    pacman -S mingw-w64-x86_64-openssl
+```bash
+# 32-bit
+pacman -S mingw-w64-i686-openssl
+
+# 64-bit
+pacman -S mingw-w64-x86_64-openssl
+```
 
 三、專案測試
 ------
@@ -176,23 +191,31 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 
 ### 下載專案
 
-    git clone https://github.com/explooosion/rust-actix-web-sample.git
+```bash
+git clone https://github.com/explooosion/rust-actix-web-sample.git
+```
 
 ### 進入專案
 
-    cd rust-actix-web-sample
+```bash
+cd rust-actix-web-sample
+```
 
 ### 編譯專案
 
 這邊順利通過其實就可以了。（初次編譯可能約 3 分鐘）
 
-    cargo build
+```bash
+cargo build
+```
 
 [![1532549021_65273.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532549021_65273.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532549021_65273.png)
 
 如果發現電腦有點當機，可以改使用：
 
-    cargo build　-j 2
+```bash
+cargo build　-j 2
+```
 
 *   \-j：調用的 cpu 執行續數量
     
@@ -203,7 +226,9 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 
 由於此專案是網站，可以藉此測試網站是否順利運行。
 
-    cargo run
+```bash
+cargo run
+```
 
 [![1532548353_19116.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532548353_19116.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532548353_19116.png)
 

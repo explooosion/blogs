@@ -28,11 +28,15 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 #### 針對匯入 import 的警語 ：
 
-    #[allow(unused_imports)]
+```bash
+#[allow(unused_imports)]
+```
 
 #### 針對變數 variable 的警語：
 
-    #[allow(unused_variables)]
+```bash
+#[allow(unused_variables)]
+```
 
 更多方法可參考：
 
@@ -42,7 +46,9 @@ image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs
 
 #### 如果你想一次把「**所有」**警語 warning 關閉，你可以嘗試這招：
 
-    #![allow(warnings)]
+```bash
+#![allow(warnings)]
+```
 
 我想應該就會很安靜了 ...
 
