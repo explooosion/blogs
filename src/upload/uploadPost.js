@@ -47,7 +47,7 @@ async function uploadToHashnode(frontMatter, content, tags) {
       metaTags: {
         title: frontMatter.title,
         description: frontMatter.subtitle || frontMatter.title,
-        image: coverImageOptions ? coverImageOptions.coverImageURL : "",
+        image: coverImageOptions ? coverImageOptions.coverImageURL : undefined,
       },
       seriesId: SERIES_ID,
       tags: tags.length > 0 ? tags : undefined,
