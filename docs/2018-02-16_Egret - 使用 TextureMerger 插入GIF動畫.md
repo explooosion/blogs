@@ -1,12 +1,11 @@
 ---
 title: "Egret - 使用 TextureMerger 插入GIF動畫"
-date: "2018-02-16"
-tags: [egret, gif, animation, TextureMerger, MovieClip, MovieClipDataFactory]
-view: "1058"
-history: "0"
-group: "Egret"
-banner: ""
----
+subtitle: "少年欸袂用 GIF 桑幾勒某..."
+date: "2018-02-16T00:00:00.000Z"
+series: "egret"
+tags: "egret","gif","animation","TextureMerger","MovieClip","MovieClipDataFactory"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/banner/56b1715518628.png"
+--- 
 
 少年欸袂用 GIF 桑幾勒某...
 
@@ -36,7 +35,7 @@ Egret 對於動畫的處理，會將所有影格合併成一張 PNG 圖檔，
 
 當然也可以將配置好的文件存檔（.tmc）。
 
-![56b1715518628.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/56b1715518628.png)
+![56b1715518628.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/56b1715518628.png)
 
 更多的操作方式可參考官方 [TextureMerge简介](http://developer.egret.com/cn/github/egret-docs/tools/TextureMerger/manual/index.html)
 
@@ -53,11 +52,11 @@ Github：EgretTutorial - [EgretAnimate](https://github.com/explooosion/EgretTu
 
 本範例版本為 v1.7.0，應該是沒有特別差異。
 
-[![1518786024_8602.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518786024_8602.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518786024_8602.png)
+[![1518786024_8602.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518786024_8602.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518786024_8602.png)
 
 開啟後我們選擇 Egret MovieClip。
 
-![1518786349_38478.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518786349_38478.png)
+![1518786349_38478.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518786349_38478.png)
 
 使用的方式我們拆分為幾種：
 
@@ -69,21 +68,21 @@ Github：EgretTutorial - [EgretAnimate](https://github.com/explooosion/EgretTu
 
 下圖為本範例素材（From [Google Search](https://giphy.com/stickers/y7Wiq1yMLpA3XEEEhA)）。
 
-### [![1518786914_46061.gif](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518786914_46061.gif)](https://media.giphy.com/media/y7Wiq1yMLpA3XEEEhA/giphy.gif)
+### [![1518786914_46061.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518786914_46061.gif)](https://media.giphy.com/media/y7Wiq1yMLpA3XEEEhA/giphy.gif)
 
 首先將圖片拖曳至表單內。
 
-[![1518787309_72684.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518787309_72684.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518787309_72684.png)
+[![1518787309_72684.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518787309_72684.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518787309_72684.png)
 
 「項目名稱」命名 girl，程式碼需要辨識名稱（可自訂）。
 
-![1518787364_04645.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518787364_04645.png)
+![1518787364_04645.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518787364_04645.png)
 
 載入後可以看到已經自動為我們切好 png 位置了！
 
 圖片位置並不影響動畫順序。
 
-[![1518787481_21054.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518787481_21054.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518787481_21054.png)
+[![1518787481_21054.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518787481_21054.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518787481_21054.png)
 
 ### 資源編輯
 
@@ -91,35 +90,35 @@ Github：EgretTutorial - [EgretAnimate](https://github.com/explooosion/EgretTu
 
 當然也可以 右鍵 / 編輯，去修改我們定義的動作名稱。
 
-![1518787526_58966.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518787526_58966.png)
+![1518787526_58966.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518787526_58966.png)
 
 建議使用英文命名，且有意義的動作名稱，
 
 動作可以設定多組，且能夠從程式中去控制（後續會提到）。
 
-![1518787644_20795.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518787644_20795.png)
+![1518787644_20795.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518787644_20795.png)
 
 在群組的右邊有個按鈕，可以提供動畫預覽。
 
-![1518788205_09211.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518788205_09211.png)
+![1518788205_09211.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518788205_09211.png)
 
 如果發現幀率過高，可以到最上層 右鍵 / 編輯，
 
-![1518788320_35137.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518788320_35137.png)
+![1518788320_35137.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518788320_35137.png)
 
 輸入低一點的幀率，也許就會正常些囉！
 
-![1518788338_13409.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518788338_13409.png)
+![1518788338_13409.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518788338_13409.png)
 
 ### 資源導出
 
 接著於功能表列，選擇將檔案「導出」。
 
-[![1518788506_73051.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518788506_73051.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518788506_73051.png)
+[![1518788506_73051.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518788506_73051.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518788506_73051.png)
 
 成功後就可以看到產出兩個檔案（.png、.json）。
 
-![1518788556_32331.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518788556_32331.png)
+![1518788556_32331.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518788556_32331.png)
 
 ### ☑ 使用 PNG 拼貼：
 
@@ -127,19 +126,19 @@ Github：EgretTutorial - [EgretAnimate](https://github.com/explooosion/EgretTu
 
 那麼其實只要建立好項目名稱後，右鍵選擇「添加動作」即可。
 
-![1518793561_69814.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518793561_69814.png)
+![1518793561_69814.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518793561_69814.png)
 
 ### ☑ 使用現有GIF並加入多個動作：
 
 下圖為本範例素材（From [Google Search](https://giphy.com/stickers/BLT8DkclFeVRdgoJFv)），圖片包含兩個動作 ( 待命、吃東西 )。
 
-[![1518793748_85194.gif](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518793748_85194.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518793748_85194.gif)
+[![1518793748_85194.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518793748_85194.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518793748_85194.gif)
 
 拖曳新增，「項目名稱」命名 metal，辨識名稱（可自訂）。
 
 然後調整一下幀率。
 
-![1518794962_4337.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518794962_4337.png)
+![1518794962_4337.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518794962_4337.png)
 
 我們可以從樹狀以及實際圖片對照，拆出兩個動作的轉捩點，
 
@@ -147,15 +146,15 @@ Github：EgretTutorial - [EgretAnimate](https://github.com/explooosion/EgretTu
 
 「F7A5AB7」為待命的最後一張
 
-![1518794072_26093.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518794072_26093.png)
+![1518794072_26093.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518794072_26093.png)
 
 「9226184D」為吃東西的第一張
 
-![1518794086_78957.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518794086_78957.png)
+![1518794086_78957.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518794086_78957.png)
 
 因此我們將目前的群組改名設定為「stand」，然後建立新的動作「eat」。
 
-![1518794376_08817.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518794376_08817.png)
+![1518794376_08817.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518794376_08817.png)
 
 一般步驟來說，待命的圖片直接右鍵「添加幀」，
 
@@ -167,17 +166,17 @@ Github：EgretTutorial - [EgretAnimate](https://github.com/explooosion/EgretTu
 
 分離後如下：
 
-![1518794928_95991.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518794928_95991.png)
+![1518794928_95991.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518794928_95991.png)
 
 建議預覽看看結果。
 
-![1518795177_09417.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518795177_09417.png)
+![1518795177_09417.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518795177_09417.png)
 
 最後導出，
 
 如果使用這個方式，可直接看 [四、MovieClip - 動作指定](#actions)。
 
-![1518795258_47886.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518795258_47886.png)
+![1518795258_47886.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518795258_47886.png)
 
 三、MovieClip - 無動作
 -----------------
@@ -192,13 +191,13 @@ Github：EgretTutorial - [EgretAnimate](https://github.com/explooosion/EgretTu
 *   game 遊戲庫
 *   res 資源加載入
 
-[![1518788814_58043.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518788814_58043.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518788814_58043.png)
+[![1518788814_58043.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518788814_58043.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518788814_58043.png)
 
 在開發風格上，自己習慣另外建立遊戲的資料夾，以及常用的方法資料夾。
 
 *   風格來源 - [NeoGuo](https://github.com/NeoGuo/html5-documents/blob/master/egret/README.md) 
 
-![1518792397_27707.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518792397_27707.png)
+![1518792397_27707.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518792397_27707.png)
 
 \[ Game / GameContainer.ts \]
 
@@ -235,15 +234,15 @@ Github：EgretTutorial - [EgretAnimate](https://github.com/explooosion/EgretTu
 
 接著將剛剛導出的 PNG、JSON 放進 /resource 內，
 
-![1518790345_45273.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518790345_45273.png)
+![1518790345_45273.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518790345_45273.png)
 
 系統提示則直接點選「Save」。
 
-[![1518790278_76937.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518790278_76937.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518790278_76937.png)
+[![1518790278_76937.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518790278_76937.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518790278_76937.png)
 
 正常來說應該就可以在 default.res.json 看到項目清單：
 
-[![1518790448_99626.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518790448_99626.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518790448_99626.png)
+[![1518790448_99626.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518790448_99626.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518790448_99626.png)
 
 ### 程式建構 - 人物
 
@@ -261,7 +260,7 @@ Github：EgretTutorial - [EgretAnimate](https://github.com/explooosion/EgretTu
 
 建構影片工廠需要兩個參數，資料集描述以及檔案來源，就是剛剛產生的 .png、.json，
 
-[![1518791386_77005.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518791386_77005.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518791386_77005.png)
+[![1518791386_77005.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518791386_77005.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518791386_77005.png)
 
 程式碼如下：
 
@@ -291,7 +290,7 @@ Github：EgretTutorial - [EgretAnimate](https://github.com/explooosion/EgretTu
 
 RES.getRes：裡面的字串請依 default.res.json 的 Name 設定
 
-[![1518792518_9157.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518792518_9157.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518792518_9157.png)
+[![1518792518_9157.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518792518_9157.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518792518_9157.png)
 
 ### 程式建構 - 主程式
 
@@ -299,7 +298,7 @@ RES.getRes：裡面的字串請依 default.res.json 的 Name 設定
 
 這些方法建立專案的時候，選擇「Egret 遊戲項目」，就會有初始範例。
 
-[![1518792724_05765.png](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518792724_05765.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518792724_05765.png)
+[![1518792724_05765.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518792724_05765.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518792724_05765.png)
 
 \[ src / Main.ts \]
 
@@ -388,7 +387,7 @@ RES.getRes：裡面的字串請依 default.res.json 的 Name 設定
 
 編譯後執行就可以看到[西莉卡](https://zh.moegirl.org/zh-tw/%E7%BB%AB%E9%87%8E%E7%8F%AA%E5%AD%90)不斷地舉手惹！
 
-[![1518792966_50839.gif](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518792966_50839.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518792966_50839.gif)
+[![1518792966_50839.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518792966_50839.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518792966_50839.gif)
 
 四、MovieClip - 動作指定
 ------------------
@@ -418,7 +417,7 @@ MovieClip 提供 gotoAndPlay，可指定到動作幀進行播放。
 
 進入待命狀態了。
 
-[![1518795955_83729.gif](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518795955_83729.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518795955_83729.gif)
+[![1518795955_83729.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518795955_83729.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518795955_83729.gif)
 
 ### 事件切換幀動作
 
@@ -459,7 +458,7 @@ MovieClip 提供 gotoAndPlay，可指定到動作幀進行播放。
 
 透過點擊可以進行吃東西的動作。
 
-[![1518796901_78157.gif](images/2018-02-16_Egret - 使用 TextureMerger 插入GIF動畫/1518796901_78157.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518796901_78157.gif)
+[![1518796901_78157.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-16_Egret%20-%20%E4%BD%BF%E7%94%A8%20TextureMerger%20%E6%8F%92%E5%85%A5GIF%E5%8B%95%E7%95%AB/1518796901_78157.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/abfab766-7033-45ad-9eb5-523105ef799f/1518796901_78157.gif)
 
 五、參考資料
 ------

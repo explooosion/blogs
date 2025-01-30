@@ -1,18 +1,17 @@
 ---
 title: "NPM - 解決套件全域安裝錯誤 Missing write access（Mac ）"
-date: "2020-07-18"
-tags: [access, EACCES, global, missing, npm, package, permission, write]
-view: "3168"
-history: "0"
-group: "NPM"
-banner: "images/2020-07-18_NPM - 解決套件全域安裝錯誤 Missing write access（Mac ）/banner/1595055493.png"
----
+subtitle: "被守門員擋住，無法安裝 global package 啦！"
+date: "2020-07-18T00:00:00.000Z"
+series: "npm"
+tags: "access","EACCES","global","missing","npm","package","permission","write"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-07-18_NPM%20-%20%E8%A7%A3%E6%B1%BA%E5%A5%97%E4%BB%B6%E5%85%A8%E5%9F%9F%E5%AE%89%E8%A3%9D%E9%8C%AF%E8%AA%A4%20Missing%20write%20access%EF%BC%88Mac%20%EF%BC%89/banner/1595055493.png"
+--- 
 
 被守門員擋住，無法安裝 global package 啦！
 
 每次在新環境中，難免還是會遇到新手村的問題。
 
-[![1595055493.png](images/2020-07-18_NPM - 解決套件全域安裝錯誤 Missing write access（Mac ）/1595055493.png)](https://dotblogsfile.blob.core.windows.net/user/robby/24194a4b-0024-4797-9aec-9066525d5b53/1595055493.png)
+[![1595055493.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-07-18_NPM%20-%20%E8%A7%A3%E6%B1%BA%E5%A5%97%E4%BB%B6%E5%85%A8%E5%9F%9F%E5%AE%89%E8%A3%9D%E9%8C%AF%E8%AA%A4%20Missing%20write%20access%EF%BC%88Mac%20%EF%BC%89/1595055493.png)](https://dotblogsfile.blob.core.windows.net/user/robby/24194a4b-0024-4797-9aec-9066525d5b53/1595055493.png)
 
 前言
 --
@@ -31,7 +30,7 @@ banner: "images/2020-07-18_NPM - 解決套件全域安裝錯誤 Missing write ac
 
 並且收到訊息如下：
 
-[![1595038641.jpg](images/2020-07-18_NPM - 解決套件全域安裝錯誤 Missing write access（Mac ）/1595038641.jpg)](https://zh.moegirl.org/zh-tw/%E9%94%81%E9%93%BE%E5%BA%B7%E5%A6%AE)
+[![1595038641.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-07-18_NPM%20-%20%E8%A7%A3%E6%B1%BA%E5%A5%97%E4%BB%B6%E5%85%A8%E5%9F%9F%E5%AE%89%E8%A3%9D%E9%8C%AF%E8%AA%A4%20Missing%20write%20access%EF%BC%88Mac%20%EF%BC%89/1595038641.jpg)](https://zh.moegirl.org/zh-tw/%E9%94%81%E9%93%BE%E5%BA%B7%E5%A6%AE)
 
 *   ref: [鎖鏈康妮](https://zh.moegirl.org/zh-tw/%E9%94%81%E9%93%BE%E5%BA%B7%E5%A6%AE)
 
@@ -39,7 +38,7 @@ banner: "images/2020-07-18_NPM - 解決套件全域安裝錯誤 Missing write ac
 
 錯誤訊息如下：
 
-[![1595038893.png](images/2020-07-18_NPM - 解決套件全域安裝錯誤 Missing write access（Mac ）/1595038893.png)](https://dotblogsfile.blob.core.windows.net/user/robby/24194a4b-0024-4797-9aec-9066525d5b53/1595038893.png)
+[![1595038893.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-07-18_NPM%20-%20%E8%A7%A3%E6%B1%BA%E5%A5%97%E4%BB%B6%E5%85%A8%E5%9F%9F%E5%AE%89%E8%A3%9D%E9%8C%AF%E8%AA%A4%20Missing%20write%20access%EF%BC%88Mac%20%EF%BC%89/1595038893.png)](https://dotblogsfile.blob.core.windows.net/user/robby/24194a4b-0024-4797-9aec-9066525d5b53/1595038893.png)
 
 考過太多次英文閱讀測驗的你，
 

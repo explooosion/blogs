@@ -1,18 +1,17 @@
 ---
 title: "GCP - 使用 Github Actions 部署 React 到 Cloud Run"
-date: "2020-10-09"
-tags: [cicd, cloud, cloud-run, deploy, docker, github, github-actions, google, react]
-view: "2404"
-history: "0"
-group: "GCP"
-banner: "images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/banner/1602243230.png"
----
+subtitle: "丟給 github actions 跑就對啦！"
+date: "2020-10-09T00:00:00.000Z"
+series: "gcp"
+tags: "cicd","cloud","cloud-run","deploy","docker","github","github-actions","google","react"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/banner/1602243230.png"
+--- 
 
 丟給 github actions 跑就對啦！
 
 利用 Github Actions 部署你的專案到 GCP Cloud Run 上吧！
 
-[![1602243230.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602243230.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602243230.png)
+[![1602243230.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602243230.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602243230.png)
 
 *   [How to deploy your Cloud Run service using GitHub Actions](https://medium.com/google-cloud/how-to-deploy-your-cloud-run-service-using-github-actions-e5b6a6f597a3)
     
@@ -124,13 +123,13 @@ banner: "images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Ru
 
 到 GCP 上，[建立](https://console.cloud.google.com/projectcreate?)你的專案，例如 my-project ( 筆者隨便決定的 )。
 
-[![1602227410.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602227410.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602227410.png)
+[![1602227410.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602227410.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602227410.png)
 
 完成後到[首頁](https://console.cloud.google.com/home/dashboard)，可以看到你的專案資訊。
 
 專案名稱、專案 ID、專案編號 後續會使用到，請務必留意。
 
-[![1602227331.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602227331.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602227331.png)
+[![1602227331.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602227331.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602227331.png)
 
 3\. 建立服務帳戶 ( [Creating and managing service account keys](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) )
 -------------------------------------------------------------------------------------------------------------------------------------
@@ -139,11 +138,11 @@ banner: "images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Ru
 
 到 IAM 與管理頁面 - 服務帳戶，點選 ＋建立服務帳戶
 
-[![1602227810.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602227810.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602227810.png)
+[![1602227810.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602227810.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602227810.png)
 
 下方資料，看各位想怎麼填都可。
 
-[![1602228715.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602228715.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602228715.png)
+[![1602228715.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602228715.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602228715.png)
 
 根據 [cloud build github-actions](https://github.com/GoogleCloudPlatform/github-actions/tree/master/example-workflows/cloud-build)，我們會用到的角色如下：
 
@@ -162,19 +161,19 @@ banner: "images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Ru
 
 此圖是後來筆者重新到 IAM 建立角色，故有些畫面不同。
 
-[![1602241712.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602241712.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602241712.png)
+[![1602241712.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602241712.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602241712.png)
 
 如果你覺得很麻煩，權限設定部分可先給最大的擁有者。
 
-[![1602228379.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602228379.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602228379.png)
+[![1602228379.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602228379.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602228379.png)
 
 完成後在右邊選擇建立金鑰。
 
-![1602228383.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602228383.png)
+![1602228383.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602228383.png)
 
 由於私密金鑰只能下載一次，務必保存好。
 
-[![1602228354.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602228354.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602228354.png)
+[![1602228354.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602228354.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602228354.png)
 
 內容格式應該類似下方：
 
@@ -249,7 +248,7 @@ banner: "images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Ru
 
 在 github 建立你的 repo，之後到 Settings 選擇 Secrets。
 
-[![1602232722.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602232722.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602232722.png)
+[![1602232722.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602232722.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602232722.png)
 
 點選 New secret，根據前一步驟的 yml，我們會需要用到以下三個 secrets：
 
@@ -263,18 +262,18 @@ banner: "images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Ru
 
 完成如下：
 
-[![1602235704.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602235704.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602235704.png)
+[![1602235704.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602235704.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602235704.png)
 
 7\. Push 專案 ＆ 檢視 Actions
 ------------------------
 
 把你的專案 push 到 github，接著就可以看到 Actions 在執行囉！
 
-[![1602240224.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602240224.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602240224.png)
+[![1602240224.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602240224.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602240224.png)
 
 展開 Run gcloud info，就可以看到指令的結果了！
 
-[![1602240266.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602240266.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602240266.png)
+[![1602240266.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602240266.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602240266.png)
 
 8\. 啟用 API 服務 ( [API Library](http://console.developers.google.com/apis/library) )
 ----------------------------------------------------------------------------------
@@ -289,7 +288,7 @@ banner: "images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Ru
 
 請先到該頁面選擇啟用 Container Registry API。
 
-[![1602235136.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602235136.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602235136.png)
+[![1602235136.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602235136.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602235136.png)
 
 以下為必啟用的 API，可到  [API 程式庫](https://console.developers.google.com/apis/library) 尋找並安裝：
 
@@ -297,15 +296,15 @@ banner: "images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Ru
 
 因此需要啟用 [Cloud Build API](https://console.developers.google.com/apis/library/cloudbuild.googleapis.com?q=Cloud%20Buil&id=9472915e-c82c-4bef-8a6a-34c81e5aebcc&project=compelling-art-292007&authuser=1) 和 [Cloud Run API](https://console.developers.google.com/apis/library/run.googleapis.com) 。
 
-[![1602240934.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602240934.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602240934.png)
+[![1602240934.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602240934.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602240934.png)
 
-[![1602241963.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602241963.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602241963.png)
+[![1602241963.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602241963.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602241963.png)
 
 以上有任何缺少的服務啟用，很可能會在 Github Actions 階段噴錯，
 
 例如 Cloud Build API 沒啟用的錯誤：
 
-[![1602240995.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602240995.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602240995.png)
+[![1602240995.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602240995.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602240995.png)
 
 9\. 新增 Docker & 修改 yml
 ----------------------
@@ -410,19 +409,19 @@ banner: "images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Ru
 
 就能看到 image 在列表中了，並且是以私人的方式發佈！
 
-[![1602242218.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602242218.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602242218.png)
+[![1602242218.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602242218.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602242218.png)
 
 當 github actions 完全跑完後，就可以查看服務。
 
-[![1602242291.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602242291.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602242291.png)
+[![1602242291.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602242291.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602242291.png)
 
 點進去查看，可以看到網址，那就是你的服務公開網址囉！
 
-[![1602242352.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602242352.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602242352.png)
+[![1602242352.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602242352.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602242352.png)
 
 看！他在動！
 
-[![1602242737.png](images/2020-10-09_GCP - 使用 Github Actions 部署 React 到 Cloud Run/1602242737.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602242737.png)
+[![1602242737.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-09_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20Cloud%20Run/1602242737.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602242737.png)
 
 本篇文章專案範例放置於：
 

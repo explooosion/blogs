@@ -1,18 +1,17 @@
 ---
 title: "Docker - 容器化 Node.js express（Mac）"
-date: "2018-09-15"
-tags: [docker, node.js, docker-compose, express, container, vm]
-view: "7088"
-history: "0"
-group: "Docker"
-banner: "images/2018-09-15_Docker - 容器化 Node.js express（Mac）/banner/1537008226_92291.jpg"
----
+subtitle: "技術導向的 docker 新手教學。"
+date: "2018-09-15T00:00:00.000Z"
+series: "docker"
+tags: "docker","node.js","docker-compose","express","container","vm"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-15_Docker%20-%20%E5%AE%B9%E5%99%A8%E5%8C%96%20Node.js%20express%EF%BC%88Mac%EF%BC%89/banner/1537008226_92291.jpg"
+--- 
 
 技術導向的 docker 新手教學。
 
 一日 docker 初體驗。
 
-[![1537008226_92291.jpg](images/2018-09-15_Docker - 容器化 Node.js express（Mac）/1537008226_92291.jpg)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537008226_92291.jpg)
+[![1537008226_92291.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-15_Docker%20-%20%E5%AE%B9%E5%99%A8%E5%8C%96%20Node.js%20express%EF%BC%88Mac%EF%BC%89/1537008226_92291.jpg)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537008226_92291.jpg)
 
 
 
@@ -78,7 +77,7 @@ banner: "images/2018-09-15_Docker - 容器化 Node.js express（Mac）/banner/15
 
 安裝完畢後開啟應用程式，就可以看到 Docker.app。
 
-[![1537009030_10876.png](images/2018-09-15_Docker - 容器化 Node.js express（Mac）/1537009030_10876.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537009030_10876.png)
+[![1537009030_10876.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-15_Docker%20-%20%E5%AE%B9%E5%99%A8%E5%8C%96%20Node.js%20express%EF%BC%88Mac%EF%BC%89/1537009030_10876.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537009030_10876.png)
 
 試著使用指令，驗證看看安裝成功與否。
 
@@ -88,7 +87,7 @@ banner: "images/2018-09-15_Docker - 容器化 Node.js express（Mac）/banner/15
 
 畫面結果。
 
-[![1537009573_56835.png](images/2018-09-15_Docker - 容器化 Node.js express（Mac）/1537009573_56835.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537009573_56835.png)
+[![1537009573_56835.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-15_Docker%20-%20%E5%AE%B9%E5%99%A8%E5%8C%96%20Node.js%20express%EF%BC%88Mac%EF%BC%89/1537009573_56835.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537009573_56835.png)
 
 二、建立 Express 專案 
 ----------------
@@ -115,7 +114,7 @@ banner: "images/2018-09-15_Docker - 容器化 Node.js express（Mac）/banner/15
 
 如果順利，應該可於 [http://localhost:3000/](http://localhost:3000/) 看到網站。
 
-![1537009941_16968.png](images/2018-09-15_Docker - 容器化 Node.js express（Mac）/1537009941_16968.png)
+![1537009941_16968.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-15_Docker%20-%20%E5%AE%B9%E5%99%A8%E5%8C%96%20Node.js%20express%EF%BC%88Mac%EF%BC%89/1537009941_16968.png)
 
 這是基本的專案啟動，
 
@@ -134,7 +133,7 @@ banner: "images/2018-09-15_Docker - 容器化 Node.js express（Mac）/banner/15
 
 建立好後，如果您使用 [vscode](https://code.visualstudio.com/)，可能會自動顯示檔案的 icon 唷～
 
-![1537010691_29149.png](images/2018-09-15_Docker - 容器化 Node.js express（Mac）/1537010691_29149.png)
+![1537010691_29149.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-15_Docker%20-%20%E5%AE%B9%E5%99%A8%E5%8C%96%20Node.js%20express%EF%BC%88Mac%EF%BC%89/1537010691_29149.png)
 
 接著輸入以下內容到該檔案。
 
@@ -182,7 +181,7 @@ docker 的運作流程首先要建立映像檔 image，
 
 完成後的指令畫面：
 
-[![1537011937_99096.png](images/2018-09-15_Docker - 容器化 Node.js express（Mac）/1537011937_99096.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537011937_99096.png)
+[![1537011937_99096.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-15_Docker%20-%20%E5%AE%B9%E5%99%A8%E5%8C%96%20Node.js%20express%EF%BC%88Mac%EF%BC%89/1537011937_99096.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537011937_99096.png)
 
 ### 2\. 查看映像檔
 
@@ -192,7 +191,7 @@ docker 的運作流程首先要建立映像檔 image，
 
 這時候應該可以看到剛剛建立好的 demo/myapp，
 
-[![1537012291_7553.png](images/2018-09-15_Docker - 容器化 Node.js express（Mac）/1537012291_7553.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537012291_7553.png)
+[![1537012291_7553.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-15_Docker%20-%20%E5%AE%B9%E5%99%A8%E5%8C%96%20Node.js%20express%EF%BC%88Mac%EF%BC%89/1537012291_7553.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537012291_7553.png)
 
 由於筆者先前已經建立很多，所以才會出現這麼多。
 
@@ -221,7 +220,7 @@ docker 的運作流程首先要建立映像檔 image，
 
 查詢結果如下：
 
-[![1537012899_96748.png](images/2018-09-15_Docker - 容器化 Node.js express（Mac）/1537012899_96748.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537012899_96748.png)
+[![1537012899_96748.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-15_Docker%20-%20%E5%AE%B9%E5%99%A8%E5%8C%96%20Node.js%20express%EF%BC%88Mac%EF%BC%89/1537012899_96748.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537012899_96748.png)
 
 *   STATUS：如果狀態看到 Up xxxx，那就是正常運作囉～
 
@@ -229,7 +228,7 @@ docker 的運作流程首先要建立映像檔 image，
 
 這是由安裝 node.js 容器所執行的 express 專案。
 
-![1537013029_04772.png](images/2018-09-15_Docker - 容器化 Node.js express（Mac）/1537013029_04772.png)
+![1537013029_04772.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-15_Docker%20-%20%E5%AE%B9%E5%99%A8%E5%8C%96%20Node.js%20express%EF%BC%88Mac%EF%BC%89/1537013029_04772.png)
 
 ### 5\. 停止/啟動 容器
 
@@ -280,7 +279,7 @@ docker 的運作流程首先要建立映像檔 image，
 
 並且啟動 nginx 時，不再是常見的這個畫面：
 
-[![1537014569_79972.png](images/2018-09-15_Docker - 容器化 Node.js express（Mac）/1537014569_79972.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537014569_79972.png)
+[![1537014569_79972.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-15_Docker%20-%20%E5%AE%B9%E5%99%A8%E5%8C%96%20Node.js%20express%EF%BC%88Mac%EF%BC%89/1537014569_79972.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537014569_79972.png)
 
 而是將 nginx 預設的 80，轉到我們 node express 的容器上。
 
@@ -366,7 +365,7 @@ docker 的運作流程首先要建立映像檔 image，
 
 整體的目錄架構如下圖：
 
-![1537016822_51827.png](images/2018-09-15_Docker - 容器化 Node.js express（Mac）/1537016822_51827.png)
+![1537016822_51827.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-15_Docker%20-%20%E5%AE%B9%E5%99%A8%E5%8C%96%20Node.js%20express%EF%BC%88Mac%EF%BC%89/1537016822_51827.png)
 
 ### 4\. 啟動 docker-compose
 
@@ -378,11 +377,11 @@ docker 的運作流程首先要建立映像檔 image，
 
 完成後就會顯示 done。
 
-[![1537015812_97327.png](images/2018-09-15_Docker - 容器化 Node.js express（Mac）/1537015812_97327.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537015812_97327.png)
+[![1537015812_97327.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-15_Docker%20-%20%E5%AE%B9%E5%99%A8%E5%8C%96%20Node.js%20express%EF%BC%88Mac%EF%BC%89/1537015812_97327.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/129efefd-3a58-462a-aa6f-e1bc2d597517/1537015812_97327.png)
 
 這時候開啟網頁，應該就可以順利看到。[http://localhost/](http://localhost/)
 
-![1537016274_24667.png](images/2018-09-15_Docker - 容器化 Node.js express（Mac）/1537016274_24667.png)
+![1537016274_24667.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-15_Docker%20-%20%E5%AE%B9%E5%99%A8%E5%8C%96%20Node.js%20express%EF%BC%88Mac%EF%BC%89/1537016274_24667.png)
 
 ### 5\. 停止運作
 

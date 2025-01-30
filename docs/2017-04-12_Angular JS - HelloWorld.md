@@ -1,12 +1,11 @@
 ---
 title: "Angular JS - HelloWorld"
-date: "2017-04-12"
-tags: [Angular, Angular1]
-view: "303"
-history: "0"
-group: "Angular1"
-banner: "images/2017-04-12_Angular JS - HelloWorld/banner/1491982694_47649.png"
----
+subtitle: "對於 angular JS 的初步認識。"
+date: "2017-04-12T00:00:00.000Z"
+series: "angular1"
+tags: "Angular","Angular1"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-04-12_Angular%20JS%20-%20HelloWorld/banner/1491982694_47649.png"
+--- 
 
 **對於 angular JS 的初步認識。**
 
@@ -28,14 +27,14 @@ banner: "images/2017-04-12_Angular JS - HelloWorld/banner/1491982694_47649.png"
 
 首先建立好 html5基本版面，並引用 angular1，本篇從 cdn 上引用 min 版本。
 
-[![1491982694_47649.png](images/2017-04-12_Angular JS - HelloWorld/1491982694_47649.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/b8508a5a-8850-44f8-8370-60c055339b6a/1491982694_47649.png)
+[![1491982694_47649.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-04-12_Angular%20JS%20-%20HelloWorld/1491982694_47649.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/b8508a5a-8850-44f8-8370-60c055339b6a/1491982694_47649.png)
 
 Angular 載入
 ----------
 
 在 html 標籤處，加上 ng-app，在我們DOM載入時，angular 會尋找文件切入點，即為 ng-app。
 
-![1491982793_91653.png](images/2017-04-12_Angular JS - HelloWorld/1491982793_91653.png)
+![1491982793_91653.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-04-12_Angular%20JS%20-%20HelloWorld/1491982793_91653.png)
 
 新增內文
 ----
@@ -56,7 +55,7 @@ Angular 載入
 
 當文字方塊修改時，即可發現變數 yourname隨之更改。
 
-[![1491983248_54175.png](images/2017-04-12_Angular JS - HelloWorld/1491983248_54175.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/b8508a5a-8850-44f8-8370-60c055339b6a/1491983248_54175.png)
+[![1491983248_54175.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-04-12_Angular%20JS%20-%20HelloWorld/1491983248_54175.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/b8508a5a-8850-44f8-8370-60c055339b6a/1491983248_54175.png)
 
 結語
 --

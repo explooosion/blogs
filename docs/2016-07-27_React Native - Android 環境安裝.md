@@ -1,12 +1,11 @@
 ---
 title: "React Native - Android 環境安裝"
-date: "2016-07-27"
-tags: [android, install, react, reactnative, windows]
-view: "3358"
-history: "0"
-group: "ReactNative"
-banner: "images/2016-07-27_React Native - Android 環境安裝/banner/1469550384_80777.png"
----
+subtitle: "react native for android，windows 環境入門起手。"
+date: "2016-07-27T00:00:00.000Z"
+series: "reactnative"
+tags: "android","install","react","reactnative","windows"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-07-27_React%20Native%20-%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D/banner/1469550384_80777.png"
+--- 
 
 react native for android，windows 環境入門起手。
 
@@ -42,7 +41,7 @@ Tools：
 *   Android SDK Platform-Tools
 *   Android SDK Build-tools （務必將 Rev. 23 的裝好）
 
-[![1469550384_80777.png](images/2016-07-27_React Native - Android 環境安裝/1469550384_80777.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/af563a5d-5efa-4900-8cbb-16882971d96e/1469550384_80777.png)
+[![1469550384_80777.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-07-27_React%20Native%20-%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D/1469550384_80777.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/af563a5d-5efa-4900-8cbb-16882971d96e/1469550384_80777.png)
 
 Android API：
 
@@ -57,7 +56,7 @@ Extras 部分：
 
 *   Android Support Repository
 
-[![1469550072_81143.png](images/2016-07-27_React Native - Android 環境安裝/1469550072_81143.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/af563a5d-5efa-4900-8cbb-16882971d96e/1469550072_81143.png)  
+[![1469550072_81143.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-07-27_React%20Native%20-%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D/1469550072_81143.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/af563a5d-5efa-4900-8cbb-16882971d96e/1469550072_81143.png)  
  
 
 Java SE Development Kit 8 下載
@@ -70,7 +69,7 @@ Windows 環境設定
 
 至電腦－系統內容，選擇環境變數。
 
-![1469549089_61808.png](images/2016-07-27_React Native - Android 環境安裝/1469549089_61808.png)
+![1469549089_61808.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-07-27_React%20Native%20-%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D/1469549089_61808.png)
 
 新增一個系統變數：
 
@@ -78,13 +77,13 @@ Windows 環境設定
 
 「變數值」請指定安裝時候 sdk 的位置，為了方便，我把 sdk另外安裝在 D:\\
 
-[![1469549141_26667.png](images/2016-07-27_React Native - Android 環境安裝/1469549141_26667.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/af563a5d-5efa-4900-8cbb-16882971d96e/1469549141_26667.png)
+[![1469549141_26667.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-07-27_React%20Native%20-%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D/1469549141_26667.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/af563a5d-5efa-4900-8cbb-16882971d96e/1469549141_26667.png)
 
 編輯 Path 系統變數，增加以下內容
 
     ;%ANDROID_HOME%\tools;%ANDROID_HOME%\platform-tools
 
-[![1469549309_5982.png](images/2016-07-27_React Native - Android 環境安裝/1469549309_5982.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/af563a5d-5efa-4900-8cbb-16882971d96e/1469549309_5982.png)
+[![1469549309_5982.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-07-27_React%20Native%20-%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D/1469549309_5982.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/af563a5d-5efa-4900-8cbb-16882971d96e/1469549309_5982.png)
 
 在編輯 Path，請小心修改，或是先備份好原有「變數值」。
 
@@ -103,7 +102,7 @@ Windows 環境設定
 
 index.android.js 則為 app 開啟時的主畫面內容（Main）
 
-[![1469549579_75511.png](images/2016-07-27_React Native - Android 環境安裝/1469549579_75511.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/af563a5d-5efa-4900-8cbb-16882971d96e/1469549579_75511.png)
+[![1469549579_75511.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-07-27_React%20Native%20-%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D/1469549579_75511.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/af563a5d-5efa-4900-8cbb-16882971d96e/1469549579_75511.png)
 
 環境執行、安裝
 
@@ -123,7 +122,7 @@ index.android.js 則為 app 開啟時的主畫面內容（Main）
 
 Welcome to React Native！
 
-[![1469549888_98836.png](images/2016-07-27_React Native - Android 環境安裝/1469549888_98836.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/af563a5d-5efa-4900-8cbb-16882971d96e/1469549888_98836.png)
+[![1469549888_98836.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-07-27_React%20Native%20-%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D/1469549888_98836.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/af563a5d-5efa-4900-8cbb-16882971d96e/1469549888_98836.png)
 
 以上為簡易環境部屬，詳細步驟可於官方文件查看
 

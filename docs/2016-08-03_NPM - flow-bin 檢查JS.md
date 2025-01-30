@@ -1,12 +1,11 @@
 ---
 title: "NPM - flow-bin 檢查JS"
-date: "2016-08-03"
-tags: [NPM, flow-bin, flow]
-view: "959"
-history: "0"
-group: "NPM"
-banner: "images/2016-08-03_NPM - flow-bin 檢查JS/banner/1470239212_53923.png"
----
+subtitle: "flow-bin 快速檢查你的 JavaScript，之除蟲大師。"
+date: "2016-08-03T00:00:00.000Z"
+series: "npm"
+tags: "NPM","flow-bin","flow"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-08-03_NPM%20-%20flow-bin%20%E6%AA%A2%E6%9F%A5JS/banner/1470239212_53923.png"
+--- 
 
 flow-bin 快速檢查你的 JavaScript，之除蟲大師。
 
@@ -95,7 +94,7 @@ flow-bin 快速檢查你的 JavaScript，之除蟲大師。
 Found 1 error，成功找到一個錯誤，
 
 並告訴你 const cannot be reassigned。  
-![1470239212_53923.png](images/2016-08-03_NPM - flow-bin 檢查JS/1470239212_53923.png)
+![1470239212_53923.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-08-03_NPM%20-%20flow-bin%20%E6%AA%A2%E6%9F%A5JS/1470239212_53923.png)
 
 本套件可於官方查閱詳細說明 - [Getting started with Flow](https://www.flowtype.org/docs/getting-started.html)
 

@@ -1,18 +1,17 @@
 ---
 title: "Cloudflare - 在世界各地邊緣你的 Workers 吧！"
-date: "2019-10-28"
-tags: [cloudflare, workers, serverless, isomorphic, edge]
-view: "2610"
-history: "0"
-group: "Cloudflare"
-banner: "images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/banner/1572227963_93755.png"
----
+subtitle: "邊緣人在世界各地邊緣程式碼。"
+date: "2019-10-28T00:00:00.000Z"
+series: "cloudflare"
+tags: "cloudflare","workers","serverless","isomorphic","edge"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/banner/1572227963_93755.png"
+--- 
 
 邊緣人在世界各地邊緣程式碼。
 
 cloudflare 推出 Workers ，每葛人都該來體驗邊緣運算的快感！
 
-[![1572227963_93755.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572227963_93755.png)](https://blog.cloudflare.com/cloudflare-workers-unleashed/)
+[![1572227963_93755.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572227963_93755.png)](https://blog.cloudflare.com/cloudflare-workers-unleashed/)
 
 *   ref：[Everyone can now run JavaScript on Cloudflare with Workers](https://blog.cloudflare.com/cloudflare-workers-unleashed/)
 
@@ -46,7 +45,7 @@ Workers 以邊緣運算  ( [Edge computing](https://zh.wikipedia.org/wiki/%E9%
 
 根據官方指出，目前服務已經擴展到 90 個國家，194 個城市。
 
-[![1572229745_14051.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572229745_14051.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572229745_14051.png)
+[![1572229745_14051.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572229745_14051.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572229745_14051.png)
 
 *   ref：[Cloudflare Global Network Expands to 193 Cities](https://blog.cloudflare.com/scaling-the-cloudflare-global/)
 *   ref：[The Cloudflare Global Anycast Network](https://www.cloudflare.com/network/) ( updated to 194 )
@@ -82,7 +81,7 @@ Workers 這葛 [serverless](https://en.wikipedia.org/wiki/Serverless_computing)
 
 由於要將部署的網站上傳到 [storage](https://www.cloudflare.com/products/workers-kv/) 需要付費，因此要自行斟酌看看費用惹。
 
-[![1572239290_13745.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572239290_13745.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572239290_13745.png)
+[![1572239290_13745.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572239290_13745.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572239290_13745.png)
 
 如果不想付費...
 
@@ -152,7 +151,7 @@ Cloudflare 提供了後台管理系統，讓你可以直接在網頁上撰寫程
 
 在登入後，請至首頁右側，[點選](https://dash.cloudflare.com) Workers。
 
-![1572263239_80575.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572263239_80575.png)
+![1572263239_80575.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572263239_80575.png)
 
 在初次進入後台時，
 
@@ -160,7 +159,7 @@ Cloudflare 提供了後台管理系統，讓你可以直接在網頁上撰寫程
 
 設定之後將無法更改！... 筆者手殘 ... 好想更改啊！！！！
 
-[![1572263596_44201.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572263596_44201.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572263596_44201.png)
+[![1572263596_44201.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572263596_44201.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572263596_44201.png)
 
 *   圖源：[An Introduction to Cloudflare Workers](https://www.sitepoint.com/cloudflare-workers/)
 
@@ -170,15 +169,15 @@ Cloudflare 提供了後台管理系統，讓你可以直接在網頁上撰寫程
 
 別擔心，隨時都可以到後台取得 Account ID。
 
-[![1572264547_79724.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572264547_79724.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572264547_79724.png)
+[![1572264547_79724.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572264547_79724.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572264547_79724.png)
 
 接著開始建立新的 Worker，很明顯可以看到一顆按鈕 Create a Worker，點下去。
 
-![1572264698_52554.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572264698_52554.png)
+![1572264698_52554.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572264698_52554.png)
 
 進入編輯頁面後，左上角圖片紅框處可以看到系統隨機給予的 Worker Name，當然，是可以更改的！
 
-![1572264812_61768.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572264812_61768.png)
+![1572264812_61768.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572264812_61768.png)
 
 程式碼編輯區塊可以看到已經有 Sample Code，右半邊則是 Preview。
 
@@ -188,7 +187,7 @@ Cloudflare 提供了後台管理系統，讓你可以直接在網頁上撰寫程
 
 此外也可以看到 Wasm 的頁籤按鈕，你可以直接上傳編譯好的 wasm 檔案上去。
 
-[![1572265049_79675.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572265049_79675.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572265049_79675.png)
+[![1572265049_79675.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572265049_79675.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572265049_79675.png)
 
 接著在下方可以看見，系統預設已經幫我們啟用：
 
@@ -198,23 +197,23 @@ Will be deployed to your workers.dev subdomain
 
 除非你要指定到自己的網域，否則就要啟用他送你的 workers.dev subdomain。
 
-![1572265329_13015.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572265329_13015.png)
+![1572265329_13015.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572265329_13015.png)
 
 再點選 Save and Deploy 之後，系統會提示部署後的網址。
 
-[![1572265551_99108.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572265551_99108.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572265551_99108.png)
+[![1572265551_99108.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572265551_99108.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572265551_99108.png)
 
 接著你可以點選頁面左上角 Cloudflare Logo 下方的左箭頭〈，返回列表。
 
-![1572265769_01402.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572265769_01402.png)
+![1572265769_01402.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572265769_01402.png)
 
 回到 Workers Dashboard，就會看到新的 Worker 已經在列表中。
 
-[![1572265651_79275.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572265651_79275.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572265651_79275.png)
+[![1572265651_79275.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572265651_79275.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572265651_79275.png)
 
 如果你點開瀏覽，應該會發現目前無法以 SSL 方式連入，請改用 http:// 即可！
 
-[![1572266238_38023.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572266238_38023.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572266238_38023.png)
+[![1572266238_38023.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572266238_38023.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572266238_38023.png)
 
 最後就可以成功看到頁面出現：
 
@@ -230,7 +229,7 @@ hello world
 
 接著點選 Workers，下方新增路由，Add route。
 
-[![1572267150_73665.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572267150_73665.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572267150_73665.png)
+[![1572267150_73665.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572267150_73665.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572267150_73665.png)
 
 在表單中，Route 是你 DNS 的路徑規則，
 
@@ -238,7 +237,7 @@ robby.tw 是我的域名，前面的 test 就是你指定的 route。
 
 \* 星號....就不用解釋惹吧，還不知道就該打屁股惹。
 
-[![1572269227_179.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572269227_179.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572269227_179.png)
+[![1572269227_179.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572269227_179.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572269227_179.png)
 
 接著到 DNS 新增 [CNAME](https://zh.wikipedia.org/zh-tw/CNAME%E8%AE%B0%E5%BD%95)：
 
@@ -251,11 +250,11 @@ steep-dawn-7db4 只是我的 Worker Name。
 你可以複製剛剛的 Worker dev 網址，貼上並修改，去除 http 等格式。
 
   
-[![1572269927_60483.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572269927_60483.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572269927_60483.png)
+[![1572269927_60483.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572269927_60483.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572269927_60483.png)
 
 於是頁面就出來惹～[https://test.robby570.tw](https://test.robby570.tw)
 
-![1572270031_24985.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572270031_24985.png)
+![1572270031_24985.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572270031_24985.png)
 
 四、以 CLI 方式建立
 ------------
@@ -299,7 +298,7 @@ Global API Key
 
 如果你會看英文就看文件說明：
 
-[![1572270630_04918.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572270630_04918.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572270630_04918.png)
+[![1572270630_04918.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572270630_04918.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572270630_04918.png)
 
 如果你比較笨，看看下面的步驟....
 
@@ -307,17 +306,17 @@ Global API Key
 
 到你的 Workers 首頁右邊，點選 Get your API token。
 
-![1572270768_41695.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572270768_41695.png)
+![1572270768_41695.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572270768_41695.png)
 
 找到最下方的 API Keys，點選 Global API Key 的 View
 
-[![1572271543_40837.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572271543_40837.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572271543_40837.png)
+[![1572271543_40837.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572271543_40837.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572271543_40837.png)
 
 輸入帳號密碼，然後勾選一葛 通過率很低 的 reCAPTCHA。 
 
 筆者也不知道為什麼... 總是驗證失敗。
 
-[![1572271644_43675.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572271644_43675.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572271644_43675.png)
+[![1572271644_43675.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572271644_43675.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572271644_43675.png)
 
 最後得到的 Key 就把他複製起來，
 
@@ -426,11 +425,11 @@ Email address
 
     wrangler preview --watch
 
-[![1572305324_1316.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572305324_1316.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572305324_1316.png)
+[![1572305324_1316.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572305324_1316.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572305324_1316.png)
 
 如果啟動的時候出現下列訊息，代表你 wrangler.toml 的 account\_id 忘了設定囉！
 
-[![1572305307_06625.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572305307_06625.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572305307_06625.png)
+[![1572305307_06625.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572305307_06625.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572305307_06625.png)
 
 ### 4.5 建置專案
 
@@ -438,7 +437,7 @@ Email address
 
     wrangler build
 
-[![1572305786_5931.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572305786_5931.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572305786_5931.png)
+[![1572305786_5931.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572305786_5931.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572305786_5931.png)
 
 ### 4.6 佈署專案
 
@@ -446,15 +445,15 @@ Email address
 
     wrangler publish
 
-[![1572305887_65647.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572305887_65647.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572305887_65647.png)
+[![1572305887_65647.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572305887_65647.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572305887_65647.png)
 
 這時候回到 [Cloudflare Workers Dashboard](https://dash.cloudflare.com/) ，就可以看到剛剛建置的 Worker 了。
 
-[![1572306082_68797.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572306082_68797.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572306082_68797.png)
+[![1572306082_68797.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572306082_68797.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572306082_68797.png)
 
 如果你有設定 zone\_id，那就可以在 [Cloudflare](https://dash.cloudflare.com) 上的網域 Workers 列表中找到！
 
-[![1572318735_90901.png](images/2019-10-28_Cloudflare - 在世界各地邊緣你的 Workers 吧！/1572318735_90901.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572318735_90901.png)
+[![1572318735_90901.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-10-28_Cloudflare%20-%20%E5%9C%A8%E4%B8%96%E7%95%8C%E5%90%84%E5%9C%B0%E9%82%8A%E7%B7%A3%E4%BD%A0%E7%9A%84%20Workers%20%E5%90%A7%EF%BC%81/1572318735_90901.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/3beca2b9-0a7c-4a6d-9a70-20cd6b7c199e/1572318735_90901.png)
 
 ### 4.7 佈署專案 dev 與 prodiction
 

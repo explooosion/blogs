@@ -1,12 +1,11 @@
 ---
 title: "GoogleMapAPI－基本載入"
-date: "2016-04-14"
-tags: [Map]
-view: "557"
-history: "0"
-group: "GoogleMapAPI"
-banner: ""
----
+subtitle: "google map api 新手教學，請安心服用。"
+date: "2016-04-14T00:00:00.000Z"
+series: "googlemapapi"
+tags: "Map"
+image: ""
+--- 
 
 google map api 新手教學，請安心服用。
 

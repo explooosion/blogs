@@ -1,12 +1,11 @@
 ---
 title: "Sublime【Package Control】 - HTML/CSS/JS Prettify - JSX"
-date: "2016-05-28"
-tags: [Sublime, HTML/CSS/JS Prettify, JSX, Format]
-view: "683"
-history: "0"
-group: "Sublime"
-banner: "images/2016-05-28_Sublime【Package Control】 - HTMLCSSJS Prettify - JSX/banner/1464398697_86321.png"
----
+subtitle: "sublime【套件應用篇】新手教學之 HTML/CSS/JS Prettify 應用，請安心服用。"
+date: "2016-05-28T00:00:00.000Z"
+series: "sublime"
+tags: "Sublime","HTML/CSS/JS Prettify","JSX","Format"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-05-28_Sublime%E3%80%90Package%20Control%E3%80%91%20-%20HTMLCSSJS%20Prettify%20-%20JSX/banner/1464398697_86321.png"
+--- 
 
 sublime【套件應用篇】新手教學之 HTML/CSS/JS Prettify 應用，請安心服用。
 
@@ -40,7 +39,7 @@ Preferences > Package Setting > HTML/CS/JS Prettify
 
 選擇 【Set Prettify Preferences】。
 
-[![1464398697_86321.png](images/2016-05-28_Sublime【Package Control】 - HTMLCSSJS Prettify - JSX/1464398697_86321.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/cb63a3af-8845-4b2d-ade8-39498917cf4c/1464398697_86321.png)
+[![1464398697_86321.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-05-28_Sublime%E3%80%90Package%20Control%E3%80%91%20-%20HTMLCSSJS%20Prettify%20-%20JSX/1464398697_86321.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/cb63a3af-8845-4b2d-ade8-39498917cf4c/1464398697_86321.png)
 
 到 "JS": 區塊，將 "e4x" 設定為 true。
 
@@ -55,6 +54,6 @@ Hot Key 可於 Preferences > Package Setting > HTML/CS/JS Prettify
 
     Ctrl + Shift + H
 
-[![1464398982_36159.png](images/2016-05-28_Sublime【Package Control】 - HTMLCSSJS Prettify - JSX/1464398982_36159.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/cb63a3af-8845-4b2d-ade8-39498917cf4c/1464398982_36159.png)
+[![1464398982_36159.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-05-28_Sublime%E3%80%90Package%20Control%E3%80%91%20-%20HTMLCSSJS%20Prettify%20-%20JSX/1464398982_36159.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/cb63a3af-8845-4b2d-ade8-39498917cf4c/1464398982_36159.png)
 
 有勘誤之處，不吝指教。ob'\_'ov

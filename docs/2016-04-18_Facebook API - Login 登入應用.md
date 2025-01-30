@@ -1,12 +1,11 @@
 ---
 title: "Facebook API - Login 登入應用"
-date: "2016-04-18"
-tags: [FacebookAPI, login]
-view: "8531"
-history: "0"
-group: "FacebookAPI"
-banner: "images/2016-04-18_Facebook API - Login 登入應用/banner/1460990573_87418.png"
----
+subtitle: "facebook api 新手教學之 login 應用，請安心服用。"
+date: "2016-04-18T00:00:00.000Z"
+series: "facebookapi"
+tags: "FacebookAPI","login"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-18_Facebook%20API%20-%20Login%20%E7%99%BB%E5%85%A5%E6%87%89%E7%94%A8/banner/1460990573_87418.png"
+--- 
 
 facebook api 新手教學之 login 應用，請安心服用。
 
@@ -25,56 +24,56 @@ facebook api 新手教學之 login 應用，請安心服用。
 
 首先可到 facebook 的 [developers](https://developers.facebook.com/apps) 新增應用程式。
 
-[![1460990573_87418.png](images/2016-04-18_Facebook API - Login 登入應用/1460990573_87418.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0dbce28d-2f5d-4f1d-ab8a-2e8de48a26a4/1460990573_87418.png)
+[![1460990573_87418.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-18_Facebook%20API%20-%20Login%20%E7%99%BB%E5%85%A5%E6%87%89%E7%94%A8/1460990573_87418.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0dbce28d-2f5d-4f1d-ab8a-2e8de48a26a4/1460990573_87418.png)
 
 開發平台我們選擇網站。
 
-[![1460990619_12103.png](images/2016-04-18_Facebook API - Login 登入應用/1460990619_12103.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0dbce28d-2f5d-4f1d-ab8a-2e8de48a26a4/1460990619_12103.png)
+[![1460990619_12103.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-18_Facebook%20API%20-%20Login%20%E7%99%BB%E5%85%A5%E6%87%89%E7%94%A8/1460990619_12103.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0dbce28d-2f5d-4f1d-ab8a-2e8de48a26a4/1460990619_12103.png)
 
 輸入應用程式名稱，點選「Create New Facebook App ID」。
 
-[![1460990658_54673.png](images/2016-04-18_Facebook API - Login 登入應用/1460990658_54673.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0dbce28d-2f5d-4f1d-ab8a-2e8de48a26a4/1460990658_54673.png)
+[![1460990658_54673.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-18_Facebook%20API%20-%20Login%20%E7%99%BB%E5%85%A5%E6%87%89%E7%94%A8/1460990658_54673.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0dbce28d-2f5d-4f1d-ab8a-2e8de48a26a4/1460990658_54673.png)
 
 輸入電子郵件，選擇參考，
 
 因為是新建立，故測試版本保持「否」。
 
-[![1460990798_80444.png](images/2016-04-18_Facebook API - Login 登入應用/1460990798_80444.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0dbce28d-2f5d-4f1d-ab8a-2e8de48a26a4/1460990798_80444.png)
+[![1460990798_80444.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-18_Facebook%20API%20-%20Login%20%E7%99%BB%E5%85%A5%E6%87%89%E7%94%A8/1460990798_80444.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0dbce28d-2f5d-4f1d-ab8a-2e8de48a26a4/1460990798_80444.png)
 
 完成建立後可看到進度「Setup SDK」
 
-[![1460990892_10683.png](images/2016-04-18_Facebook API - Login 登入應用/1460990892_10683.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0dbce28d-2f5d-4f1d-ab8a-2e8de48a26a4/1460990892_10683.png)
+[![1460990892_10683.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-18_Facebook%20API%20-%20Login%20%E7%99%BB%E5%85%A5%E6%87%89%E7%94%A8/1460990892_10683.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0dbce28d-2f5d-4f1d-ab8a-2e8de48a26a4/1460990892_10683.png)
 
 網頁編寫
 ----
 
 捲下來看，可看到基本的 Facebook SDK JS。
 
-[![1460990985_84808.png](images/2016-04-18_Facebook API - Login 登入應用/1460990985_84808.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0dbce28d-2f5d-4f1d-ab8a-2e8de48a26a4/1460990985_84808.png)
+[![1460990985_84808.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-18_Facebook%20API%20-%20Login%20%E7%99%BB%E5%85%A5%E6%87%89%E7%94%A8/1460990985_84808.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0dbce28d-2f5d-4f1d-ab8a-2e8de48a26a4/1460990985_84808.png)
 
 下方輸入要嵌入 Facebook SDK 的網站。
 
 若為本機測試，可輸入 [http://localhost/](http://localhost/)
 
-![1460991037_93026.png](images/2016-04-18_Facebook API - Login 登入應用/1460991037_93026.png)
+![1460991037_93026.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-18_Facebook%20API%20-%20Login%20%E7%99%BB%E5%85%A5%E6%87%89%E7%94%A8/1460991037_93026.png)
 
 完成後會跳出 fb 按讚留言的 div
 
-![1460991107_6827.png](images/2016-04-18_Facebook API - Login 登入應用/1460991107_6827.png)
+![1460991107_6827.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-18_Facebook%20API%20-%20Login%20%E7%99%BB%E5%85%A5%E6%87%89%E7%94%A8/1460991107_6827.png)
 
 建立一個空白網頁，並將剛剛 JS 及 div 加入於內容中
 
 即可建立一個簡易讚 + 分享 的功能。
 
-![1460991338_56984.png](images/2016-04-18_Facebook API - Login 登入應用/1460991338_56984.png)
+![1460991338_56984.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-18_Facebook%20API%20-%20Login%20%E7%99%BB%E5%85%A5%E6%87%89%E7%94%A8/1460991338_56984.png)
 
 若為本機測試，在「Like」部份則可能會有點問題
 
-![1460991771_97137.png](images/2016-04-18_Facebook API - Login 登入應用/1460991771_97137.png)
+![1460991771_97137.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-18_Facebook%20API%20-%20Login%20%E7%99%BB%E5%85%A5%E6%87%89%E7%94%A8/1460991771_97137.png)
 
 以上測試順利後，選擇「 Login」查看文件。
 
-[![1460991846_55178.png](images/2016-04-18_Facebook API - Login 登入應用/1460991846_55178.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0dbce28d-2f5d-4f1d-ab8a-2e8de48a26a4/1460991846_55178.png)
+[![1460991846_55178.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-18_Facebook%20API%20-%20Login%20%E7%99%BB%E5%85%A5%E6%87%89%E7%94%A8/1460991846_55178.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0dbce28d-2f5d-4f1d-ab8a-2e8de48a26a4/1460991846_55178.png)
 
 登入 Login
 --------
@@ -198,11 +197,11 @@ facebook api 新手教學之 login 應用，請安心服用。
         version    : 'v2.2' // use version 2.2
       });
 
-![1460992311_73001.png](images/2016-04-18_Facebook API - Login 登入應用/1460992311_73001.png)
+![1460992311_73001.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-18_Facebook%20API%20-%20Login%20%E7%99%BB%E5%85%A5%E6%87%89%E7%94%A8/1460992311_73001.png)
 
 完成後即可看到 Log In 按鈕。
 
-![1460992583_20485.png](images/2016-04-18_Facebook API - Login 登入應用/1460992583_20485.png)
+![1460992583_20485.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-04-18_Facebook%20API%20-%20Login%20%E7%99%BB%E5%85%A5%E6%87%89%E7%94%A8/1460992583_20485.png)
 
 在網頁載時，會先執行 FB.getLoginStatus，
 

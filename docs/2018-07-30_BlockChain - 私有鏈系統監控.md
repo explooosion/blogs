@@ -1,12 +1,11 @@
 ---
 title: "BlockChain - 私有鏈系統監控"
-date: "2018-07-30"
-tags: [blockchain, Node.js, eth-netstats, eth-net-intelligence-api, dashboard]
-view: "1658"
-history: "0"
-group: "Blockchain"
-banner: "images/2018-07-30_BlockChain - 私有鏈系統監控/banner/1532954411_07255.png"
----
+subtitle: "使用 Node.js 來監控鏈的狀態 ..."
+date: "2018-07-30T00:00:00.000Z"
+series: "blockchain"
+tags: "blockchain","Node.js","eth-netstats","eth-net-intelligence-api","dashboard"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/banner/1532954411_07255.png"
+--- 
 
 使用 Node.js 來監控鏈的狀態 ...
 
@@ -20,7 +19,7 @@ banner: "images/2018-07-30_BlockChain - 私有鏈系統監控/banner/1532954411_
 2.  [BlockChain - 私有鏈系統監控](https://dotblogs.com.tw/explooosion/2018/07/30/200754)［本篇］
 3.  BlockChain - 私有鏈的智能合約（Solidity & Node.js）- 未完工
 
-[![1532954411_07255.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1532954411_07255.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1532954411_07255.png)
+[![1532954411_07255.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1532954411_07255.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1532954411_07255.png)
 
 為了方便了解鏈的狀態，除了使用終端機命令去查詢，
 
@@ -41,7 +40,7 @@ banner: "images/2018-07-30_BlockChain - 私有鏈系統監控/banner/1532954411_
 
 如下目錄結構：
 
-![1532951882_1607.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1532951882_1607.png)
+![1532951882_1607.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1532951882_1607.png)
 
 一、eth-netstats
 --------------
@@ -68,7 +67,7 @@ banner: "images/2018-07-30_BlockChain - 私有鏈系統監控/banner/1532954411_
 
     grunt
 
-![1532951023_10744.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1532951023_10744.png)
+![1532951023_10744.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1532951023_10744.png)
 
 接著在專案根目錄底下建立檔案 ws\_secret.json，
 
@@ -82,25 +81,25 @@ banner: "images/2018-07-30_BlockChain - 私有鏈系統監控/banner/1532954411_
         "WS_SECRET": "update"
     }
 
-![1532951077_15995.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1532951077_15995.png)
+![1532951077_15995.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1532951077_15995.png)
 
 ### 2\. 啟動
 
     npm start
 
-[![1532950999_74486.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1532950999_74486.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1532950999_74486.png)
+[![1532950999_74486.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1532950999_74486.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1532950999_74486.png)
 
 順利啟動後，就可以開啟網站 [http://localhost:3000](http://localhost:3000)
 
 如果出現以下警告，則代表可能是 ws\_secret.json 設定失敗哦！
 
-[![1532950977_95022.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1532950977_95022.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1532950977_95022.png)
+[![1532950977_95022.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1532950977_95022.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1532950977_95022.png)
 
 網站開起來後，可以看到漂亮的儀表板，
 
 而數據部分則會透過 [eth-net-intelligence-api](https://github.com/cubedro/eth-net-intelligence-api) 進行介接，因此接著繼續下一段佈署。
 
-[![1532951401_88841.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1532951401_88841.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1532951401_88841.png)
+[![1532951401_88841.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1532951401_88841.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1532951401_88841.png)
 
 二、eth-net-intelligence-api
 --------------------------
@@ -121,7 +120,7 @@ banner: "images/2018-07-30_BlockChain - 私有鏈系統監控/banner/1532954411_
 
 在這邊使用到 [pm2](https://github.com/Unitech/pm2)，它是用於管理 node.js 環境的一個程序管理器。
 
-![1532952163_05271.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1532952163_05271.png)
+![1532952163_05271.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1532952163_05271.png)
 
 首先安裝該套件：
 
@@ -131,7 +130,7 @@ banner: "images/2018-07-30_BlockChain - 私有鏈系統監控/banner/1532954411_
 
     pm2 -v
 
-![1532957622_62071.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1532957622_62071.png)
+![1532957622_62071.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1532957622_62071.png)
 
 ### 2\. 設定參數
 
@@ -190,7 +189,7 @@ banner: "images/2018-07-30_BlockChain - 私有鏈系統監控/banner/1532954411_
     // results = false;
     results = [];
 
-[![1532959223_64437.jpg](images/2018-07-30_BlockChain - 私有鏈系統監控/1532959223_64437.jpg)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1532959223_64437.jpg)
+[![1532959223_64437.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1532959223_64437.jpg)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1532959223_64437.jpg)
 
 ### 4\. 啟動程式
 
@@ -202,11 +201,11 @@ banner: "images/2018-07-30_BlockChain - 私有鏈系統監控/banner/1532954411_
 
 如果出現以下訊息，請務必確認是否有完成［修改程式］：
 
-[![37942414_10209561771240087_1018541267929268224_o.jpg](images/2018-07-30_BlockChain - 私有鏈系統監控/37942414_10209561771240087_1018541267929268224_o.jpg)](https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/37942414_10209561771240087_1018541267929268224_o.jpg?_nc_cat=0&oh=80151723a120ddb8d91dc41740bd09e0&oe=5C0F0B52)
+[![37942414_10209561771240087_1018541267929268224_o.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/37942414_10209561771240087_1018541267929268224_o.jpg)](https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/37942414_10209561771240087_1018541267929268224_o.jpg?_nc_cat=0&oh=80151723a120ddb8d91dc41740bd09e0&oe=5C0F0B52)
 
 啟動後看看網頁，就可以看儀表板獲取所有資訊了！
 
-[![1533017816_49794.gif](images/2018-07-30_BlockChain - 私有鏈系統監控/1533017816_49794.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533017816_49794.gif)
+[![1533017816_49794.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533017816_49794.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533017816_49794.gif)
 
 ### 5\. 查看程序狀態
 
@@ -214,7 +213,7 @@ banner: "images/2018-07-30_BlockChain - 私有鏈系統監控/banner/1532954411_
 
     pm2 list
 
-[![1533019136_78726.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1533019136_78726.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019136_78726.png)
+[![1533019136_78726.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533019136_78726.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019136_78726.png)
 
 ### 查看程序日誌
 
@@ -222,13 +221,13 @@ banner: "images/2018-07-30_BlockChain - 私有鏈系統監控/banner/1532954411_
 
     pm2 log
 
-[![1533019285_35834.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1533019285_35834.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019285_35834.png)
+[![1533019285_35834.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533019285_35834.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019285_35834.png)
 
-[![1533019281_44816.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1533019281_44816.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019281_44816.png)
+[![1533019281_44816.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533019281_44816.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019281_44816.png)
 
 輸入 Ctrl \+ C 就可以停止監控。
 
-![1533019339_57261.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1533019339_57261.png)
+![1533019339_57261.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533019339_57261.png)
 
 ### 6\. 重啟服務
 
@@ -240,7 +239,7 @@ banner: "images/2018-07-30_BlockChain - 私有鏈系統監控/banner/1532954411_
 
     pm2 restart 0
 
-[![1533019748_75896.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1533019748_75896.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019748_75896.png)
+[![1533019748_75896.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533019748_75896.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019748_75896.png)
 
 你知道嗎？筆者輸入的 node-app 其實是由 app.json 所設定的哦！
 
@@ -250,7 +249,7 @@ banner: "images/2018-07-30_BlockChain - 私有鏈系統監控/banner/1532954411_
 
     pm2 stop node-app
 
-[![1533019704_95665.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1533019704_95665.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019704_95665.png)
+[![1533019704_95665.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533019704_95665.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019704_95665.png)
 
 這裡的停止服務，並非將服務移除，他是可以隨時被啟用的！
 
@@ -258,7 +257,7 @@ banner: "images/2018-07-30_BlockChain - 私有鏈系統監控/banner/1532954411_
 
     pm2 start node-app
 
-[![1533019947_49901.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1533019947_49901.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019947_49901.png)
+[![1533019947_49901.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533019947_49901.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533019947_49901.png)
 
 ### 8\. 刪除服務
 
@@ -266,11 +265,11 @@ banner: "images/2018-07-30_BlockChain - 私有鏈系統監控/banner/1532954411_
 
     pm2 delete node-app
 
-[![1533020281_16587.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1533020281_16587.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533020281_16587.png)
+[![1533020281_16587.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533020281_16587.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533020281_16587.png)
 
 或是使用 pm2 kill，將所有 pm2 的程序通通刪除！
 
-[![1533020398_6155.png](images/2018-07-30_BlockChain - 私有鏈系統監控/1533020398_6155.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533020398_6155.png)
+[![1533020398_6155.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-30_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E7%B3%BB%E7%B5%B1%E7%9B%A3%E6%8E%A7/1533020398_6155.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/4fc2376b-a8d1-4ebe-9de2-4204d6e22999/1533020398_6155.png)
 
 ※、結語
 ----

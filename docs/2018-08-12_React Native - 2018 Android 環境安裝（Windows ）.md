@@ -1,16 +1,15 @@
 ---
 title: "React Native - 2018 Android 環境安裝（Windows ）"
-date: "2018-08-12"
-tags: [install, reactnative, windows, android, environment, react]
-view: "5582"
-history: "0"
-group: "ReactNative"
-banner: "images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/banner/1534016090_40382.png"
----
+subtitle: "現在放棄的話，專案就結束了哦"
+date: "2018-08-12T00:00:00.000Z"
+series: "reactnative"
+tags: "install","reactnative","windows","android","environment","react"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/banner/1534016090_40382.png"
+--- 
 
 現在放棄的話，專案就結束了哦
 
-[![1534016090_40382.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534016090_40382.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534016090_40382.png)
+[![1534016090_40382.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534016090_40382.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534016090_40382.png)
 
 沒想到過了兩年又回來寫 RN
 
@@ -60,7 +59,7 @@ QAQ 時間過好快！！！
 
     choco -v
 
-![1534006571_85758.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534006571_85758.png)
+![1534006571_85758.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534006571_85758.png)
 
 更新 chocolatey。
 
@@ -96,7 +95,7 @@ QAQ 時間過好快！！！
 
     react-native -v
 
-[![1534006526_46709.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534006526_46709.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534006526_46709.png)
+[![1534006526_46709.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534006526_46709.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534006526_46709.png)
 
 ### 2.4 安裝 Android Studio
 
@@ -109,19 +108,19 @@ QAQ 時間過好快！！！
 
 點選 Download Android Studio 並同意授權。
 
-[![1534006837_68263.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534006837_68263.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534006837_68263.png)
+[![1534006837_68263.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534006837_68263.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534006837_68263.png)
 
 下一步到底！　然後安裝完成！
 
-![1534007024_72951.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534007024_72951.png)
+![1534007024_72951.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534007024_72951.png)
 
 接著啟動 Android Studio。
 
-![1534007435_85566.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534007435_85566.png)
+![1534007435_85566.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534007435_85566.png)
 
 展開 Configure，選擇 SDK Manager。
 
-[![1534007085_26819.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534007085_26819.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534007085_26819.png)
+[![1534007085_26819.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534007085_26819.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534007085_26819.png)
 
 由於筆者環境已經設定過，這時候應該會跳出視窗，
 
@@ -146,7 +145,7 @@ QAQ 時間過好快！！！
 
 在畫面中可以看到有三個頁籤(Tab)：
 
-[![1534007703_328.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534007703_328.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534007703_328.png)
+[![1534007703_328.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534007703_328.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534007703_328.png)
 
 原則上我們只會動到 SDK Platforms，其他的頁籤項目都已經幫我們預設打勾。
 
@@ -160,15 +159,15 @@ QAQ 時間過好快！！！
 
 #### ［SDK Platforms］
 
-[![1534007873_28629.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534007873_28629.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534007873_28629.png)
+[![1534007873_28629.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534007873_28629.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534007873_28629.png)
 
 #### ［SDK Tools］
 
-[![1534007983_39082.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534007983_39082.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534007983_39082.png)
+[![1534007983_39082.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534007983_39082.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534007983_39082.png)
 
 #### ［SDK Update Sites］
 
-[![1534008038_95143.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534008038_95143.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534008038_95143.png)
+[![1534008038_95143.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534008038_95143.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534008038_95143.png)
 
 接著就開始漫長的安裝之旅吧～～～
 
@@ -192,7 +191,7 @@ QAQ 時間過好快！！！
 
 給文組的圖解步驟如下：
 
-[![1534008632_56543.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534008632_56543.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534008632_56543.png)
+[![1534008632_56543.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534008632_56543.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534008632_56543.png)
 
 ### 2.6 安裝模擬器
 
@@ -200,7 +199,7 @@ QAQ 時間過好快！！！
 
 由於筆者電腦也沒安裝 VirtualBox，因此下載類型選擇 with VirtualBox。
 
-![1534009227_46989.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534009227_46989.png)
+![1534009227_46989.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534009227_46989.png)
 
 請記得註冊帳號。
 
@@ -208,17 +207,17 @@ QAQ 時間過好快！！！
 
 選擇 Settings－ADB，接著選擇你的 sdk 所在目錄。
 
-[![1534009394_82503.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534009394_82503.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534009394_82503.png)
+[![1534009394_82503.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534009394_82503.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534009394_82503.png)
 
 這邊會要求登入，記得勾選 personal 方案
 
 接著建立一個模擬器，乳下方結果：
 
-[![1534009498_16671.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534009498_16671.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534009498_16671.png)
+[![1534009498_16671.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534009498_16671.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534009498_16671.png)
 
 完成建立後就啟動它吧～
 
-[![1534009609_66908.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534009609_66908.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534009609_66908.png)
+[![1534009609_66908.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534009609_66908.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534009609_66908.png)
 
 ### 2.7 建立新的 APP 專案
 
@@ -240,7 +239,7 @@ QAQ 時間過好快！！！
 
 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈！
 
-[![1534011190_17842.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534011190_17842.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534011190_17842.png)
+[![1534011190_17842.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534011190_17842.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534011190_17842.png)
 
 先學會怎麼摔，再學會怎麼站起。
 
@@ -269,7 +268,7 @@ platform-tools 位於你的 sdk 所在位置。
 
     C:\Android\sdk\platform-tools
 
-![1534012255_71578.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534012255_71578.png)
+![1534012255_71578.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534012255_71578.png)
 
 執行以下指令：
 
@@ -299,11 +298,11 @@ platform-tools 位於你的 sdk 所在位置。
 
 快去看看模擬器～
 
-[![1534012848_17183.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534012848_17183.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534012848_17183.png)
+[![1534012848_17183.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534012848_17183.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534012848_17183.png)
 
 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈！
 
-[![1534012800_28451.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534012800_28451.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534012800_28451.png)
+[![1534012800_28451.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534012800_28451.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534012800_28451.png)
 
 先學會怎麼摔，再學會怎麼站起。
 
@@ -351,7 +350,7 @@ platform-tools 位於你的 sdk 所在位置。
 
     yarn install
 
-[![1534014038_61958.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534014038_61958.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534014038_61958.png)
+[![1534014038_61958.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534014038_61958.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534014038_61958.png)
 
 如果使用 npm install，請乖乖移除整個 node\_modules，再下指令重新安裝。
 
@@ -363,11 +362,11 @@ platform-tools 位於你的 sdk 所在位置。
 
 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈！
 
-[![1534014104_58904.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534014104_58904.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534014104_58904.png)
+[![1534014104_58904.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534014104_58904.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534014104_58904.png)
 
 教練說過：
 
-[![1534014179_8163.jpg](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534014179_8163.jpg)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534014179_8163.jpg)
+[![1534014179_8163.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534014179_8163.jpg)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534014179_8163.jpg)
 
 ### \> [Unable to load script from assets index.android.bundle on windows](https://stackoverflow.com/questions/44446523/unable-to-load-script-from-assets-index-android-bundle-on-windows)
 
@@ -387,7 +386,7 @@ platform-tools 位於你的 sdk 所在位置。
 
 #### 灑花🌼🌼　灑花🌼🌼　灑花🌼🌼
 
-[![1534014403_5091.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534014403_5091.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534014403_5091.png)
+[![1534014403_5091.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534014403_5091.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534014403_5091.png)
 
 四、**[react-native-starter-kit](https://github.com/mcnamee/react-native-starter-kit) 範例**
 ----------------------------------------------------------------------------------------
@@ -416,13 +415,13 @@ platform-tools 位於你的 sdk 所在位置。
 
 出現提示畫面時，我們按下 a
 
-[![1534015124_31909.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534015124_31909.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534015124_31909.png)
+[![1534015124_31909.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534015124_31909.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534015124_31909.png)
 
 如果有畫面，初次使用請依照指示設定。
 
 順利就可以看到初始畫面囉～
 
-[![1534015256_87828.png](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534015256_87828.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534015256_87828.png)
+[![1534015256_87828.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534015256_87828.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/64374127-8f6f-4297-bef0-8c3421f3edd6/1534015256_87828.png)
 
 如果有發生 port 的一些占用問題，
 
@@ -430,7 +429,7 @@ platform-tools 位於你的 sdk 所在位置。
 
 再次讓肝偉大吧！ 趕快起身上廁所...
 
-[![1534015659_84212.jpg](images/2018-08-12_React Native - 2018 Android 環境安裝（Windows ）/1534015659_84212.jpg)](https://www.facebook.com/kaobei.engineer/?ref=br_rs)
+[![1534015659_84212.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-12_React%20Native%20-%202018%20Android%20%E7%92%B0%E5%A2%83%E5%AE%89%E8%A3%9D%EF%BC%88Windows%20%EF%BC%89/1534015659_84212.jpg)](https://www.facebook.com/kaobei.engineer/?ref=br_rs)
 
 哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈！
 

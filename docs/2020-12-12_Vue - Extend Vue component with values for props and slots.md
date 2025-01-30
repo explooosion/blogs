@@ -1,18 +1,17 @@
 ---
 title: "Vue - Extend Vue component with values for props and slots"
-date: "2020-12-12"
-tags: [renderContext, Vue2, slots, extends, quasar, Vue, template, createElement, components, render functions, functional]
-view: "1882"
-history: "0"
-group: "Vue"
-banner: "images/2020-12-12_Vue - Extend Vue component with values for props and slots/banner/1607715557.jpg"
----
+subtitle: "談討關於繼承組件以及覆寫 props 與 slots！"
+date: "2020-12-12T00:00:00.000Z"
+series: "vue"
+tags: "renderContext","Vue2","slots","extends","quasar","Vue","template","createElement","components","render functions","functional"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-12-12_Vue%20-%20Extend%20Vue%20component%20with%20values%20for%20props%20and%20slots/banner/1607715557.jpg"
+--- 
 
 談討關於繼承組件以及覆寫 props 與 slots！
 
 關於重新包裝組件的方式，本篇圍繞著 Render Functions 與 Template。
 
-[![1607715557.jpg](images/2020-12-12_Vue - Extend Vue component with values for props and slots/1607715557.jpg)](https://webdevchallenges.com/persist-access-token-with-vue-js/)
+[![1607715557.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-12-12_Vue%20-%20Extend%20Vue%20component%20with%20values%20for%20props%20and%20slots/1607715557.jpg)](https://webdevchallenges.com/persist-access-token-with-vue-js/)
 
 *   banner: [Persist Access Token with Vue.js](http://webdevchallenges.com/persist-access-token-with-vue-js/)
 
@@ -149,7 +148,7 @@ banner: "images/2020-12-12_Vue - Extend Vue component with values for props and 
 
 畫面預覽：
 
-![1607763821.png](images/2020-12-12_Vue - Extend Vue component with values for props and slots/1607763821.png)
+![1607763821.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-12-12_Vue%20-%20Extend%20Vue%20component%20with%20values%20for%20props%20and%20slots/1607763821.png)
 
 * * *
 
@@ -216,7 +215,7 @@ banner: "images/2020-12-12_Vue - Extend Vue component with values for props and 
 
 畫面預覽：
 
-![1607763861.png](images/2020-12-12_Vue - Extend Vue component with values for props and slots/1607763861.png)
+![1607763861.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-12-12_Vue%20-%20Extend%20Vue%20component%20with%20values%20for%20props%20and%20slots/1607763861.png)
 
 關於上述 3 種使用情境：
 
@@ -230,7 +229,7 @@ banner: "images/2020-12-12_Vue - Extend Vue component with values for props and 
 
 但是查看 DOM tree，bold 被誤當 attrs 加上去了。
 
-[![1607760109.png](images/2020-12-12_Vue - Extend Vue component with values for props and slots/1607760109.png)](https://dotblogsfile.blob.core.windows.net/user/robby/07b62e54-0c5b-42da-8a53-9a6a5fc56585/1607760109.png)
+[![1607760109.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-12-12_Vue%20-%20Extend%20Vue%20component%20with%20values%20for%20props%20and%20slots/1607760109.png)](https://dotblogsfile.blob.core.windows.net/user/robby/07b62e54-0c5b-42da-8a53-9a6a5fc56585/1607760109.png)
 
 因為我們沒有在 ButtonTemplate.vue 告知他是 props
 
@@ -260,7 +259,7 @@ banner: "images/2020-12-12_Vue - Extend Vue component with values for props and 
 
 重新檢視原始碼，就不會被當屬性顯示！
 
-![1607761183.png](images/2020-12-12_Vue - Extend Vue component with values for props and slots/1607761183.png)
+![1607761183.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-12-12_Vue%20-%20Extend%20Vue%20component%20with%20values%20for%20props%20and%20slots/1607761183.png)
 
 雖然沒被當屬性顯示，但我們傳遞的 bold 也失效了，
 
@@ -268,7 +267,7 @@ banner: "images/2020-12-12_Vue - Extend Vue component with values for props and 
 
 沒有成功接收到 props: bold 的畫面：
 
-![1607763893.png](images/2020-12-12_Vue - Extend Vue component with values for props and slots/1607763893.png)
+![1607763893.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-12-12_Vue%20-%20Extend%20Vue%20component%20with%20values%20for%20props%20and%20slots/1607763893.png)
 
 這時你可以在 v-bind 補上 $options.propsData 就沒問題囉！
 
@@ -287,7 +286,7 @@ banner: "images/2020-12-12_Vue - Extend Vue component with values for props and 
 
 成功後的畫面：
 
-![1607763930.png](images/2020-12-12_Vue - Extend Vue component with values for props and slots/1607763930.png)
+![1607763930.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-12-12_Vue%20-%20Extend%20Vue%20component%20with%20values%20for%20props%20and%20slots/1607763930.png)
 
 #### 3\. with slots
 
@@ -295,7 +294,7 @@ banner: "images/2020-12-12_Vue - Extend Vue component with values for props and 
 
 可以嘗試在 mounted 印出 [this.$scopedSlots](https://vuejs.org/v2/guide/components-slots.html#Scoped-Slots-with-the-slot-scope-Attribute)，可以發現多了 after 與 default 
 
-[![1607761811.png](images/2020-12-12_Vue - Extend Vue component with values for props and slots/1607761811.png)](https://dotblogsfile.blob.core.windows.net/user/robby/07b62e54-0c5b-42da-8a53-9a6a5fc56585/1607761811.png)
+[![1607761811.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-12-12_Vue%20-%20Extend%20Vue%20component%20with%20values%20for%20props%20and%20slots/1607761811.png)](https://dotblogsfile.blob.core.windows.net/user/robby/07b62e54-0c5b-42da-8a53-9a6a5fc56585/1607761811.png)
 
 我們可以利用 v-for 將這段 slots 補進來：
 
@@ -312,7 +311,7 @@ banner: "images/2020-12-12_Vue - Extend Vue component with values for props and 
 
 畫面預覽：
 
-![1607763954.png](images/2020-12-12_Vue - Extend Vue component with values for props and slots/1607763954.png)
+![1607763954.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-12-12_Vue%20-%20Extend%20Vue%20component%20with%20values%20for%20props%20and%20slots/1607763954.png)
 
 #### 完整的 components 方式：
 
@@ -356,7 +355,7 @@ banner: "images/2020-12-12_Vue - Extend Vue component with values for props and 
 
 同時你也可以發現，ButtonTemplate 其實是個 wrapper 概念。
 
-![1607768997.png](images/2020-12-12_Vue - Extend Vue component with values for props and slots/1607768997.png)
+![1607768997.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-12-12_Vue%20-%20Extend%20Vue%20component%20with%20values%20for%20props%20and%20slots/1607768997.png)
 
 * * *
 
@@ -412,7 +411,7 @@ banner: "images/2020-12-12_Vue - Extend Vue component with values for props and 
 
 畫面預覽：
 
-![1607766194.png](images/2020-12-12_Vue - Extend Vue component with values for props and slots/1607766194.png)
+![1607766194.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-12-12_Vue%20-%20Extend%20Vue%20component%20with%20values%20for%20props%20and%20slots/1607766194.png)
 
 關於上述 3 種使用情境：
 
@@ -515,11 +514,11 @@ banner: "images/2020-12-12_Vue - Extend Vue component with values for props and 
 
 畫面預覽：
 
-![1607768921.png](images/2020-12-12_Vue - Extend Vue component with values for props and slots/1607768921.png)
+![1607768921.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-12-12_Vue%20-%20Extend%20Vue%20component%20with%20values%20for%20props%20and%20slots/1607768921.png)
 
 有個小缺點是你無法透過 [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 找到你的組件。
 
-![1607768971.png](images/2020-12-12_Vue - Extend Vue component with values for props and slots/1607768971.png)
+![1607768971.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-12-12_Vue%20-%20Extend%20Vue%20component%20with%20values%20for%20props%20and%20slots/1607768971.png)
 
 * * *
 
@@ -527,7 +526,7 @@ banner: "images/2020-12-12_Vue - Extend Vue component with values for props and 
 
 [https://github.com/explooosion/vue-extend-slot-example](https://github.com/explooosion/vue-extend-slot-example)
 
-[![1607769127.png](images/2020-12-12_Vue - Extend Vue component with values for props and slots/1607769127.png)](https://dotblogsfile.blob.core.windows.net/user/robby/07b62e54-0c5b-42da-8a53-9a6a5fc56585/1607769127.png)
+[![1607769127.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-12-12_Vue%20-%20Extend%20Vue%20component%20with%20values%20for%20props%20and%20slots/1607769127.png)](https://dotblogsfile.blob.core.windows.net/user/robby/07b62e54-0c5b-42da-8a53-9a6a5fc56585/1607769127.png)
 
 Reference
 ---------

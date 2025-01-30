@@ -1,12 +1,11 @@
 ---
 title: "Phaser - Tilemaps create and collision - [ 1 ]"
-date: "2018-02-24"
-tags: [phaser, tile, ttilemap, collision]
-view: "1270"
-history: "0"
-group: "Phaser"
-banner: "images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/banner/1519459832_36077.png"
----
+subtitle: "世界地圖！我的主場！ ~ 地圖建立篇"
+date: "2018-02-24T00:00:00.000Z"
+series: "phaser"
+tags: "phaser","tile","ttilemap","collision"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/banner/1519459832_36077.png"
+--- 
 
 世界地圖！我的主場！ ~ 地圖建立篇
 
@@ -14,7 +13,7 @@ banner: "images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/banner
 
 今天的主場是 [Phaser](https://phaser.io/)
 
-![1519459832_36077.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519459832_36077.png)
+![1519459832_36077.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519459832_36077.png)
 
 在 Phaser 中如果要使用地圖，可以搭配 [Tiled Map Editor](http://www.mapeditor.org/)，
 
@@ -22,7 +21,7 @@ banner: "images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/banner
 
 輸出的格式可為 xml、json 等等。
 
-![1519459804_65374.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519459804_65374.png)
+![1519459804_65374.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519459804_65374.png)
 
 本系列實作檔案放置於 Github 上：
 
@@ -50,7 +49,7 @@ banner: "images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/banner
 
 目前最近的 [Release](https://thorbjorn.itch.io/tiled/devlog/22665/tiled-112-released) 版本是 1.1.2。
 
-[![1519459750_83076.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519459750_83076.png)](https://thorbjorn.itch.io/tiled)
+[![1519459750_83076.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519459750_83076.png)](https://thorbjorn.itch.io/tiled)
 
 ### 範例檔案
 
@@ -60,7 +59,7 @@ banner: "images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/banner
 
 例如：C:\\Program Files\\Tiled\\examples\\desert.tmx
 
-[![1519461083_65364.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519461083_65364.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519461083_65364.png)
+[![1519461083_65364.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519461083_65364.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519461083_65364.png)
 
 ### 結構說明
 
@@ -77,7 +76,7 @@ banner: "images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/banner
 
 或是使用以下圖片：
 
-![1519461801_28758.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519461801_28758.png)
+![1519461801_28758.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519461801_28758.png)
 
 ### 建立新檔案
 
@@ -85,7 +84,7 @@ banner: "images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/banner
 
 將檔案存成 desert.tmx。
 
-![1519463041_6322.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519463041_6322.png)
+![1519463041_6322.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519463041_6322.png)
 
 *   地圖方向：預設即可
 *   圖層格式：提供了三種，但是 phaser 不支援 Base64(zlib)，請不要選擇已壓縮
@@ -101,7 +100,7 @@ banner: "images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/banner
 
 名稱 在 phaser 地圖實作中會用到。
 
-![1519462613_04776.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519462613_04776.png)
+![1519462613_04776.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519462613_04776.png)
 
 *   名稱：tileset，謹慎命名，phaser 中會用到
 *   類型：選擇「基於圖塊集合像」
@@ -112,27 +111,27 @@ banner: "images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/banner
 
 點選右下的 Edit Tileset，可以檢視或新增圖塊屬性。
 
-![1519463318_85991.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519463318_85991.png)
+![1519463318_85991.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519463318_85991.png)
 
 每個圖塊都有自己的 ID，在 phaser 中將作為圖塊集索引。
 
 ID 在 phaser 碰撞偵測（collision）實作中會用到。
 
-[![1519463403_97664.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519463403_97664.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519463403_97664.png)
+[![1519463403_97664.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519463403_97664.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519463403_97664.png)
 
 選擇圖塊後，可以在客製屬性中新增。
 
 可以用拖曳的方式一次選取快速新增。
 
-[![1519464303_66779.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519464303_66779.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519464303_66779.png)
+[![1519464303_66779.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519464303_66779.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519464303_66779.png)
 
 試著新增 name 屬性，看它是什麼就給什麼名稱囉！
 
-![1519464562_55341.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519464562_55341.png)![1519464467_27104.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519464467_27104.png)
+![1519464562_55341.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519464562_55341.png)![1519464467_27104.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519464467_27104.png)
 
-![1519464578_48935.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519464578_48935.png)![1519464524_84674.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519464524_84674.png)
+![1519464578_48935.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519464578_48935.png)![1519464524_84674.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519464524_84674.png)
 
-![1519464608_14394.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519464608_14394.png)![1519464546_41895.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519464546_41895.png)
+![1519464608_14394.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519464608_14394.png)![1519464546_41895.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519464546_41895.png)
 
 其餘都命名為「陸地」，完成後存檔即可。
 
@@ -140,11 +139,11 @@ ID 在 phaser 碰撞偵測（collision）實作中會用到。
 
 可以善用上方的工具去繪製。
 
-![1519464758_22684.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519464758_22684.png)
+![1519464758_22684.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519464758_22684.png)
 
 繪製的同時，右側可以看到屬性內容。
 
-[![1519464983_94774.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519464983_94774.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519464983_94774.png)
+[![1519464983_94774.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519464983_94774.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519464983_94774.png)
 
 ### 圖層命名
 
@@ -154,7 +153,7 @@ ID 在 phaser 碰撞偵測（collision）實作中會用到。
 
 名稱 在 phaser 地圖實作中會用到。
 
-![1519466758_50369.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519466758_50369.png)![1519466785_73469.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 1 ]/1519466785_73469.png)
+![1519466758_50369.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519466758_50369.png)![1519466785_73469.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%201%20%5D/1519466785_73469.png)
 
 ### 檔案匯出
 

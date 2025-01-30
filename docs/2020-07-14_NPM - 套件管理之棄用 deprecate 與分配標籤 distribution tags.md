@@ -1,18 +1,17 @@
 ---
 title: "NPM - 套件管理之棄用 deprecate 與分配標籤 distribution tags"
-date: "2020-07-14"
-tags: [deprecated, latest, npm-deprecate, npm-dist-tag, package, publish, tags]
-view: "336"
-history: "0"
-group: "NPM"
-banner: "images/2020-07-14_NPM - 套件管理之棄用 deprecate 與分配標籤 distribution tags/banner/1594727263.png"
----
+subtitle: "啊啊啊！！！發佈一個垃圾怎摸辦！"
+date: "2020-07-14T00:00:00.000Z"
+series: "npm"
+tags: "deprecated","latest","npm-deprecate","npm-dist-tag","package","publish","tags"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-07-14_NPM%20-%20%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%E4%B9%8B%E6%A3%84%E7%94%A8%20deprecate%20%E8%88%87%E5%88%86%E9%85%8D%E6%A8%99%E7%B1%A4%20distribution%20tags/banner/1594727263.png"
+--- 
 
 啊啊啊！！！發佈一個垃圾怎摸辦！
 
 npm 套件管理中的棄用與分配標籤應用。
 
-[![1594727263.png](images/2020-07-14_NPM - 套件管理之棄用 deprecate 與分配標籤 distribution tags/1594727263.png)](https://dotblogsfile.blob.core.windows.net/user/robby/c901b341-0c8d-4d3a-988c-f9b514f26816/1594727263.png)
+[![1594727263.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-07-14_NPM%20-%20%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%E4%B9%8B%E6%A3%84%E7%94%A8%20deprecate%20%E8%88%87%E5%88%86%E9%85%8D%E6%A8%99%E7%B1%A4%20distribution%20tags/1594727263.png)](https://dotblogsfile.blob.core.windows.net/user/robby/c901b341-0c8d-4d3a-988c-f9b514f26816/1594727263.png)
 
 前言
 --
@@ -57,9 +56,9 @@ npm 套件管理中的棄用與分配標籤應用。
 
 防止相關貼紙及 Github、npm 頁面資訊顯示有錯誤的版本：
 
-![1594725206.png](images/2020-07-14_NPM - 套件管理之棄用 deprecate 與分配標籤 distribution tags/1594725206.png)
+![1594725206.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-07-14_NPM%20-%20%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%E4%B9%8B%E6%A3%84%E7%94%A8%20deprecate%20%E8%88%87%E5%88%86%E9%85%8D%E6%A8%99%E7%B1%A4%20distribution%20tags/1594725206.png)
 
-![1594725242.png](images/2020-07-14_NPM - 套件管理之棄用 deprecate 與分配標籤 distribution tags/1594725242.png)
+![1594725242.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-07-14_NPM%20-%20%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%E4%B9%8B%E6%A3%84%E7%94%A8%20deprecate%20%E8%88%87%E5%88%86%E9%85%8D%E6%A8%99%E7%B1%A4%20distribution%20tags/1594725242.png)
 
 ### 2\. Deprecate
 
@@ -69,11 +68,11 @@ npm 套件管理中的棄用與分配標籤應用。
 
 完成後可以在 [npm 頁面](https://www.npmjs.com/package/agm-direction/v/0.8.1)上看到有 deprecated 警語：
 
-[![1594725328.png](images/2020-07-14_NPM - 套件管理之棄用 deprecate 與分配標籤 distribution tags/1594725328.png)](https://dotblogsfile.blob.core.windows.net/user/robby/c901b341-0c8d-4d3a-988c-f9b514f26816/1594725328.png)
+[![1594725328.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-07-14_NPM%20-%20%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%E4%B9%8B%E6%A3%84%E7%94%A8%20deprecate%20%E8%88%87%E5%88%86%E9%85%8D%E6%A8%99%E7%B1%A4%20distribution%20tags/1594725328.png)](https://dotblogsfile.blob.core.windows.net/user/robby/c901b341-0c8d-4d3a-988c-f9b514f26816/1594725328.png)
 
 並且在 Versions 頁籤中可以看到棄用的版本被隱藏了起來。
 
-[![1594725939.png](images/2020-07-14_NPM - 套件管理之棄用 deprecate 與分配標籤 distribution tags/1594725939.png)](https://dotblogsfile.blob.core.windows.net/user/robby/c901b341-0c8d-4d3a-988c-f9b514f26816/1594725939.png)
+[![1594725939.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-07-14_NPM%20-%20%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%E4%B9%8B%E6%A3%84%E7%94%A8%20deprecate%20%E8%88%87%E5%88%86%E9%85%8D%E6%A8%99%E7%B1%A4%20distribution%20tags/1594725939.png)](https://dotblogsfile.blob.core.windows.net/user/robby/c901b341-0c8d-4d3a-988c-f9b514f26816/1594725939.png)
 
 ### 3\. Tags
 
@@ -85,7 +84,7 @@ npm 套件管理中的棄用與分配標籤應用。
 
 因此預設會是以 latest 進行標記。　
 
-[![1594726029.png](images/2020-07-14_NPM - 套件管理之棄用 deprecate 與分配標籤 distribution tags/1594726029.png)](https://dotblogsfile.blob.core.windows.net/user/robby/c901b341-0c8d-4d3a-988c-f9b514f26816/1594726029.png)
+[![1594726029.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-07-14_NPM%20-%20%E5%A5%97%E4%BB%B6%E7%AE%A1%E7%90%86%E4%B9%8B%E6%A3%84%E7%94%A8%20deprecate%20%E8%88%87%E5%88%86%E9%85%8D%E6%A8%99%E7%B1%A4%20distribution%20tags/1594726029.png)](https://dotblogsfile.blob.core.windows.net/user/robby/c901b341-0c8d-4d3a-988c-f9b514f26816/1594726029.png)
 
 以上完成後，在 npm install 時 latest ，
 

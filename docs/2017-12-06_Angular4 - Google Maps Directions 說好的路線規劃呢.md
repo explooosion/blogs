@@ -1,12 +1,11 @@
 ---
 title: "Angular4 - Google Maps Directions 說好的路線規劃呢"
-date: "2017-12-06"
-tags: [agm, angular, angular4, google map]
-view: "779"
-history: "0"
-group: "Angular"
-banner: ""
----
+subtitle: "利用 Agm-Direction 套件補足 AGM 尚未提供的路線規劃服務"
+date: "2017-12-06T00:00:00.000Z"
+series: "angular"
+tags: "agm","angular","angular4","google map"
+image: ""
+--- 
 
 利用 [Agm-Direction](https://github.com/explooosion/Agm-Direction) 套件補足 [AGM](https://github.com/SebastianM/angular-google-maps) 尚未提供的路線規劃服務
 
@@ -33,7 +32,7 @@ banner: ""
 
 想必大家在地圖上一定很常用這個功能，如下圖：
 
-[![JdGcr.png](images/2017-12-06_Angular4 - Google Maps Directions 說好的路線規劃呢/JdGcr.png)](https://i.stack.imgur.com/JdGcr.png)
+[![JdGcr.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-12-06_Angular4%20-%20Google%20Maps%20Directions%20%E8%AA%AA%E5%A5%BD%E7%9A%84%E8%B7%AF%E7%B7%9A%E8%A6%8F%E5%8A%83%E5%91%A2/JdGcr.png)](https://i.stack.imgur.com/JdGcr.png)
 
 摁......
 
@@ -43,7 +42,7 @@ banner: ""
 
 當然，在 [Github Issue](https://github.com/SebastianM/angular-google-maps/issues?utf8=%E2%9C%93&q=direction) 上也可以看到各種需求
 
-[![1512498439_98805.png](images/2017-12-06_Angular4 - Google Maps Directions 說好的路線規劃呢/1512498439_98805.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/faa3655b-e55c-4af8-be14-55ddab4df702/1512498439_98805.png)
+[![1512498439_98805.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-12-06_Angular4%20-%20Google%20Maps%20Directions%20%E8%AA%AA%E5%A5%BD%E7%9A%84%E8%B7%AF%E7%B7%9A%E8%A6%8F%E5%8A%83%E5%91%A2/1512498439_98805.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/faa3655b-e55c-4af8-be14-55ddab4df702/1512498439_98805.png)
 
 為了解決這個問題，爬了很多作法，
 
@@ -112,7 +111,7 @@ banner: ""
 
 *   [Agm-Direction](https://github.com/explooosion/Agm-Direction)
 
-![1512499731_1476.png](images/2017-12-06_Angular4 - Google Maps Directions 說好的路線規劃呢/1512499731_1476.png)
+![1512499731_1476.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-12-06_Angular4%20-%20Google%20Maps%20Directions%20%E8%AA%AA%E5%A5%BD%E7%9A%84%E8%B7%AF%E7%B7%9A%E8%A6%8F%E5%8A%83%E5%91%A2/1512499731_1476.png)
 
 ※. 地圖利用 AGM 載入，詳細方式請參考：
 
@@ -165,7 +164,7 @@ banner: ""
 
 ### **IV、Result**
 
-[![DCIoXqS.jpg](images/2017-12-06_Angular4 - Google Maps Directions 說好的路線規劃呢/DCIoXqS.jpg)](https://i.imgur.com/DCIoXqS.jpg)
+[![DCIoXqS.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-12-06_Angular4%20-%20Google%20Maps%20Directions%20%E8%AA%AA%E5%A5%BD%E7%9A%84%E8%B7%AF%E7%B7%9A%E8%A6%8F%E5%8A%83%E5%91%A2/DCIoXqS.jpg)](https://i.imgur.com/DCIoXqS.jpg)
 
 ※. 經測試暫時不支援 Angular5 +
 

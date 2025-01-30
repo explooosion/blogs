@@ -1,12 +1,11 @@
 ---
 title: "NPM - 無法更新套件 Refusing to delete"
-date: "2018-04-25"
-tags: [npm, nvm, update, upgrate]
-view: "793"
-history: "0"
-group: "NPM"
-banner: "images/2018-04-25_NPM - 無法更新套件 Refusing to delete/banner/1524598695_45295.jpg"
----
+subtitle: "更新 npm 是一件很不容易的事情..."
+date: "2018-04-25T00:00:00.000Z"
+series: "npm"
+tags: "npm","nvm","update","upgrate"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-04-25_NPM%20-%20%E7%84%A1%E6%B3%95%E6%9B%B4%E6%96%B0%E5%A5%97%E4%BB%B6%20Refusing%20to%20delete/banner/1524598695_45295.jpg"
+--- 
 
 更新 npm 是一件很不容易的事情...
 
@@ -21,7 +20,7 @@ banner: "images/2018-04-25_NPM - 無法更新套件 Refusing to delete/banner/15
 
 因為用過的人都回不去。
 
-[![1524598695_45295.jpg](images/2018-04-25_NPM - 無法更新套件 Refusing to delete/1524598695_45295.jpg)](https://dotblogsfile.blob.core.windows.net/user/incredible/500fb800-9a4a-4283-bf1f-0d8eca676660/1524598695_45295.jpg)
+[![1524598695_45295.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-04-25_NPM%20-%20%E7%84%A1%E6%B3%95%E6%9B%B4%E6%96%B0%E5%A5%97%E4%BB%B6%20Refusing%20to%20delete/1524598695_45295.jpg)](https://dotblogsfile.blob.core.windows.net/user/incredible/500fb800-9a4a-4283-bf1f-0d8eca676660/1524598695_45295.jpg)
 
 🔨 更新
 -----
@@ -40,7 +39,7 @@ banner: "images/2018-04-25_NPM - 無法更新套件 Refusing to delete/banner/15
 *   Refusing to delete ...
 *   File exists ...
 
-[![1524598949_31452.png](images/2018-04-25_NPM - 無法更新套件 Refusing to delete/1524598949_31452.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/500fb800-9a4a-4283-bf1f-0d8eca676660/1524598949_31452.png)
+[![1524598949_31452.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-04-25_NPM%20-%20%E7%84%A1%E6%B3%95%E6%9B%B4%E6%96%B0%E5%A5%97%E4%BB%B6%20Refusing%20to%20delete/1524598949_31452.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/500fb800-9a4a-4283-bf1f-0d8eca676660/1524598949_31452.png)
 
 這篇文章並不想探討原因，只想解決問題。
 
@@ -68,13 +67,13 @@ banner: "images/2018-04-25_NPM - 無法更新套件 Refusing to delete/banner/15
 
 成功畫面：
 
-[![1524599346_13545.png](images/2018-04-25_NPM - 無法更新套件 Refusing to delete/1524599346_13545.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/500fb800-9a4a-4283-bf1f-0d8eca676660/1524599346_13545.png)
+[![1524599346_13545.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-04-25_NPM%20-%20%E7%84%A1%E6%B3%95%E6%9B%B4%E6%96%B0%E5%A5%97%E4%BB%B6%20Refusing%20to%20delete/1524599346_13545.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/500fb800-9a4a-4283-bf1f-0d8eca676660/1524599346_13545.png)
 
 試著查看版本：
 
     npm -v
 
-![1524599373_82596.png](images/2018-04-25_NPM - 無法更新套件 Refusing to delete/1524599373_82596.png)
+![1524599373_82596.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-04-25_NPM%20-%20%E7%84%A1%E6%B3%95%E6%9B%B4%E6%96%B0%E5%A5%97%E4%BB%B6%20Refusing%20to%20delete/1524599373_82596.png)
 
 ### 恭喜成功囉～
 

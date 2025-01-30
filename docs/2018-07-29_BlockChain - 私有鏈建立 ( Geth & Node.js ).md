@@ -1,12 +1,11 @@
 ---
 title: "BlockChain - 私有鏈建立 ( Geth & Node.js )"
-date: "2018-07-29"
-tags: [Node.js, geth, blockchain]
-view: "6301"
-history: "0"
-group: "Blockchain"
-banner: "images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/banner/1532910469_56127.png"
----
+subtitle: "這篇適合給對於區塊鏈有基本認識的朋友閱讀 ..."
+date: "2018-07-29T00:00:00.000Z"
+series: "blockchain"
+tags: "Node.js","geth","blockchain"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/banner/1532910469_56127.png"
+--- 
 
 這篇適合給對於區塊鏈有基本認識的朋友閱讀 ...
 
@@ -20,7 +19,7 @@ banner: "images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/banne
 2.  [BlockChain - 私有鏈系統監控](https://dotblogs.com.tw/explooosion/2018/07/30/200754)
 3.  BlockChain - 私有鏈的智能合約（Solidity & Node.js）- 未完工
 
-[![1532910469_56127.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532910469_56127.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532910469_56127.png)
+[![1532910469_56127.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532910469_56127.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532910469_56127.png)
 
 本篇不再贅述於知識部分，主要講解建立的技術，
 
@@ -48,35 +47,35 @@ banner: "images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/banne
 
 支援多數平台，到[下載頁面](https://geth.ethereum.org/downloads/)點選 「[適用於Windows的Geth 1.8.12](https://gethstore.blob.core.windows.net/builds/geth-windows-amd64-1.8.12-37685930.exe)」。
 
-[![1532875556_99995.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532875556_99995.png)](https://gethstore.blob.core.windows.net/builds/geth-windows-amd64-1.8.12-37685930.exe)
+[![1532875556_99995.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532875556_99995.png)](https://gethstore.blob.core.windows.net/builds/geth-windows-amd64-1.8.12-37685930.exe)
 
 本文系統環境皆以 Windows10 64bit 為主，絕對不是因為買不起 macOS！ ... QAQ
 
 親，記住，下一步到底。
 
-![1532875136_67385.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532875136_67385.png)
+![1532875136_67385.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532875136_67385.png)
 
 強迫同意授權。
 
-![1532875191_59483.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532875191_59483.png)
+![1532875191_59483.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532875191_59483.png)
 
 預設安裝。
 
-![1532875216_52047.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532875216_52047.png)
+![1532875216_52047.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532875216_52047.png)
 
 預設路徑。
 
-![1532875227_75088.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532875227_75088.png)
+![1532875227_75088.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532875227_75088.png)
 
 平安喜樂，安裝完成。
 
-![1532875382_15921.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532875382_15921.png)
+![1532875382_15921.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532875382_15921.png)
 
 輸入[指令幫助](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options)，測試是否安裝成功。
 
     geth -h
 
-[![1532883254_73769.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532883254_73769.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532883254_73769.png)
+[![1532883254_73769.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883254_73769.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532883254_73769.png)
 
 二、創世區塊
 ------
@@ -132,11 +131,11 @@ banner: "images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/banne
 *   \--datadir：區塊會儲存在 data 資料夾中。
 *   init：初始參數所使用的配置檔案 genesis.json
 
-[![1532877653_5274.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532877653_5274.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532877653_5274.png)
+[![1532877653_5274.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532877653_5274.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532877653_5274.png)
 
 目錄結構如下：
 
-![1532910351_63547.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532910351_63547.png)
+![1532910351_63547.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532910351_63547.png)
 
 ### 啟動鏈
 
@@ -152,7 +151,7 @@ banner: "images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/banne
 *   console：將會啟動命令模式，以便後續下達命令。
 *   更多參數說明請翻閱 [Management-APIs](https://github.com/ethereum/go-ethereum/wiki/Management-APIs)
 
-[![1532880514_1152.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532880514_1152.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532880514_1152.png)
+[![1532880514_1152.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532880514_1152.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532880514_1152.png)
 
 三、私鏈管理
 ------
@@ -165,11 +164,11 @@ banner: "images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/banne
 
 例如想使用 admin 的指令：
 
-[![1532883137_51538.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532883137_51538.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532883137_51538.png)
+[![1532883137_51538.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883137_51538.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532883137_51538.png)
 
 實際 Demo。
 
-[![1532881887_54905.gif](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532881887_54905.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532881887_54905.gif)
+[![1532881887_54905.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532881887_54905.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532881887_54905.gif)
 
 ### 3.1 查看節點資訊
 
@@ -177,7 +176,7 @@ banner: "images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/banne
 
     admin.nodeInfo
 
-[![1532881391_84028.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532881391_84028.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532881391_84028.png)
+[![1532881391_84028.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532881391_84028.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532881391_84028.png)
 
 ### 3.2 建立新帳號
 
@@ -189,37 +188,37 @@ banner: "images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/banne
 
 然後接著輸入密碼，以及確認密碼，完成建置後會顯示帳號位址。
 
-![1532883317_16672.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532883317_16672.png)
+![1532883317_16672.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883317_16672.png)
 
 你也可以在建立時直接預設密碼：
 
     personal.newAccount("654321")
 
-![1532883342_69688.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532883342_69688.png)
+![1532883342_69688.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883342_69688.png)
 
 ### 3.3 查詢所有帳號
 
     eth.accounts
 
-[![1532883101_16537.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532883101_16537.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532883101_16537.png)
+[![1532883101_16537.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883101_16537.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532883101_16537.png)
 
 由於 accounts 是個陣列集合，其實也可以查詢第 N 個索引用戶：
 
     eth.accounts[0]
 
-![1532883076_80988.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532883076_80988.png)
+![1532883076_80988.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883076_80988.png)
 
 ### 3.4 查詢帳號錢包
 
     eth.getBalance(eth.accounts[0])
 
-![1532883063_19279.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532883063_19279.png)
+![1532883063_19279.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883063_19279.png)
 
  getBalance() 是個 function，裡面填入帳號地址，
 
 當然地址取得方式可以直接使用 eth.account 獲取。
 
-![1532883047_45991.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532883047_45991.png)
+![1532883047_45991.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883047_45991.png)
 
 你也可以使用 web3 的 CLI 命令，去查詢帳號地址的錢：
 
@@ -231,11 +230,11 @@ banner: "images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/banne
 
     eth.coinbase
 
-[![1532883644_35553.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532883644_35553.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532883644_35553.png)
+[![1532883644_35553.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883644_35553.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532883644_35553.png)
 
 你也可以修改預設礦工帳號，讓你在挖礦時，錢直接轉到對應帳號。
 
-[![1532883772_70083.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532883772_70083.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532883772_70083.png)
+[![1532883772_70083.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532883772_70083.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532883772_70083.png)
 
 ### 3.6 解鎖帳號
 
@@ -247,7 +246,7 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
 解除時會要求輸入用戶密碼。
 
-[![1532884148_54557.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532884148_54557.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532884148_54557.png)
+[![1532884148_54557.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532884148_54557.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532884148_54557.png)
 
 ### 3.7 查詢區塊資訊
 
@@ -259,7 +258,7 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
     eth.getBlock(0)
 
-[![1532884509_63282.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532884509_63282.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532884509_63282.png)
+[![1532884509_63282.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532884509_63282.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532884509_63282.png)
 
 利用交易地址查詢區塊（本範例為假地址）：
 
@@ -285,7 +284,7 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
     txpool.status
 
-![1532886571_08902.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532886571_08902.png)
+![1532886571_08902.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532886571_08902.png)
 
 上圖為後來有很多錢的時候補貼圖片。
 
@@ -301,13 +300,13 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
 *   參數為 CPU 使用數
 
-[![1532885407_13664.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532885407_13664.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532885407_13664.png)
+[![1532885407_13664.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532885407_13664.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532885407_13664.png)
 
 #### 3.9.2 停止挖礦
 
     miner.stop()
 
-[![1532885447_10375.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532885447_10375.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532885447_10375.png)
+[![1532885447_10375.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532885447_10375.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532885447_10375.png)
 
 也許你會疑惑，終端機不斷地刷新內容，要如何暫停？
 
@@ -321,14 +320,14 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
     eth.blockNumber
 
-![1532885748_99924.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532885748_99924.png)
+![1532885748_99924.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532885748_99924.png)
 
 四、交易與驗證
 -------
 
 終於讀到第四章，爬到這層了，卻遇到了一個**大魔王**......
 
-[![1532891760_44813.JPG](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532891760_44813.JPG)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532891760_44813.JPG)
+[![1532891760_44813.JPG](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532891760_44813.JPG)](https://dotblogsfile.blob.core.windows.net/user/incredible/0571a664-ac38-421c-90e5-6f07b0346e10/1532891760_44813.JPG)
 
 因為帳號沒錢，無法完成轉帳的實作啊啊啊啊啊啊！！！！！
 
@@ -338,7 +337,7 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
 做到這邊，建議您起個身子，泡杯咖啡，上個廁所，鏟鏟貓屎。
 
-[![maxresdefault.jpg](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/maxresdefault.jpg)](https://www.youtube.com/watch?v=3WX7N8GRlm8)
+[![maxresdefault.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/maxresdefault.jpg)](https://www.youtube.com/watch?v=3WX7N8GRlm8)
 
 *   不久之後。
 
@@ -346,7 +345,7 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
 看一下錢包，錢錢多多。
 
-![1532888106_98173.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532888106_98173.png)
+![1532888106_98173.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532888106_98173.png)
 
 由於剛剛筆者將預設礦工設定為 帳號1，因此挖到的錢都在這個帳號上。
 
@@ -376,13 +375,13 @@ unlockAccount() 也是個 function，裡面放入帳號地址。
 
 所有的準備工作與佇列都為 0，代表完成工作了～
 
-![1532888581_47907.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532888581_47907.png)
+![1532888581_47907.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532888581_47907.png)
 
 接著查看「帳號0」的錢包：
 
     eth.getBalance(eth.accounts[0])
 
-![1532888804_90652.png](images/2018-07-29_BlockChain - 私有鏈建立 ( Geth & Node.js )/1532888804_90652.png)
+![1532888804_90652.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-29_BlockChain%20-%20%E7%A7%81%E6%9C%89%E9%8F%88%E5%BB%BA%E7%AB%8B%20(%20Geth%20%26%20Node.js%20)/1532888804_90652.png)
 
 哦哦哦！是錢錢！
 

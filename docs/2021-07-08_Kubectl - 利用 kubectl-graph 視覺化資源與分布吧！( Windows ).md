@@ -1,18 +1,17 @@
 ---
 title: "Kubectl - 利用 kubectl-graph 視覺化資源與分布吧！( Windows )"
-date: "2021-07-08"
-tags: [cypher-shell, kubectl-graph, kubernetes, neo4j, visualize]
-view: "234"
-history: "0"
-group: "Kubectl"
-banner: ""
----
+subtitle: "自己的星團珠寶自己拚！"
+date: "2021-07-08T00:00:00.000Z"
+series: "kubectl"
+tags: "cypher-shell","kubectl-graph","kubernetes","neo4j","visualize"
+image: ""
+--- 
 
 自己的星團珠寶自己拚！
 
 將 Kubernetes 資源分布視覺化
 
-![cypher-loki.png](images/2021-07-08_Kubectl - 利用 kubectl-graph 視覺化資源與分布吧！( Windows )/cypher-loki.png)
+![cypher-loki.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2021-07-08_Kubectl%20-%20%E5%88%A9%E7%94%A8%20kubectl-graph%20%E8%A6%96%E8%A6%BA%E5%8C%96%E8%B3%87%E6%BA%90%E8%88%87%E5%88%86%E5%B8%83%E5%90%A7%EF%BC%81(%20Windows%20)/cypher-loki.png)
 
 steveteuber/kubectl-graph
 
@@ -71,7 +70,7 @@ steveteuber/kubectl-graph
 
 環境變數建議在選擇的時候直接勾選好。
 
-[![1625673759.png](images/2021-07-08_Kubectl - 利用 kubectl-graph 視覺化資源與分布吧！( Windows )/1625673759.png)](https://dotblogsfile.blob.core.windows.net/user/robby/3c7eacc9-1ef9-42d5-8f56-9f95cb9f8d66/1625673759.png)
+[![1625673759.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2021-07-08_Kubectl%20-%20%E5%88%A9%E7%94%A8%20kubectl-graph%20%E8%A6%96%E8%A6%BA%E5%8C%96%E8%B3%87%E6%BA%90%E8%88%87%E5%88%86%E5%B8%83%E5%90%A7%EF%BC%81(%20Windows%20)/1625673759.png)](https://dotblogsfile.blob.core.windows.net/user/robby/3c7eacc9-1ef9-42d5-8f56-9f95cb9f8d66/1625673759.png)
 
 確認是否安裝成功 ( -V 為大寫 )：
 
@@ -131,15 +130,15 @@ steveteuber/kubectl-graph
 
 完成後可以開啟網址檢視畫面：[http://localhost:7474/](http://localhost:7474/)
 
-[![1625674573.png](images/2021-07-08_Kubectl - 利用 kubectl-graph 視覺化資源與分布吧！( Windows )/1625674573.png)](https://dotblogsfile.blob.core.windows.net/user/robby/3c7eacc9-1ef9-42d5-8f56-9f95cb9f8d66/1625674573.png)
+[![1625674573.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2021-07-08_Kubectl%20-%20%E5%88%A9%E7%94%A8%20kubectl-graph%20%E8%A6%96%E8%A6%BA%E5%8C%96%E8%B3%87%E6%BA%90%E8%88%87%E5%88%86%E5%B8%83%E5%90%A7%EF%BC%81(%20Windows%20)/1625674573.png)](https://dotblogsfile.blob.core.windows.net/user/robby/3c7eacc9-1ef9-42d5-8f56-9f95cb9f8d66/1625674573.png)
 
 由於我們沒設置密碼因此直接 connect 即可。
 
-[![1625676706.png](images/2021-07-08_Kubectl - 利用 kubectl-graph 視覺化資源與分布吧！( Windows )/1625676706.png)](https://dotblogsfile.blob.core.windows.net/user/robby/3c7eacc9-1ef9-42d5-8f56-9f95cb9f8d66/1625676706.png)
+[![1625676706.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2021-07-08_Kubectl%20-%20%E5%88%A9%E7%94%A8%20kubectl-graph%20%E8%A6%96%E8%A6%BA%E5%8C%96%E8%B3%87%E6%BA%90%E8%88%87%E5%88%86%E5%B8%83%E5%90%A7%EF%BC%81(%20Windows%20)/1625676706.png)](https://dotblogsfile.blob.core.windows.net/user/robby/3c7eacc9-1ef9-42d5-8f56-9f95cb9f8d66/1625676706.png)
 
 登入後點選左上的 Database Information，確認 neo4j。
 
-![1625674732.png](images/2021-07-08_Kubectl - 利用 kubectl-graph 視覺化資源與分布吧！( Windows )/1625674732.png)
+![1625674732.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2021-07-08_Kubectl%20-%20%E5%88%A9%E7%94%A8%20kubectl-graph%20%E8%A6%96%E8%A6%BA%E5%8C%96%E8%B3%87%E6%BA%90%E8%88%87%E5%88%86%E5%B8%83%E5%90%A7%EF%BC%81(%20Windows%20)/1625674732.png)
 
 接著我們就可以利用指令將節點資訊匯入資料庫了：
 
@@ -155,7 +154,7 @@ steveteuber/kubectl-graph
 
 在網頁上就可以看到 Labels 有許多分類啦～～～～
 
-![1625676891.png](images/2021-07-08_Kubectl - 利用 kubectl-graph 視覺化資源與分布吧！( Windows )/1625676891.png)
+![1625676891.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2021-07-08_Kubectl%20-%20%E5%88%A9%E7%94%A8%20kubectl-graph%20%E8%A6%96%E8%A6%BA%E5%8C%96%E8%B3%87%E6%BA%90%E8%88%87%E5%88%86%E5%B8%83%E5%90%A7%EF%BC%81(%20Windows%20)/1625676891.png)
 
 Reference
 ---------

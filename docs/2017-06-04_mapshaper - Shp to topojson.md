@@ -1,12 +1,11 @@
 ---
 title: "mapshaper - Shp to topojson"
-date: "2017-06-04"
-tags: [GEO, mapshaper, shapefile, topojson, geojson]
-view: "1012"
-history: "0"
-group: "GEO"
-banner: "images/2017-06-04_mapshaper - Shp to topojson/banner/1496509567_93099.png"
----
+subtitle: "利用 mapshaper 進行圖資的格式轉換"
+date: "2017-06-04T00:00:00.000Z"
+series: "geo"
+tags: "GEO","mapshaper","shapefile","topojson","geojson"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-06-04_mapshaper%20-%20Shp%20to%20topojson/banner/1496509567_93099.png"
+--- 
 
 利用 mapshaper 進行圖資的格式轉換
 
@@ -31,7 +30,7 @@ banner: "images/2017-06-04_mapshaper - Shp to topojson/banner/1496509567_93099.p
 
 總會出現找不到此命令。
 
-[![1496509567_93099.png](images/2017-06-04_mapshaper - Shp to topojson/1496509567_93099.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/086f16a8-72de-4955-837b-7c7543659927/1496509567_93099.png)
+[![1496509567_93099.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-06-04_mapshaper%20-%20Shp%20to%20topojson/1496509567_93099.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/086f16a8-72de-4955-837b-7c7543659927/1496509567_93099.png)
 
 至於原因個人還是無法釐清 QQ，
 
@@ -91,7 +90,7 @@ banner: "images/2017-06-04_mapshaper - Shp to topojson/banner/1496509567_93099.p
 
 成功畫面：
 
-![1496512765_74873.png](images/2017-06-04_mapshaper - Shp to topojson/1496512765_74873.png)
+![1496512765_74873.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-06-04_mapshaper%20-%20Shp%20to%20topojson/1496512765_74873.png)
 
 *   顯示 Wrote xxx.json 表示成功
 
@@ -130,6 +129,6 @@ mapshaper 的使用方式十分簡單又快速，
 
 親愛的台灣終於出來惹..
 
-![1496512985_91868.png](images/2017-06-04_mapshaper - Shp to topojson/1496512985_91868.png)
+![1496512985_91868.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-06-04_mapshaper%20-%20Shp%20to%20topojson/1496512985_91868.png)
 
 有勘誤之處，不吝指教。ob'\_'ov

@@ -1,18 +1,17 @@
 ---
 title: "Rust - 關閉警語 嗡嗡嗡 Keep It Silence"
-date: "2018-11-25"
-tags: [rust, lint, warning, builtin]
-view: "231"
-history: "0"
-group: "Rust"
-banner: "images/2018-11-25_Rust - 關閉警語 嗡嗡嗡 Keep It Silence/banner/1543131514_31819.png"
----
+subtitle: "如果你也被 rust 的警語感到不耐煩 ..."
+date: "2018-11-25T00:00:00.000Z"
+series: "rust"
+tags: "rust","lint","warning","builtin"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-25_Rust%20-%20%E9%97%9C%E9%96%89%E8%AD%A6%E8%AA%9E%20%E5%97%A1%E5%97%A1%E5%97%A1%20Keep%20It%20Silence/banner/1543131514_31819.png"
+--- 
 
 如果你也被 rust 的警語感到不耐煩 ...
 
 如果你在撰寫 Rust 的時候，遇到了嗡嗡嗡 ...
 
-[![1543131514_31819.png](images/2018-11-25_Rust - 關閉警語 嗡嗡嗡 Keep It Silence/1543131514_31819.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/a22b1a90-dfde-4438-9ee2-23d5abd7596f/1543131514_31819.png)
+[![1543131514_31819.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-25_Rust%20-%20%E9%97%9C%E9%96%89%E8%AD%A6%E8%AA%9E%20%E5%97%A1%E5%97%A1%E5%97%A1%20Keep%20It%20Silence/1543131514_31819.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/a22b1a90-dfde-4438-9ee2-23d5abd7596f/1543131514_31819.png)
 
 本篇不超過一百字，只為了解決一個問題。
 
@@ -61,6 +60,6 @@ banner: "images/2018-11-25_Rust - 關閉警語 嗡嗡嗡 Keep It Silence/banner/
 
 嗡嗡嗡。
 
-[![1543133147_43545.jpg](images/2018-11-25_Rust - 關閉警語 嗡嗡嗡 Keep It Silence/1543133147_43545.jpg)](https://dotblogsfile.blob.core.windows.net/user/incredible/cc6102ac-4231-43e1-857e-94d5ab0fa44e/1543133147_43545.jpg)
+[![1543133147_43545.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-25_Rust%20-%20%E9%97%9C%E9%96%89%E8%AD%A6%E8%AA%9E%20%E5%97%A1%E5%97%A1%E5%97%A1%20Keep%20It%20Silence/1543133147_43545.jpg)](https://dotblogsfile.blob.core.windows.net/user/incredible/cc6102ac-4231-43e1-857e-94d5ab0fa44e/1543133147_43545.jpg)
 
 有勘誤之處，不吝指教。ob'\_'ov

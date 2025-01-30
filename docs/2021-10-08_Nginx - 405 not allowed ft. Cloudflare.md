@@ -1,18 +1,17 @@
 ---
 title: "Nginx - 405 not allowed ft. Cloudflare"
-date: "2021-10-08"
-tags: [405, error_page, method, nginx, not allowed, post]
-view: "387"
-history: "0"
-group: "Nginx"
-banner: "images/2021-10-08_Nginx - 405 not allowed ft. Cloudflare/banner/1633700292.png"
----
+subtitle: "Nginx 405 not allowed 解決方式"
+date: "2021-10-08T00:00:00.000Z"
+series: "nginx"
+tags: "405","error_page","method","nginx","not allowed","post"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2021-10-08_Nginx%20-%20405%20not%20allowed%20ft.%20Cloudflare/banner/1633700292.png"
+--- 
 
 Nginx 405 not allowed 解決方式
 
 修正 nginx 出現 405 方法拒絕
 
-![1633700292.png](images/2021-10-08_Nginx - 405 not allowed ft. Cloudflare/1633700292.png)
+![1633700292.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2021-10-08_Nginx%20-%20405%20not%20allowed%20ft.%20Cloudflare/1633700292.png)
 
 前言
 --

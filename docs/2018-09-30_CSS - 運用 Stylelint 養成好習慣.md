@@ -1,18 +1,17 @@
 ---
 title: "CSS - 運用 Stylelint 養成好習慣"
-date: "2018-09-30"
-tags: [scss, css, stylelint, style, guide]
-view: "4705"
-history: "0"
-group: "CSS"
-banner: "images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/banner/1538286972_7387.jpg"
----
+subtitle: "盤點那些樣式不好好寫的人，請他好好面對。"
+date: "2018-09-30T00:00:00.000Z"
+series: "css"
+tags: "scss","css","stylelint","style","guide"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-30_CSS%20-%20%E9%81%8B%E7%94%A8%20Stylelint%20%E9%A4%8A%E6%88%90%E5%A5%BD%E7%BF%92%E6%85%A3/banner/1538286972_7387.jpg"
+--- 
 
 盤點那些樣式不好好寫的人，請他好好面對。
 
 參與多人專案開發的時後，最討厭樣式不好好寫的人了。
 
-[![1538286972_7387.jpg](images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/1538286972_7387.jpg)](https://www.youtube.com/watch?v=XbMxA70ZA6o)
+[![1538286972_7387.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-30_CSS%20-%20%E9%81%8B%E7%94%A8%20Stylelint%20%E9%A4%8A%E6%88%90%E5%A5%BD%E7%BF%92%E6%85%A3/1538286972_7387.jpg)](https://www.youtube.com/watch?v=XbMxA70ZA6o)
 
 *   圖源：[Stylelint Tutorial - CSS Linter for VSCode](https://www.youtube.com/watch?v=XbMxA70ZA6o)
 
@@ -84,18 +83,18 @@ banner: "images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/banner/1538286
 
 接著用 vscode 打開專案。
 
-[![1538289265_0042.png](images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/1538289265_0042.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/768eeac2-5183-4869-b725-a06acca5d1b1/1538289265_0042.png)
+[![1538289265_0042.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-30_CSS%20-%20%E9%81%8B%E7%94%A8%20Stylelint%20%E9%A4%8A%E6%88%90%E5%A5%BD%E7%BF%92%E6%85%A3/1538289265_0042.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/768eeac2-5183-4869-b725-a06acca5d1b1/1538289265_0042.png)
 
 接著在 vscode 中安裝以下兩個擴充功能：
 
 *   [stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)
 *   [vscode-stylefmt](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-stylefmt)
 
-[![1576493649_32166.png](images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/1576493649_32166.png)](https://marketplace.visualstudio.com/items?itemName=stuartzhang.stylelint-stzhang)[![1538289428_79332.png](images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/1538289428_79332.png)](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-stylefmt)
+[![1576493649_32166.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-30_CSS%20-%20%E9%81%8B%E7%94%A8%20Stylelint%20%E9%A4%8A%E6%88%90%E5%A5%BD%E7%BF%92%E6%85%A3/1576493649_32166.png)](https://marketplace.visualstudio.com/items?itemName=stuartzhang.stylelint-stzhang)[![1538289428_79332.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-30_CSS%20-%20%E9%81%8B%E7%94%A8%20Stylelint%20%E9%A4%8A%E6%88%90%E5%A5%BD%E7%BF%92%E6%85%A3/1538289428_79332.png)](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-stylefmt)
 
 安裝完畢後，就會出現在清單列表中。
 
-![1538289602_9444.png](images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/1538289602_9444.png)
+![1538289602_9444.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-30_CSS%20-%20%E9%81%8B%E7%94%A8%20Stylelint%20%E9%A4%8A%E6%88%90%E5%A5%BD%E7%BF%92%E6%85%A3/1538289602_9444.png)
 
 三、安裝套件
 ------
@@ -145,7 +144,7 @@ banner: "images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/banner/1538286
 
 接下來在專案中建立檔案名為「.stylelintrc.json」。
 
-![1538290362_80365.png](images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/1538290362_80365.png)
+![1538290362_80365.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-30_CSS%20-%20%E9%81%8B%E7%94%A8%20Stylelint%20%E9%A4%8A%E6%88%90%E5%A5%BD%E7%BF%92%E6%85%A3/1538290362_80365.png)
 
 內容可參考筆者所寫好的設定檔「[**.stylelintrc.json**](https://github.com/explooosion/stylelint-scss-config/blob/master/.stylelintrc.json)」，直接複製貼上，
 
@@ -325,7 +324,7 @@ banner: "images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/banner/1538286
 
 這時候你應該會發現**滿江紅**。
 
-![1538292026_62463.png](images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/1538292026_62463.png)
+![1538292026_62463.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-30_CSS%20-%20%E9%81%8B%E7%94%A8%20Stylelint%20%E9%A4%8A%E6%88%90%E5%A5%BD%E7%BF%92%E6%85%A3/1538292026_62463.png)
 
 這時候你依然不理會他，並執行語法檢測。
 
@@ -333,7 +332,7 @@ banner: "images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/banner/1538286
 
 然後你就會被各種不符合規定的訊息噴滿臉。
 
-[![1538292414_78228.png](images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/1538292414_78228.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/768eeac2-5183-4869-b725-a06acca5d1b1/1538292414_78228.png)
+[![1538292414_78228.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-30_CSS%20-%20%E9%81%8B%E7%94%A8%20Stylelint%20%E9%A4%8A%E6%88%90%E5%A5%BD%E7%BF%92%E6%85%A3/1538292414_78228.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/768eeac2-5183-4869-b725-a06acca5d1b1/1538292414_78228.png)
 
 對於這樣的錯誤訊息格式相當清楚，
 
@@ -349,11 +348,11 @@ banner: "images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/banner/1538286
 
 最後僅僅花了 1.04 秒的時間，修正這些腦殘的風格。
 
-[![1538292375_43886.png](images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/1538292375_43886.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/768eeac2-5183-4869-b725-a06acca5d1b1/1538292375_43886.png)
+[![1538292375_43886.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-30_CSS%20-%20%E9%81%8B%E7%94%A8%20Stylelint%20%E9%A4%8A%E6%88%90%E5%A5%BD%E7%BF%92%E6%85%A3/1538292375_43886.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/768eeac2-5183-4869-b725-a06acca5d1b1/1538292375_43886.png)
 
 然後我們接著看看剛剛的 index.scss 樣式檔案。
 
-![1538292610_53263.png](images/2018-09-30_CSS - 運用 Stylelint 養成好習慣/1538292610_53263.png)
+![1538292610_53263.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-09-30_CSS%20-%20%E9%81%8B%E7%94%A8%20Stylelint%20%E9%A4%8A%E6%88%90%E5%A5%BD%E7%BF%92%E6%85%A3/1538292610_53263.png)
 
 ##### _所有的紅底線警告都消失了～_
 

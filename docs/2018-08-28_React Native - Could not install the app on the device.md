@@ -1,12 +1,11 @@
 ---
 title: "React Native - Could not install the app on the device"
-date: "2018-08-28"
-tags: [android, environment, react, reactnative, chmod]
-view: "356"
-history: "0"
-group: "ReactNative"
-banner: "images/2018-08-28_React Native - Could not install the app on the device/banner/1535440186_05007.png"
----
+subtitle: "你編譯的苦我們都知道..."
+date: "2018-08-28T00:00:00.000Z"
+series: "reactnative"
+tags: "android","environment","react","reactnative","chmod"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-28_React%20Native%20-%20Could%20not%20install%20the%20app%20on%20the%20device/banner/1535440186_05007.png"
+--- 
 
 你編譯的苦我們都知道...
 
@@ -23,7 +22,7 @@ banner: "images/2018-08-28_React Native - Could not install the app on the devic
 
 結果不幸的噴出以下訊息：
 
-[![1535440186_05007.png](images/2018-08-28_React Native - Could not install the app on the device/1535440186_05007.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/b04536e1-9466-4198-847a-9c1add044236/1535440186_05007.png)
+[![1535440186_05007.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-28_React%20Native%20-%20Could%20not%20install%20the%20app%20on%20the%20device/1535440186_05007.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/b04536e1-9466-4198-847a-9c1add044236/1535440186_05007.png)
 
 沒錯親愛的！
 
@@ -73,7 +72,7 @@ banner: "images/2018-08-28_React Native - Could not install the app on the devic
 
 沒意外等個一分鐘：
 
-[![1535441377_88178.png](images/2018-08-28_React Native - Could not install the app on the device/1535441377_88178.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/b04536e1-9466-4198-847a-9c1add044236/1535441377_88178.png)
+[![1535441377_88178.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-08-28_React%20Native%20-%20Could%20not%20install%20the%20app%20on%20the%20device/1535441377_88178.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/b04536e1-9466-4198-847a-9c1add044236/1535441377_88178.png)
 
 看到 **BUILD SUCCESSFUL** 就成功囉～
 

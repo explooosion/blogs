@@ -1,12 +1,11 @@
 ---
 title: "Phaser - Tilemaps create and collision - [ 2 ]"
-date: "2018-02-24"
-tags: [collision, phaser, tile, ttilemap]
-view: "1391"
-history: "0"
-group: "Phaser"
-banner: "images/2018-02-24_Phaser - Tilemaps create and collision - [ 2 ]/banner/1519465737_84657.gif"
----
+subtitle: "世界地圖！我的主場！~ 程式撰寫篇"
+date: "2018-02-24T00:00:00.000Z"
+series: "phaser"
+tags: "collision","phaser","tile","ttilemap"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%202%20%5D/banner/1519465737_84657.gif"
+--- 
 
 世界地圖！我的主場！~ 程式撰寫篇
 
@@ -56,7 +55,7 @@ Run the development server
 
 執行後預設畫面：
 
-[![1519465737_84657.gif](images/2018-02-24_Phaser - Tilemaps create and collision - [ 2 ]/1519465737_84657.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519465737_84657.gif)
+[![1519465737_84657.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%202%20%5D/1519465737_84657.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519465737_84657.gif)
 
 ### 地圖載入
 
@@ -66,7 +65,7 @@ tmx 其實可以不需要了。
 
 ［assets / images］
 
-![1519466313_73964.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 2 ]/1519466313_73964.png)
+![1519466313_73964.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%202%20%5D/1519466313_73964.png)
 
 ［src / states / Splash.js］
 
@@ -111,7 +110,7 @@ tmx 其實可以不需要了。
 
 畫面結果如下：
 
-[![1519467667_80813.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 2 ]/1519467667_80813.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519467667_80813.png)
+[![1519467667_80813.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%202%20%5D/1519467667_80813.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519467667_80813.png)
 
 四、玩家與地圖碰撞
 ---------
@@ -126,7 +125,7 @@ tmx 其實可以不需要了。
 
 可直接複製下圖使用，放置於 images 底下。
 
-![1519467797_73808.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 2 ]/1519467797_73808.png)
+![1519467797_73808.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%202%20%5D/1519467797_73808.png)
 
 ［src / states / Splash.js］
 
@@ -232,7 +231,7 @@ tmx 其實可以不需要了。
 
 玩家能夠透過方向鍵 ↑ ↓ ← → 自由移動，畫面結果如下：
 
-[![1519474309_91968.gif](images/2018-02-24_Phaser - Tilemaps create and collision - [ 2 ]/1519474309_91968.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519474309_91968.gif)
+[![1519474309_91968.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%202%20%5D/1519474309_91968.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519474309_91968.gif)
 
 ### 碰撞偵測
 
@@ -266,7 +265,7 @@ tmx 其實可以不需要了。
 
 畫面結果，可以透過 debug 模式看到綠框為限制區域：
 
-[![1519475300_72421.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 2 ]/1519475300_72421.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519475300_72421.png)
+[![1519475300_72421.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%202%20%5D/1519475300_72421.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519475300_72421.png)
 
 ［src / states / Game.js］
 
@@ -282,7 +281,7 @@ tmx 其實可以不需要了。
 
 可以發現往右邊移動到石塊區會無法再過去。
 
-[![1519475455_39377.gif](images/2018-02-24_Phaser - Tilemaps create and collision - [ 2 ]/1519475455_39377.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519475455_39377.gif)
+[![1519475455_39377.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%202%20%5D/1519475455_39377.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519475455_39377.gif)
 
 ### 圖塊偵測
 
@@ -305,7 +304,7 @@ tmx 其實可以不需要了。
 
 結果畫面，開啟 F12，可以看到訊息印出：
 
-[![1519475865_75185.png](images/2018-02-24_Phaser - Tilemaps create and collision - [ 2 ]/1519475865_75185.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519475865_75185.png)
+[![1519475865_75185.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-24_Phaser%20-%20Tilemaps%20create%20and%20collision%20-%20%5B%202%20%5D/1519475865_75185.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/70d4e27e-766b-41b8-9656-066a7f9bc552/1519475865_75185.png)
 
 五、結語
 ----

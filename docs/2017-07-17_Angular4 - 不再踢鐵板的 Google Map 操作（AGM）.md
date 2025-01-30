@@ -1,12 +1,11 @@
 ---
 title: "Angular4 - 不再踢鐵板的 Google Map 操作（AGM）"
-date: "2017-07-17"
-tags: [angular, angular4, google map, agm]
-view: "3375"
-history: "0"
-group: "Angular"
-banner: "images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM）/banner/1500304538_18673.png"
----
+subtitle: "利用套件 angular-google-maps（AGM）快速上手 google map"
+date: "2017-07-17T00:00:00.000Z"
+series: "angular"
+tags: "angular","angular4","google map","agm"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/banner/1500304538_18673.png"
+--- 
 
 利用套件 angular-google-maps（AGM）快速上手 google map
 
@@ -20,7 +19,7 @@ banner: "images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM
 
 本篇介紹 [AGM](https://github.com/SebastianM/angular-google-maps) ，將使用心得分享給大家。
 
-[![1500304538_18673.png](images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM）/1500304538_18673.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500304538_18673.png)
+[![1500304538_18673.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500304538_18673.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500304538_18673.png)
 
 *   Github： [angular-google-maps（AGM）](https://github.com/SebastianM/angular-google-maps) 
 *   Web：[Angular Google Maps (AGM)](https://angular-maps.com/)
@@ -35,13 +34,13 @@ banner: "images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM
 
 目前的相關文件也仍是舊版，因此本篇將以新版（@agm/core）的方式介紹。
 
-[![1500298279_89095.png](images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM）/1500298279_89095.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500298279_89095.png)
+[![1500298279_89095.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500298279_89095.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500298279_89095.png)
 
 首先進行安裝，目前版本為 1.0.0 beta版。
 
     npm install @agm/core --save
 
-[![1500298386_86971.png](images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM）/1500298386_86971.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500298386_86971.png)
+[![1500298386_86971.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500298386_86971.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500298386_86971.png)
 
 到 src/app/app.module.ts  中引入 AGM 模組。
 
@@ -113,7 +112,7 @@ banner: "images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM
 
 這時候到網頁看看.....疑疑疑！？！？
 
-[![1500300880_21468.png](images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM）/1500300880_21468.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500300880_21468.png)
+[![1500300880_21468.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500300880_21468.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500300880_21468.png)
 
 別急～你會發現空空如也！別忘了設定地圖高度。
 
@@ -125,7 +124,7 @@ banner: "images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM
 
 Demo
 
-[![1500301227_58082.png](images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM）/1500301227_58082.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500301227_58082.png)
+[![1500301227_58082.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500301227_58082.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500301227_58082.png)
 
 三、Component - Marker
 --------------------
@@ -155,11 +154,11 @@ Demo
 
 Demo（無自訂圖案）：
 
-[![1500301422_82422.png](images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM）/1500301422_82422.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500301422_82422.png)
+[![1500301422_82422.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500301422_82422.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500301422_82422.png)
 
 Demo（自訂圖案）：
 
-[![1500314306_64312.png](images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM）/1500314306_64312.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500314306_64312.png)
+[![1500314306_64312.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500314306_64312.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500314306_64312.png)
 
 四、Component - Marker + InfoWindow
 ---------------------------------
@@ -195,7 +194,7 @@ Demo（自訂圖案）：
         this.isOpen = true;
       }
 
-![1500303373_67957.png](images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM）/1500303373_67957.png)
+![1500303373_67957.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500303373_67957.png)
 
 不過當我們關閉後，會發現卻再也無法點選回去了，
 
@@ -227,7 +226,7 @@ Demo（自訂圖案）：
 
 打開瀏覽器開發者模式，透過 console.log 就可看到物件資訊
 
-[![1500303799_08525.png](images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM）/1500303799_08525.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500303799_08525.png)
+[![1500303799_08525.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500303799_08525.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500303799_08525.png)
 
 五、Component - Circle
 --------------------
@@ -266,7 +265,7 @@ Demo（自訂圖案）：
 
 Demo：
 
-[![1500304861_09206.png](images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM）/1500304861_09206.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500304861_09206.png)
+[![1500304861_09206.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500304861_09206.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500304861_09206.png)
 
 六、Component  - DataLayer
 ------------------------
@@ -295,7 +294,7 @@ _覺得還蠻幸運的，還好有紀錄，否則就要在這採坑一段時間�
 
     ng g service service/layer
 
-[![1500305812_63058.png](images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM）/1500305812_63058.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500305812_63058.png)
+[![1500305812_63058.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500305812_63058.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500305812_63058.png)
 
 為了使用 Http 以及 Json 模組，我們必須先注入相關 Provider，
 
@@ -416,7 +415,7 @@ _覺得還蠻幸運的，還好有紀錄，否則就要在這採坑一段時間�
 
 Demo：
 
-[![1500307936_35381.png](images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM）/1500307936_35381.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500307936_35381.png)
+[![1500307936_35381.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500307936_35381.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500307936_35381.png)
 
 七、Component  - DataLayer Style
 ------------------------------
@@ -431,7 +430,7 @@ Demo：
 
 看了官方的 [API](https://angular-maps.com/api-docs/agm-core/directives/AgmDataLayer.html) 說明：
 
-![1500310339_40546.png](images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM）/1500310339_40546.png)
+![1500310339_40546.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500310339_40546.png)
 
 因此照著設定
 
@@ -521,7 +520,7 @@ Demo：
 
 Demo：
 
-[![1500311836_85493.png](images/2017-07-17_Angular4 - 不再踢鐵板的 Google Map 操作（AGM）/1500311836_85493.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500311836_85493.png)
+[![1500311836_85493.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-07-17_Angular4%20-%20%E4%B8%8D%E5%86%8D%E8%B8%A2%E9%90%B5%E6%9D%BF%E7%9A%84%20Google%20Map%20%E6%93%8D%E4%BD%9C%EF%BC%88AGM%EF%BC%89/1500311836_85493.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/358c2d8f-3bc7-4910-b855-eb3087977425/1500311836_85493.png)
 
 八、後記
 ----

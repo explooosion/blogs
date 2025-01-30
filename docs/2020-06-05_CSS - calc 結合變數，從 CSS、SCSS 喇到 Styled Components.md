@@ -1,18 +1,17 @@
 ---
 title: "CSS - calc 結合變數，從 CSS、SCSS 喇到 Styled Components"
-date: "2020-06-05"
-tags: [calc, css, react, scsss, styled-components, variable]
-view: "1322"
-history: "0"
-group: "CSS"
-banner: "images/2020-06-05_CSS - calc 結合變數，從 CSS、SCSS 喇到 Styled Components/banner/1591286116.png"
----
+subtitle: "css calc 搭配變數的各種奇淫技巧！"
+date: "2020-06-05T00:00:00.000Z"
+series: "css"
+tags: "calc","css","react","scsss","styled-components","variable"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-06-05_CSS%20-%20calc%20%E7%B5%90%E5%90%88%E8%AE%8A%E6%95%B8%EF%BC%8C%E5%BE%9E%20CSS%E3%80%81SCSS%20%E5%96%87%E5%88%B0%20Styled%20Components/banner/1591286116.png"
+--- 
 
 css calc 搭配變數的各種奇淫技巧！
 
 有些經驗技巧，總在奇妙需求後。
 
-[![1591286116.png](images/2020-06-05_CSS - calc 結合變數，從 CSS、SCSS 喇到 Styled Components/1591286116.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/1a686640-c6f9-46f1-94fb-6ec2f192b89e/1591286116.png)
+[![1591286116.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-06-05_CSS%20-%20calc%20%E7%B5%90%E5%90%88%E8%AE%8A%E6%95%B8%EF%BC%8C%E5%BE%9E%20CSS%E3%80%81SCSS%20%E5%96%87%E5%88%B0%20Styled%20Components/1591286116.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/1a686640-c6f9-46f1-94fb-6ec2f192b89e/1591286116.png)
 
 前言
 --
@@ -115,7 +114,7 @@ css calc 搭配變數的各種奇淫技巧！
 
 你可能也會有 scss 資料夾存放各類模組，例如：
 
-![1591258035.png](images/2020-06-05_CSS - calc 結合變數，從 CSS、SCSS 喇到 Styled Components/1591258035.png)
+![1591258035.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-06-05_CSS%20-%20calc%20%E7%B5%90%E5%90%88%E8%AE%8A%E6%95%B8%EF%BC%8C%E5%BE%9E%20CSS%E3%80%81SCSS%20%E5%96%87%E5%88%B0%20Styled%20Components/1591258035.png)
 
 那麼 calc 內的變數，可能會有幾種來源：
 

@@ -1,18 +1,17 @@
 ---
 title: "GCP - 使用 Github Actions 部署 React 到 GKE"
-date: "2020-10-10"
-tags: [cicd, deploy, docker, github, github-actions, gke, google, k8s, kubernetes, react]
-view: "1005"
-history: "0"
-group: "GCP"
-banner: "images/2020-10-10_GCP - 使用 Github Actions 部署 React 到 GKE/banner/1602267554.png"
----
+subtitle: "丟給 github actions 跑就對啦！"
+date: "2020-10-10T00:00:00.000Z"
+series: "gcp"
+tags: "cicd","deploy","docker","github","github-actions","gke","google","k8s","kubernetes","react"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-10_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20GKE/banner/1602267554.png"
+--- 
 
 丟給 github actions 跑就對啦！
 
 利用 Github Actions 部署你的專案到 GKE Cluster 上吧！
 
-[![1602267554.png](images/2020-10-10_GCP - 使用 Github Actions 部署 React 到 GKE/1602267554.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602267554.png)
+[![1602267554.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-10_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20GKE/1602267554.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602267554.png)
 
 *   [GitHub Actions self-hosted runners on Google Cloud](https://github.blog/2020-08-04-github-actions-self-hosted-runners-on-google-cloud/)
     
@@ -46,7 +45,7 @@ banner: "images/2020-10-10_GCP - 使用 Github Actions 部署 React 到 GKE/bann
 *   `Storage Admin` - allows publishing to Container Registry
     
 
-[![1602268882.png](images/2020-10-10_GCP - 使用 Github Actions 部署 React 到 GKE/1602268882.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602268882.png)
+[![1602268882.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-10_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20GKE/1602268882.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602268882.png)
 
 接著取出 Service Account Key，將 JSON file 下載保存。
 
@@ -74,13 +73,13 @@ banner: "images/2020-10-10_GCP - 使用 Github Actions 部署 React 到 GKE/bann
 
 到 Kubernetes Engine 建立新的叢集 cluster。
 
-[![1602269060.png](images/2020-10-10_GCP - 使用 Github Actions 部署 React 到 GKE/1602269060.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602269060.png)
+[![1602269060.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-10_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20GKE/1602269060.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602269060.png)
 
 在位置區域的配置，筆者選擇 asia-east1-a。
 
-[![1602269082.png](images/2020-10-10_GCP - 使用 Github Actions 部署 React 到 GKE/1602269082.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602269082.png)
+[![1602269082.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-10_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20GKE/1602269082.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602269082.png)
 
-[![1602269105.png](images/2020-10-10_GCP - 使用 Github Actions 部署 React 到 GKE/1602269105.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602269105.png)
+[![1602269105.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-10_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20GKE/1602269105.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602269105.png)
 
 3.  建立 CRA 專案 ( [Create React App](https://zh-hant.reactjs.org/docs/create-a-new-react-app.html#create-react-app) )
 -------------------------------------------------------------------------------------------------------------------
@@ -196,7 +195,7 @@ banner: "images/2020-10-10_GCP - 使用 Github Actions 部署 React 到 GKE/bann
 *   GKE\_PROJECT：專案 id
 *   GKE\_SA\_KEY：專案金鑰，建立 secret 時，務必整個 JSON 內容貼上
 
-[![1602272016.png](images/2020-10-10_GCP - 使用 Github Actions 部署 React 到 GKE/1602272016.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602272016.png)
+[![1602272016.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-10_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20GKE/1602272016.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602272016.png)
 
 而 yml 自身也使用了幾個 env 參數：
 
@@ -286,19 +285,19 @@ banner: "images/2020-10-10_GCP - 使用 Github Actions 部署 React 到 GKE/bann
 
 可以看到順利建置好 image。
 
-[![1602272712.png](images/2020-10-10_GCP - 使用 Github Actions 部署 React 到 GKE/1602272712.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602272712.png)
+[![1602272712.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-10_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20GKE/1602272712.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602272712.png)
 
 工作負載也順利部署成功。
 
-[![1602332234.png](images/2020-10-10_GCP - 使用 Github Actions 部署 React 到 GKE/1602332234.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602332234.png)
+[![1602332234.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-10_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20GKE/1602332234.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602332234.png)
 
 Service 與 Ingress 也順利建立，在端點欄位可以看到公開網址。
 
-[![1602332277.png](images/2020-10-10_GCP - 使用 Github Actions 部署 React 到 GKE/1602332277.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602332277.png)
+[![1602332277.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-10_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20GKE/1602332277.png)](https://dotblogsfile.blob.core.windows.net/user/robby/201d891d-f853-4e13-8cf5-829845b41e4f/1602332277.png)
 
 看！他在動！
 
-[![1602242737.png](images/2020-10-10_GCP - 使用 Github Actions 部署 React 到 GKE/1602242737.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602242737.png)
+[![1602242737.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-10-10_GCP%20-%20%E4%BD%BF%E7%94%A8%20Github%20Actions%20%E9%83%A8%E7%BD%B2%20React%20%E5%88%B0%20GKE/1602242737.png)](https://dotblogsfile.blob.core.windows.net/user/robby/be9c89cd-fdf5-4f93-a363-601ab3b16219/1602242737.png)
 
 本篇文章專案範例放置於：
 

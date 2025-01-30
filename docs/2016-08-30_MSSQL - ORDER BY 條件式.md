@@ -1,12 +1,11 @@
 ---
 title: "MSSQL - ORDER BY 條件式"
-date: "2016-08-30"
-tags: [MSSQL, ORDER BY, CASE WHEN]
-view: "4863"
-history: "0"
-group: "MSSQL"
-banner: ""
----
+subtitle: "MSSQL 針對 ORDER BY 指定條件之筆記。"
+date: "2016-08-30T00:00:00.000Z"
+series: "mssql"
+tags: "MSSQL","ORDER BY","CASE WHEN"
+image: ""
+--- 
 
 MSSQL 針對 ORDER BY 指定條件之筆記。
 

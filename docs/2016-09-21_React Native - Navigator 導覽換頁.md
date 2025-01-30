@@ -1,12 +1,11 @@
 ---
 title: "React Native - Navigator 導覽換頁"
-date: "2016-09-21"
-tags: [navigator, react, reactnative]
-view: "1942"
-history: "0"
-group: "ReactNative"
-banner: ""
----
+subtitle: "react native navigator 快速建立換頁功能。"
+date: "2016-09-21T00:00:00.000Z"
+series: "reactnative"
+tags: "navigator","react","reactnative"
+image: ""
+--- 
 
 **react native navigator 快速建立換頁功能。**
 

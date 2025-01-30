@@ -1,16 +1,15 @@
 ---
 title: "Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS"
-date: "2020-01-20"
-tags: [flutter, connect, multiple, devices, debug, vscode, hotreload]
-view: "1693"
-history: "0"
-group: "Flutter"
-banner: "images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/banner/1579488535_77802.jpeg"
----
+subtitle: "如果你使用果粉信仰的 MacPro 進行 APP 開發，那你一定要試試！"
+date: "2020-01-20T00:00:00.000Z"
+series: "flutter"
+tags: "flutter","connect","multiple","devices","debug","vscode","hotreload"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/banner/1579488535_77802.jpeg"
+--- 
 
 如果你使用果粉信仰的 MacPro 進行 APP 開發，那你一定要試試！
 
-[![1579488535_77802.jpeg](images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/1579488535_77802.jpeg)](https://dotblogsfile.blob.core.windows.net/user/incredible/d4e40a03-8ebb-46c0-8be3-5adc0808f6e6/1579488535_77802.jpeg)
+[![1579488535_77802.jpeg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/1579488535_77802.jpeg)](https://dotblogsfile.blob.core.windows.net/user/incredible/d4e40a03-8ebb-46c0-8be3-5adc0808f6e6/1579488535_77802.jpeg)
 
 *   ref：[Kody Technolab.](https://medium.com/@kodyTechnolab?source=post_page-----c07429ca5115----------------------)
 
@@ -58,7 +57,7 @@ II. 事情是這樣的
 
 通常我們使用指令啟動專案後，都會得到一段訊息：
 
-[![1579514200_17817.png](images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/1579514200_17817.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d4e40a03-8ebb-46c0-8be3-5adc0808f6e6/1579514200_17817.png)
+[![1579514200_17817.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/1579514200_17817.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d4e40a03-8ebb-46c0-8be3-5adc0808f6e6/1579514200_17817.png)
 
 雖然按下r可以進行 Hot Reload，但此一功能需要每次手動按，實在很麻煩...
 
@@ -93,7 +92,7 @@ III. 開始設定
 
     flutter doctor
 
-[![1579515783_90024.png](images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/1579515783_90024.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d4e40a03-8ebb-46c0-8be3-5adc0808f6e6/1579515783_90024.png)
+[![1579515783_90024.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/1579515783_90024.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d4e40a03-8ebb-46c0-8be3-5adc0808f6e6/1579515783_90024.png)
 
 ● No issues found !
 
@@ -107,11 +106,11 @@ III. 開始設定
 
 到左邊第4個蟲蟲，選擇 \[ 建立 launch.json 檔案。 \]。
 
-[![1579516636_77472.png](images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/1579516636_77472.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d4e40a03-8ebb-46c0-8be3-5adc0808f6e6/1579516636_77472.png)
+[![1579516636_77472.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/1579516636_77472.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d4e40a03-8ebb-46c0-8be3-5adc0808f6e6/1579516636_77472.png)
 
 請選擇 \[ Dart & Flutter \]，就會得到一個範本設定檔了。
 
-![1579516794_60855.png](images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/1579516794_60855.png)
+![1579516794_60855.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/1579516794_60855.png)
 
 接著到官方文件：
 
@@ -152,7 +151,7 @@ III. 開始設定
 
 設定過後，你的專案也會多一個 .vscode / launch.json 檔案。
 
-![1579519006_89296.png](images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/1579519006_89296.png)
+![1579519006_89296.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/1579519006_89296.png)
 
 ### 3\. 啟動模擬器
 
@@ -162,13 +161,13 @@ III. 開始設定
 
 如果 VSCODE 右下顯示，\[ No Device \]，請記得點選，然後開啟。
 
-![1579517149_96616.png](images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/1579517149_96616.png)
+![1579517149_96616.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/1579517149_96616.png)
 
 例如筆者的 Android 已經啟動，但 iOS 還沒啟動，
 
 廢話不多說，啟動就對了！
 
-![1579517361_66476.png](images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/1579517361_66476.png)
+![1579517361_66476.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/1579517361_66476.png)
 
 你知道嗎？尚未開啟的模擬器會有前綴 Start 的字眼。
 
@@ -180,19 +179,19 @@ III. 開始設定
 
 然後點選 綠綠的按鈕 執行！
 
-![1579517714_58432.png](images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/1579517714_58432.png)
+![1579517714_58432.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/1579517714_58432.png)
 
 同時你也一定很興奮著看著畫面在跑：
 
-[![1579517967_24801.png](images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/1579517967_24801.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d4e40a03-8ebb-46c0-8be3-5adc0808f6e6/1579517967_24801.png)
+[![1579517967_24801.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/1579517967_24801.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d4e40a03-8ebb-46c0-8be3-5adc0808f6e6/1579517967_24801.png)
 
 確認模擬器都開始執行你的專案。
 
-[![PqavL7b.png](images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/PqavL7b.png)](https://i.imgur.com/PqavL7b.png)
+[![PqavL7b.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/PqavL7b.png)](https://i.imgur.com/PqavL7b.png)
 
 除了模擬器，也會自動打開網頁，提供 [Dart DevTools](https://flutter.dev/docs/development/tools/devtools/overview)！
 
-[![1579517960_39866.png](images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/1579517960_39866.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d4e40a03-8ebb-46c0-8be3-5adc0808f6e6/1579517960_39866.png)
+[![1579517960_39866.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/1579517960_39866.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d4e40a03-8ebb-46c0-8be3-5adc0808f6e6/1579517960_39866.png)
 
 ### 5\. Auto Hot Reload
 
@@ -200,13 +199,13 @@ III. 開始設定
 
 並且可以看到偵錯主控台多次的 Reloaded 紀錄。
 
-[![1579518521_64291.png](images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/1579518521_64291.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d4e40a03-8ebb-46c0-8be3-5adc0808f6e6/1579518521_64291.png)
+[![1579518521_64291.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/1579518521_64291.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d4e40a03-8ebb-46c0-8be3-5adc0808f6e6/1579518521_64291.png)
 
 ### 6\. 快速偵錯
 
 當你執行過一次後，VSCODE 底部會顯示快速偵錯的按鈕選單。
 
-![1579518820_56704.png](images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/1579518820_56704.png)
+![1579518820_56704.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/1579518820_56704.png)
 
 括弧內是你的專案名稱喇！
 
@@ -214,7 +213,7 @@ III. 開始設定
 
 你就可以快快樂樂選擇你要的偵錯環境囉！
 
-![1579518886_79955.png](images/2020-01-20_Flutter - 在 macOS 中使用 VSCODE 同時偵錯 Android 和 iOS/1579518886_79955.png)
+![1579518886_79955.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-01-20_Flutter%20-%20%E5%9C%A8%20macOS%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20VSCODE%20%E5%90%8C%E6%99%82%E5%81%B5%E9%8C%AF%20Android%20%E5%92%8C%20iOS/1579518886_79955.png)
 
 IV. 參考資料
 --------

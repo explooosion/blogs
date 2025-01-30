@@ -1,12 +1,11 @@
 ---
 title: "GoogleMapAPI－定位、畫記"
-date: "2016-07-12"
-tags: [marker, Polyline, Polygon, Circle, InfoWindow]
-view: "1426"
-history: "0"
-group: "GoogleMapAPI"
-banner: "images/2016-07-12_GoogleMapAPI－定位、畫記/banner/1468333503_63881.png"
----
+subtitle: "google map api 新手教學，請安心服用。"
+date: "2016-07-12T00:00:00.000Z"
+series: "googlemapapi"
+tags: "marker","Polyline","Polygon","Circle","InfoWindow"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-07-12_GoogleMapAPI%EF%BC%8D%E5%AE%9A%E4%BD%8D%E3%80%81%E7%95%AB%E8%A8%98/banner/1468333503_63881.png"
+--- 
 
 google map api 新手教學，請安心服用。
 
@@ -49,7 +48,7 @@ Marker（定位標記）
     marker.setMap(map);
 
 結果如下圖  
-[![1468333503_63881.png](images/2016-07-12_GoogleMapAPI－定位、畫記/1468333503_63881.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d94acdaf-7ad6-4254-a8f4-a905ae513529/1468333503_63881.png)
+[![1468333503_63881.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-07-12_GoogleMapAPI%EF%BC%8D%E5%AE%9A%E4%BD%8D%E3%80%81%E7%95%AB%E8%A8%98/1468333503_63881.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d94acdaf-7ad6-4254-a8f4-a905ae513529/1468333503_63881.png)
 
 Polyline（線段路徑）
 --------------
@@ -82,7 +81,7 @@ Polyline（線段路徑）
 
 結果如下圖
 
-[![1468334060_12625.png](images/2016-07-12_GoogleMapAPI－定位、畫記/1468334060_12625.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d94acdaf-7ad6-4254-a8f4-a905ae513529/1468334060_12625.png)
+[![1468334060_12625.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-07-12_GoogleMapAPI%EF%BC%8D%E5%AE%9A%E4%BD%8D%E3%80%81%E7%95%AB%E8%A8%98/1468334060_12625.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d94acdaf-7ad6-4254-a8f4-a905ae513529/1468334060_12625.png)
 
 Polygon（多邊形）
 ------------
@@ -120,7 +119,7 @@ Polygon（多邊形）
 
 結果如下圖
 
-[![1468334582_01452.png](images/2016-07-12_GoogleMapAPI－定位、畫記/1468334582_01452.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d94acdaf-7ad6-4254-a8f4-a905ae513529/1468334582_01452.png)
+[![1468334582_01452.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-07-12_GoogleMapAPI%EF%BC%8D%E5%AE%9A%E4%BD%8D%E3%80%81%E7%95%AB%E8%A8%98/1468334582_01452.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d94acdaf-7ad6-4254-a8f4-a905ae513529/1468334582_01452.png)
 
 Circle 實心圓
 ----------
@@ -155,7 +154,7 @@ Circle 實心圓
 
 結果如下圖
 
-[![1468334818_25925.png](images/2016-07-12_GoogleMapAPI－定位、畫記/1468334818_25925.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d94acdaf-7ad6-4254-a8f4-a905ae513529/1468334818_25925.png)
+[![1468334818_25925.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-07-12_GoogleMapAPI%EF%BC%8D%E5%AE%9A%E4%BD%8D%E3%80%81%E7%95%AB%E8%A8%98/1468334818_25925.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d94acdaf-7ad6-4254-a8f4-a905ae513529/1468334818_25925.png)
 
 InfoWindow（訊息視窗）
 ----------------
@@ -176,7 +175,7 @@ PS. 記得要先劃記好 marker
 
 結果如下圖
 
-[![1468334982_04192.png](images/2016-07-12_GoogleMapAPI－定位、畫記/1468334982_04192.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d94acdaf-7ad6-4254-a8f4-a905ae513529/1468334982_04192.png)
+[![1468334982_04192.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2016-07-12_GoogleMapAPI%EF%BC%8D%E5%AE%9A%E4%BD%8D%E3%80%81%E7%95%AB%E8%A8%98/1468334982_04192.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d94acdaf-7ad6-4254-a8f4-a905ae513529/1468334982_04192.png)
 
 以上為基本的地圖劃記功能～
 

@@ -1,12 +1,11 @@
 ---
 title: "Egret - Bitmap 無限の滾動背景實作"
-date: "2018-02-13"
-tags: [egret, scroll, background, scene, bitmap]
-view: "983"
-history: "0"
-group: "Egret"
-banner: ""
----
+subtitle: "無限月月月月月月月月 👁👁 場景製作..."
+date: "2018-02-13T00:00:00.000Z"
+series: "egret"
+tags: "egret","scroll","background","scene","bitmap"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/banner/0.png"
+--- 
 
 無限月月月月月月月月 👁👁 場景製作...
 
@@ -15,7 +14,7 @@ banner: ""
 
 無限月讀の.... 
 
-![0](images/2018-02-13_Egret - Bitmap 無限の滾動背景實作/0)
+![0](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/0)
 
 \-
 
@@ -25,7 +24,7 @@ banner: ""
 
 示意圖如下 [Flappy Bird](http://flappybird.io/)：
 
-![09-parallax-scrolling.gif](images/2018-02-13_Egret - Bitmap 無限の滾動背景實作/09-parallax-scrolling.gif)
+![09-parallax-scrolling.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/09-parallax-scrolling.gif)
 
 本範例實作結果放置於 Github 上，可直接 clone 下來。
 
@@ -48,7 +47,7 @@ banner: ""
 
 因此需要額外一張圖（框線），去補足空白地方。
 
-![1518522715_23657.png](images/2018-02-13_Egret - Bitmap 無限の滾動背景實作/1518522715_23657.png)
+![1518522715_23657.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/1518522715_23657.png)
 
 ### 背景圖拼貼成一個陣列
 
@@ -77,7 +76,7 @@ x軸座標利用 i，即索引（index），去乘背景圖寬度：
 *   第二張 x座標 30： 30 \* 1
 *   第三張 x座標 60： 30 \* 2
 
-![1518524600_35941.jpg](images/2018-02-13_Egret - Bitmap 無限の滾動背景實作/1518524600_35941.jpg)
+![1518524600_35941.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/1518524600_35941.jpg)
 
 ### 陣列值新增移除操作
 
@@ -94,7 +93,7 @@ x軸座標利用 i，即索引（index），去乘背景圖寬度：
 
 *   利用 [shift](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) 從陣列中移除**第一個**元素。
 
-![1518542900_88941.png](images/2018-02-13_Egret - Bitmap 無限の滾動背景實作/1518542900_88941.png)
+![1518542900_88941.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/1518542900_88941.png)
 
 因為總張數少了一張（元素），所以要在陣列末端新增一個圖片。
 
@@ -111,11 +110,11 @@ x軸座標利用 i，即索引（index），去乘背景圖寬度：
 
 *    利用 [push](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/push) 添加該元素至陣列的末端。
 
-![1518544560_38357.png](images/2018-02-13_Egret - Bitmap 無限の滾動背景實作/1518544560_38357.png)
+![1518544560_38357.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/1518544560_38357.png)
 
 以上動作完成後，又回到最原本的陣列：
 
-![1518545408_23555.png](images/2018-02-13_Egret - Bitmap 無限の滾動背景實作/1518545408_23555.png)
+![1518545408_23555.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/1518545408_23555.png)
 
 實作滾動
 ----
@@ -124,13 +123,13 @@ x軸座標利用 i，即索引（index），去乘背景圖寬度：
 
 場景所使用到的 lib 只有 egret 核心庫、res 資源加載庫。
 
-[![1518547083_52315.png](images/2018-02-13_Egret - Bitmap 無限の滾動背景實作/1518547083_52315.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/7aaaf1f5-032e-4c8f-b26d-e0ec2425457b/1518547083_52315.png)
+[![1518547083_52315.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/1518547083_52315.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/7aaaf1f5-032e-4c8f-b26d-e0ec2425457b/1518547083_52315.png)
 
 在遊戲開發上，本範例使用的系統架構，
 
 會另外建立資料夾 mygame、utils 以及遊戲的 namespace，檔案架構如下：
 
-![1518552347_17185.png](images/2018-02-13_Egret - Bitmap 無限の滾動背景實作/1518552347_17185.png)
+![1518552347_17185.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/1518552347_17185.png)
 
 *   GameContainer.ts：遊戲主畫面容器
 *   BgMap.ts：場景
@@ -171,25 +170,25 @@ utils / GameUtil.ts
 
 將背景圖片資源放入 resource，可以使用本範例 ↓ ↓ ↓ 或是另行準備。
 
-[![1518557915_88889.jpg](images/2018-02-13_Egret - Bitmap 無限の滾動背景實作/1518557915_88889.jpg)](https://dotblogsfile.blob.core.windows.net/user/incredible/7aaaf1f5-032e-4c8f-b26d-e0ec2425457b/1518557915_88889.jpg)
+[![1518557915_88889.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/1518557915_88889.jpg)](https://dotblogsfile.blob.core.windows.net/user/incredible/7aaaf1f5-032e-4c8f-b26d-e0ec2425457b/1518557915_88889.jpg)
 
 如果 IDE ( Egret Wing ) 出現提示，請選擇 Save。
 
-[![1518554406_68757.png](images/2018-02-13_Egret - Bitmap 無限の滾動背景實作/1518554406_68757.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/7aaaf1f5-032e-4c8f-b26d-e0ec2425457b/1518554406_68757.png)
+[![1518554406_68757.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/1518554406_68757.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/7aaaf1f5-032e-4c8f-b26d-e0ec2425457b/1518554406_68757.png)
 
 這時候查看 resource / default.res.json。
 
-![1518554365_85531.png](images/2018-02-13_Egret - Bitmap 無限の滾動背景實作/1518554365_85531.png)
+![1518554365_85531.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/1518554365_85531.png)
 
 切換至 Design 檢視模式，應該可以看到剛剛新增的資源項目：
 
-[![1518554579_64116.png](images/2018-02-13_Egret - Bitmap 無限の滾動背景實作/1518554579_64116.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/7aaaf1f5-032e-4c8f-b26d-e0ec2425457b/1518554579_64116.png)
+[![1518554579_64116.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/1518554579_64116.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/7aaaf1f5-032e-4c8f-b26d-e0ec2425457b/1518554579_64116.png)
 
 *   Name：如果要調用該圖片資源，不再需要輸入整個路徑 url，僅需要輸入賦予的 Name
 
 如果沒有，就請直接拖曳到 Drop Here 吧～
 
-![1518554302_90328.png](images/2018-02-13_Egret - Bitmap 無限の滾動背景實作/1518554302_90328.png)
+![1518554302_90328.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/1518554302_90328.png)
 
 ### 滾動背景設計
 
@@ -455,7 +454,7 @@ Shift \+ Ctrl \+ B快捷鍵編譯吧！
 
 然後將 template / web / index.html 複製於此底下，如下圖結果：
 
-![1518558120_74798.png](images/2018-02-13_Egret - Bitmap 無限の滾動背景實作/1518558120_74798.png)
+![1518558120_74798.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-13_Egret%20-%20Bitmap%20%E7%84%A1%E9%99%90%E3%81%AE%E6%BB%BE%E5%8B%95%E8%83%8C%E6%99%AF%E5%AF%A6%E4%BD%9C/1518558120_74798.png)
 
 參考資料
 ----

@@ -1,18 +1,17 @@
 ---
 title: "Github - CICD 使用 Actions 以 React 建置 pages 為例"
-date: "2019-09-06"
-tags: [github, react, actions, cicd, pages]
-view: "2166"
-history: "0"
-group: "GitHub"
-banner: "images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/banner/1567739924_33717.png"
----
+subtitle: "Actions 推出啦～～趕快來體驗看看！"
+date: "2019-09-06T00:00:00.000Z"
+series: "github"
+tags: "github","react","actions","cicd","pages"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/banner/1567739924_33717.png"
+--- 
 
 Actions 推出啦～～趕快來體驗看看！
 
 讓網站運作通通自己動起來！
 
-[![1567739924_33717.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567739924_33717.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567739924_33717.png)
+[![1567739924_33717.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567739924_33717.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567739924_33717.png)
 
 *   圖源：[https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/](https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/)
 
@@ -54,14 +53,14 @@ Actions 推出啦～～趕快來體驗看看！
 
 如果申請成功，應該可以發現你任何一個 repo，都會多一個 Actions 的選項：
 
-[![1567742053_26249.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567742053_26249.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567742053_26249.png)
+[![1567742053_26249.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567742053_26249.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567742053_26249.png)
 
 建立 Repo
 -------
 
 在 Github 上建立新的 [repository](https://github.com/new)，本文以 my-app 為例。
 
-[![1567743262_30611.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567743262_30611.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567743262_30611.png)
+[![1567743262_30611.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567743262_30611.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567743262_30611.png)
 
 新增專案
 ----
@@ -90,7 +89,7 @@ Actions 推出啦～～趕快來體驗看看！
      "homepage": "http://explooosion.github.io/my-app",
     }
 
-[![1567746547_21315.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567746547_21315.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567746547_21315.png)
+[![1567746547_21315.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567746547_21315.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567746547_21315.png)
 
 YML 設定檔
 -------
@@ -103,7 +102,7 @@ YML 設定檔
 
 該子層資料夾中，建立檔案：main.yml，如下圖範例。
 
-![1567747543_62604.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567747543_62604.png)
+![1567747543_62604.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567747543_62604.png)
 
 接著補上描述內容：
 
@@ -157,7 +156,7 @@ name: Build and Deploy 
 
 代表本次整體任務的名稱，會顯示於下方紅框處中：
 
-[![1567747953_85882.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567747953_85882.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567747953_85882.png)
+[![1567747953_85882.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567747953_85882.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567747953_85882.png)
 
 on:
 
@@ -171,7 +170,7 @@ install-and-test：該工作主要進行安裝與測試。
 
 build-and-deploy：該工作則是將專案進行建置，並且程式碼 push 至指定的 branch 上。
 
-![1567748330_73247.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567748330_73247.png)
+![1567748330_73247.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567748330_73247.png)
 
 uses: JamesIves/github-pages-deploy-action@master
 
@@ -241,37 +240,37 @@ BUILD\_SCRIPT: yarn && yarn build
 
 首先到個人 github 上的 [Settings](https://github.com/settings/profile)。
 
-![1567750317_91042.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567750317_91042.png)
+![1567750317_91042.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567750317_91042.png)
 
 點選 [Developer settings](https://github.com/settings/apps)。
 
-![1567750391_28159.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567750391_28159.png)
+![1567750391_28159.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567750391_28159.png)
 
 然後選擇 [Personal access tokens](https://github.com/settings/tokens)。
 
-![1567750451_37442.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567750451_37442.png)
+![1567750451_37442.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567750451_37442.png)
 
 接著點選 [Generate new token](https://github.com/settings/tokens/new) 建立私人令牌。
 
-[![1567750566_24903.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567750566_24903.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567750566_24903.png)
+[![1567750566_24903.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567750566_24903.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567750566_24903.png)
 
 在欄位中，Note 是輸入可以識別的名稱，日後可以改，
 
 權限則勾選最上面區塊 repo 就好，會自動勾取其子項目，最後確定產生。
 
-[![1567750843_39012.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567750843_39012.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567750843_39012.png)![1567750843_41935.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567750843_41935.png)
+[![1567750843_39012.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567750843_39012.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567750843_39012.png)![1567750843_41935.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567750843_41935.png)
 
 產生後，請確保成功複製 token，因為之後無法再進行複製的動作，必須要重新產生。
 
-[![1567751127_34335.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567751127_34335.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567751127_34335.png)
+[![1567751127_34335.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567751127_34335.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567751127_34335.png)
 
 接著到你 github 的專案 Settings。
 
-[![1567751263_57526.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567751263_57526.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567751263_57526.png)
+[![1567751263_57526.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567751263_57526.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567751263_57526.png)
 
 選擇 Secrets。
 
-![1567751402_9566.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567751402_9566.png)
+![1567751402_9566.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567751402_9566.png)
 
 點選 Add a new secret。
 
@@ -279,11 +278,11 @@ Name 請輸入：ACCESS\_TOKEN
 
 Value 請貼上剛剛複製的 token。
 
-[![1567751403_0206.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567751403_0206.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567751403_0206.png)
+[![1567751403_0206.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567751403_0206.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567751403_0206.png)
 
 如果成功，應該會看到 綠色 鎖頭。
 
-![1567751627_40074.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567751627_40074.png)
+![1567751627_40074.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567751627_40074.png)
 
 484 OS： 耖尼瑪的版主顏色亂搞我！嘿嘿！
 
@@ -306,19 +305,19 @@ Value 請貼上剛剛複製的 token。
 
 推送完畢後，你可以到 github 專案 Actions 中查看，是不是順利通過。
 
-[![1567753280_99129.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567753280_99129.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567753280_99129.png)
+[![1567753280_99129.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567753280_99129.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567753280_99129.png)
 
 如果失敗，預設會發送電子郵件給你。
 
 試著切換分支，可以發現多了 gh-pages。
 
-[![1567753331_312.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567753331_312.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567753331_312.png)
+[![1567753331_312.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567753331_312.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567753331_312.png)
 
 在 Settings 中，也可以發現 Github Pages，自動選擇 gh-pages 分支，
 
 並且可以看到提示訊息的網址。
 
-[![1567753449_47213.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567753449_47213.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567753449_47213.png)
+[![1567753449_47213.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567753449_47213.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/ec9f149d-a499-4399-9640-01ddb7401ba9/1567753449_47213.png)
 
 因為筆者有設定過 [Custom domain](https://help.github.com/en/articles/quick-start-setting-up-a-custom-domain)，所以網址會不太一樣！
 
@@ -326,7 +325,7 @@ Value 請貼上剛剛複製的 token。
 
 並且如果有設定環境變數，title 也順利被套用上去。
 
-![1567753737_38252.png](images/2019-09-06_Github - CICD 使用 Actions 以 React 建置 pages 為例/1567753737_38252.png)
+![1567753737_38252.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2019-09-06_Github%20-%20CICD%20%E4%BD%BF%E7%94%A8%20Actions%20%E4%BB%A5%20React%20%E5%BB%BA%E7%BD%AE%20pages%20%E7%82%BA%E4%BE%8B/1567753737_38252.png)
 
 恭喜！
 

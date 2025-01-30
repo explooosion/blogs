@@ -1,18 +1,17 @@
 ---
 title: "Docker - 在 Mac 上安裝 MSSQL 的搖光吧！"
-date: "2018-11-10"
-tags: [docker, mssql, dbeaver, mssql-server-linux, images, fluctlight]
-view: "9014"
-history: "0"
-group: "Docker"
-banner: "images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/banner/1541917014_27525.png"
----
+subtitle: "這是一篇將 mssql 容器化的教學文。"
+date: "2018-11-10T00:00:00.000Z"
+series: "docker"
+tags: "docker","mssql","dbeaver","mssql-server-linux","images","fluctlight"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/banner/1541917014_27525.png"
+--- 
 
 這是一篇將 mssql 容器化的教學文。
 
 在 Mac 上使用 MSSQL ，您可以有另一種選擇。
 
-[![1541917014_27525.png](images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/1541917014_27525.png)](https://dotblogs.com.tw/explooosion)
+[![1541917014_27525.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541917014_27525.png)](https://dotblogs.com.tw/explooosion)
 
 摁？搖光？
 
@@ -66,7 +65,7 @@ banner: "images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/bann
 
 下載網址：[Docker Community Edition for Mac](https://store.docker.com/editions/community/docker-ce-desktop-mac) 
 
-[![1541855714_94078.png](images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/1541855714_94078.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541855714_94078.png)
+[![1541855714_94078.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541855714_94078.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541855714_94078.png)
 
 #### 1.1.2 從 Homebrew 安裝
 
@@ -82,11 +81,11 @@ SQL Server 最低需求配置為 **3.25 GB**，
 
 選擇 Preferences...
 
-![1541908711_42496.png](images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/1541908711_42496.png)
+![1541908711_42496.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541908711_42496.png)
 
 切換到 Advanced，將 Memory 增加至 4GB。
 
-![1541908711_01531.png](images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/1541908711_01531.png)
+![1541908711_01531.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541908711_01531.png)
 
 更詳細的安裝步驟請參考：[macOS 安装 Docker](https://yeasy.gitbooks.io/docker_practice/install/mac.html) ^Q^
 
@@ -122,7 +121,7 @@ SQL Server 最低需求配置為 **3.25 GB**，
 
     docker images
 
-[![1541855887_69839.png](images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/1541855887_69839.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541855887_69839.png)
+[![1541855887_69839.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541855887_69839.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541855887_69839.png)
 
 所以檔案在哪？我真的很擔心怎麼辦？
 
@@ -159,7 +158,7 @@ SQL Server 最低需求配置為 **3.25 GB**，
 
 運行成功的話，STATUS 應該會顯示建立時間點。
 
-[![1541911919_69676.png](images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/1541911919_69676.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541911919_69676.png)
+[![1541911919_69676.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541911919_69676.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541911919_69676.png)
 
 如果失敗，應該會是密碼不夠嚴謹的問題，或是 1433 port 你的本地已經佔用。
 
@@ -217,25 +216,25 @@ SQL Server 最低需求配置為 **3.25 GB**，
 
 如果出現該畫面，就表示成功囉！
 
-[![1541913341_95828.png](images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/1541913341_95828.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541913341_95828.png)
+[![1541913341_95828.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541913341_95828.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541913341_95828.png)
 
 試試軟體版本查詢。
 
     select @@version
 
-[![1541913526_22207.png](images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/1541913526_22207.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541913526_22207.png)
+[![1541913526_22207.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541913526_22207.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541913526_22207.png)
 
 試著建立資料庫。
 
     CREATE DATABASE test
 
-![1541913932_26426.png](images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/1541913932_26426.png)
+![1541913932_26426.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541913932_26426.png)
 
 試著查詢現有資料庫。
 
     .databases
 
-![1541913967_04991.png](images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/1541913967_04991.png)
+![1541913967_04991.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541913967_04991.png)
 
 四、介紹 GUI
 --------
@@ -248,21 +247,21 @@ SQL Server 最低需求配置為 **3.25 GB**，
 
 [DBeaver Community](https://dbeaver.io/) ( 免費 )
 
-[![1541914550_56774.png](images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/1541914550_56774.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541914550_56774.png)
+[![1541914550_56774.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541914550_56774.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541914550_56774.png)
 
 [SQL Operations Studio](https://docs.microsoft.com/zh-tw/sql/azure-data-studio/download?view=sql-server-2017) ( 免費 )
 
-[![1541915345_27177.png](images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/1541915345_27177.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541915345_27177.png)
+[![1541915345_27177.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541915345_27177.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/c618f813-8e98-4651-94ba-f9030a5b9da9/1541915345_27177.png)
 
 安裝與操作方法 ...
 
 ### 抽牌！
 
-[![1541916304_44454.png](images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/1541916304_44454.png)](zh.wikipedia.org/zh-tw/%E8%A7%80%E8%90%BD%E9%99%B0)
+[![1541916304_44454.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541916304_44454.png)](zh.wikipedia.org/zh-tw/%E8%A7%80%E8%90%BD%E9%99%B0)
 
 搖出來了嗎？
 
-[![1541917723_76398.jpg](images/2018-11-10_Docker - 在 Mac 上安裝 MSSQL 的搖光吧！/1541917723_76398.jpg)](https://zh.wikipedia.org/zh-tw/%E5%88%80%E5%8A%8D%E7%A5%9E%E5%9F%9F)
+[![1541917723_76398.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-11-10_Docker%20-%20%E5%9C%A8%20Mac%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20MSSQL%20%E7%9A%84%E6%90%96%E5%85%89%E5%90%A7%EF%BC%81/1541917723_76398.jpg)](https://zh.wikipedia.org/zh-tw/%E5%88%80%E5%8A%8D%E7%A5%9E%E5%9F%9F)
 
 * * *
 

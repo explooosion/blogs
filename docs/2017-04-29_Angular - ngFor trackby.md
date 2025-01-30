@@ -1,12 +1,11 @@
 ---
 title: "Angular - ngFor trackby"
-date: "2017-04-29"
-tags: [angular, angular2, ngfor, trackby, performance]
-view: "4943"
-history: "0"
-group: "Angular"
-banner: "images/2017-04-29_Angular - ngFor trackby/banner/1493405855_91016.png"
----
+subtitle: "針對 angular（angular2）中 *ngFor 補充說明。"
+date: "2017-04-29T00:00:00.000Z"
+series: "angular"
+tags: "angular","angular2","ngfor","trackby","performance"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-04-29_Angular%20-%20ngFor%20trackby/banner/1493405855_91016.png"
+--- 
 
 針對 angular（angular2）中 \*ngFor 補充說明。
 
@@ -84,7 +83,7 @@ ngFor 可以看成三大塊，最前面的部分沒什麼問題，即從 items �
 
 個人另一種想法就是跟我們常見的磁碟機的索引是一樣的。
 
-![1493405855_91016.png](images/2017-04-29_Angular - ngFor trackby/1493405855_91016.png)
+![1493405855_91016.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-04-29_Angular%20-%20ngFor%20trackby/1493405855_91016.png)
 
 三、不使用 ngForTrackBy
 ------------------
@@ -139,7 +138,7 @@ ngFor 可以看成三大塊，最前面的部分沒什麼問題，即從 items �
 
 【Result 】
 
-[![1493407970_8119.gif](images/2017-04-29_Angular - ngFor trackby/1493407970_8119.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/15df1082-d5e7-4967-9033-24ae5683bef7/1493407970_8119.gif)
+[![1493407970_8119.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-04-29_Angular%20-%20ngFor%20trackby/1493407970_8119.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/15df1082-d5e7-4967-9033-24ae5683bef7/1493407970_8119.gif)
 
 三、使用 ngForTrackBy
 -----------------
@@ -191,7 +190,7 @@ ngFor 可以看成三大塊，最前面的部分沒什麼問題，即從 items �
 
 "ng-reflect-ng-for-track-by": "function (index, item) {\\r\\n        return index; // or item.id\\r\\n    }"
 
-[![1493408347_96578.gif](images/2017-04-29_Angular - ngFor trackby/1493408347_96578.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/15df1082-d5e7-4967-9033-24ae5683bef7/1493408347_96578.gif)
+[![1493408347_96578.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2017-04-29_Angular%20-%20ngFor%20trackby/1493408347_96578.gif)](https://dotblogsfile.blob.core.windows.net/user/incredible/15df1082-d5e7-4967-9033-24ae5683bef7/1493408347_96578.gif)
 
 真的只是這樣嗎？
 

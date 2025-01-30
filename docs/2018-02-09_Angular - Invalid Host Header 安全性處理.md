@@ -1,12 +1,11 @@
 ---
 title: "Angular - Invalid Host Header 安全性處理"
-date: "2018-02-09"
-tags: [angular, Webpack, invalid, host]
-view: "3503"
-history: "0"
-group: "Angular"
-banner: "images/2018-02-09_Angular - Invalid Host Header 安全性處理/banner/34676503-61854b14-f463-11e7-8c0b-37399e9cdb5b.jpg"
----
+subtitle: "煩死人的詭異錯誤。"
+date: "2018-02-09T00:00:00.000Z"
+series: "angular"
+tags: "angular","Webpack","invalid","host"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-09_Angular%20-%20Invalid%20Host%20Header%20%E5%AE%89%E5%85%A8%E6%80%A7%E8%99%95%E7%90%86/banner/34676503-61854b14-f463-11e7-8c0b-37399e9cdb5b.jpg"
+--- 
 
 煩死人的詭異錯誤。
 
@@ -33,7 +32,7 @@ banner: "images/2018-02-09_Angular - Invalid Host Header 安全性處理/banner/
 *   **Invalid Host Header**
     
 
-[![34676503-61854b14-f463-11e7-8c0b-37399e9cdb5b.jpg](images/2018-02-09_Angular - Invalid Host Header 安全性處理/34676503-61854b14-f463-11e7-8c0b-37399e9cdb5b.jpg)](https://user-images.githubusercontent.com/15818783/34676503-61854b14-f463-11e7-8c0b-37399e9cdb5b.jpg)
+[![34676503-61854b14-f463-11e7-8c0b-37399e9cdb5b.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-09_Angular%20-%20Invalid%20Host%20Header%20%E5%AE%89%E5%85%A8%E6%80%A7%E8%99%95%E7%90%86/34676503-61854b14-f463-11e7-8c0b-37399e9cdb5b.jpg)](https://user-images.githubusercontent.com/15818783/34676503-61854b14-f463-11e7-8c0b-37399e9cdb5b.jpg)
 
 但明明在本機 local 看很正常啊啊啊！！！
 
@@ -41,7 +40,7 @@ banner: "images/2018-02-09_Angular - Invalid Host Header 安全性處理/banner/
 
 主要是因為 [Angular CLI](https://github.com/angular/angular-cli) 依賴的 [webpack-devserver](https://github.com/webpack/webpack-dev-server) 做了更新。
 
-[![webpack-dev-server.jpg](images/2018-02-09_Angular - Invalid Host Header 安全性處理/webpack-dev-server.jpg)](https://www.wisdomgeek.com/wp-content/uploads/2017/07/webpack-dev-server.jpg)
+[![webpack-dev-server.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-09_Angular%20-%20Invalid%20Host%20Header%20%E5%AE%89%E5%85%A8%E6%80%A7%E8%99%95%E7%90%86/webpack-dev-server.jpg)](https://www.wisdomgeek.com/wp-content/uploads/2017/07/webpack-dev-server.jpg)
 
 在版本 [1.16.4](https://github.com/webpack/webpack-dev-server/releases?after=v2.4.3) 和 [2.4.3](https://github.com/webpack/webpack-dev-server/releases/tag/v2.4.4) 中提到了`disableHostCheck` 這個功能：
 
@@ -62,7 +61,7 @@ banner: "images/2018-02-09_Angular - Invalid Host Header 安全性處理/banner/
 
     ng -v
 
-[![1518117100_56284.png](images/2018-02-09_Angular - Invalid Host Header 安全性處理/1518117100_56284.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/8edecf87-f737-48a7-9c24-c8cb7d9fe8ba/1518117100_56284.png)
+[![1518117100_56284.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-02-09_Angular%20-%20Invalid%20Host%20Header%20%E5%AE%89%E5%85%A8%E6%80%A7%E8%99%95%E7%90%86/1518117100_56284.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/8edecf87-f737-48a7-9c24-c8cb7d9fe8ba/1518117100_56284.png)
 
 嘿嘿～ 終於處理好這個問題。
 

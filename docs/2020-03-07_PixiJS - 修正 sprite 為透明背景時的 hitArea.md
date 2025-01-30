@@ -1,18 +1,17 @@
 ---
 title: "PixiJS - 修正 sprite 為透明背景時的 hitArea"
-date: "2020-03-07"
-tags: [Polygon, pixijs, hitArea, physicseditor, shape, transparent, explorter]
-view: "1196"
-history: "0"
-group: "PixiJS"
-banner: ""
----
+subtitle: "將你的 sprite hitArea 套上完美的 polygons 吧！"
+date: "2020-03-07T00:00:00.000Z"
+series: "pixijs"
+tags: "Polygon","pixijs","hitArea","physicseditor","shape","transparent","explorter"
+image: ""
+--- 
 
 將你的 sprite hitArea 套上完美的 polygons 吧！
 
 PixiJS 很好玩，你一定要試試！
 
-[![1*x1LOZj2hMIGNJjxOAsMR7w.png](images/2020-03-07_PixiJS - 修正 sprite 為透明背景時的 hitArea/1*x1LOZj2hMIGNJjxOAsMR7w.png)](https://miro.medium.com/max/640/1*x1LOZj2hMIGNJjxOAsMR7w.png)
+[![1*x1LOZj2hMIGNJjxOAsMR7w.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-03-07_PixiJS%20-%20%E4%BF%AE%E6%AD%A3%20sprite%20%E7%82%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF%E6%99%82%E7%9A%84%20hitArea/1*x1LOZj2hMIGNJjxOAsMR7w.png)](https://miro.medium.com/max/640/1*x1LOZj2hMIGNJjxOAsMR7w.png)
 
 *   ref：[Introduction to PixiJS: An HTML5 2D rendering engine](https://itnext.io/introduction-to-pixijs-an-html5-2d-rendering-engine-64173df9a14e)
 
@@ -30,7 +29,7 @@ PixiJS  是個很龐大的 2D 渲染引擎，使用後，你會發現更多美�
 
  我們隨意找一張圖，下圖為 PixiJS 範例圖。
 
-[![1583511339.png](images/2020-03-07_PixiJS - 修正 sprite 為透明背景時的 hitArea/1583511339.png)](https://pixijs.io/examples/examples/assets/flowerTop.png)
+[![1583511339.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-03-07_PixiJS%20-%20%E4%BF%AE%E6%AD%A3%20sprite%20%E7%82%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF%E6%99%82%E7%9A%84%20hitArea/1583511339.png)](https://pixijs.io/examples/examples/assets/flowerTop.png)
 
 該圖大小為 119x181 且為透明背景的可愛河童。
 
@@ -58,13 +57,13 @@ PixiJS  是個很龐大的 2D 渲染引擎，使用後，你會發現更多美�
 
 點選了河童，看起來沒問題！
 
-[![P14ul0V.gif](images/2020-03-07_PixiJS - 修正 sprite 為透明背景時的 hitArea/P14ul0V.gif)](https://i.imgur.com/P14ul0V.gif)
+[![P14ul0V.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-03-07_PixiJS%20-%20%E4%BF%AE%E6%AD%A3%20sprite%20%E7%82%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF%E6%99%82%E7%9A%84%20hitArea/P14ul0V.gif)](https://i.imgur.com/P14ul0V.gif)
 
 但接下來，你試著將滑鼠移動到右下角的 「黑色區域」 ...！？
 
 居然能夠觸發觸碰事件，而且滑鼠指標也呈現 pointer 樣式。
 
-[![Qofu6Ms.gif](images/2020-03-07_PixiJS - 修正 sprite 為透明背景時的 hitArea/Qofu6Ms.gif)](https://i.imgur.com/Qofu6Ms.gif)
+[![Qofu6Ms.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-03-07_PixiJS%20-%20%E4%BF%AE%E6%AD%A3%20sprite%20%E7%82%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF%E6%99%82%E7%9A%84%20hitArea/Qofu6Ms.gif)](https://i.imgur.com/Qofu6Ms.gif)
 
 為什麼會這樣？
 
@@ -83,25 +82,25 @@ PixiJS  是個很龐大的 2D 渲染引擎，使用後，你會發現更多美�
 
 如果有長期需求，當然建議可以給他買下去，約台幣 $800/year 不到～
 
-[![1583513084.png](images/2020-03-07_PixiJS - 修正 sprite 為透明背景時的 hitArea/1583513084.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d59d2bde-48ea-485e-8fa6-41cd863f372e/1583513084.png)
+[![1583513084.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-03-07_PixiJS%20-%20%E4%BF%AE%E6%AD%A3%20sprite%20%E7%82%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF%E6%99%82%E7%9A%84%20hitArea/1583513084.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/d59d2bde-48ea-485e-8fa6-41cd863f372e/1583513084.png)
 
 安裝完畢後啟動，試著加入圖片吧！
 
 \[ Add sprites \]
 
-[![76091487-9edc7e80-5ff8-11ea-8578-e5a45a193c75.png](images/2020-03-07_PixiJS - 修正 sprite 為透明背景時的 hitArea/76091487-9edc7e80-5ff8-11ea-8578-e5a45a193c75.png)](https://user-images.githubusercontent.com/13682994/76091487-9edc7e80-5ff8-11ea-8578-e5a45a193c75.png)
+[![76091487-9edc7e80-5ff8-11ea-8578-e5a45a193c75.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-03-07_PixiJS%20-%20%E4%BF%AE%E6%AD%A3%20sprite%20%E7%82%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF%E6%99%82%E7%9A%84%20hitArea/76091487-9edc7e80-5ff8-11ea-8578-e5a45a193c75.png)](https://user-images.githubusercontent.com/13682994/76091487-9edc7e80-5ff8-11ea-8578-e5a45a193c75.png)
 
 接著使用如同魔術棒的輪廓偵測工具，捕捉圖形邊框。
 
 \[ Shape tracer \]
 
-![76091676-ff6bbb80-5ff8-11ea-8f40-14f111042477.png](images/2020-03-07_PixiJS - 修正 sprite 為透明背景時的 hitArea/76091676-ff6bbb80-5ff8-11ea-8f40-14f111042477.png)
+![76091676-ff6bbb80-5ff8-11ea-8f40-14f111042477.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-03-07_PixiJS%20-%20%E4%BF%AE%E6%AD%A3%20sprite%20%E7%82%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF%E6%99%82%E7%9A%84%20hitArea/76091676-ff6bbb80-5ff8-11ea-8f40-14f111042477.png)
 
 由於我們使用 PixiJS，在右側 Exporter 中，請選擇 Phaser (P2)。
 
 \[ Exporter \]
 
-![76091884-60938f00-5ff9-11ea-8ee9-679058daea09.png](images/2020-03-07_PixiJS - 修正 sprite 為透明背景時的 hitArea/76091884-60938f00-5ff9-11ea-8ee9-679058daea09.png)
+![76091884-60938f00-5ff9-11ea-8ee9-679058daea09.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-03-07_PixiJS%20-%20%E4%BF%AE%E6%AD%A3%20sprite%20%E7%82%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF%E6%99%82%E7%9A%84%20hitArea/76091884-60938f00-5ff9-11ea-8ee9-679058daea09.png)
 
 你知道嗎？Phaser 是一套完整性高的 2D 網頁遊戲引擎。
 
@@ -109,7 +108,7 @@ PixiJS  是個很龐大的 2D 渲染引擎，使用後，你會發現更多美�
 
 \[ Publish \]
 
-![76091960-8a4cb600-5ff9-11ea-92fe-3b03a58e7986.png](images/2020-03-07_PixiJS - 修正 sprite 為透明背景時的 hitArea/76091960-8a4cb600-5ff9-11ea-92fe-3b03a58e7986.png)
+![76091960-8a4cb600-5ff9-11ea-92fe-3b03a58e7986.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-03-07_PixiJS%20-%20%E4%BF%AE%E6%AD%A3%20sprite%20%E7%82%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF%E6%99%82%E7%9A%84%20hitArea/76091960-8a4cb600-5ff9-11ea-92fe-3b03a58e7986.png)
 
 仔細看看它的 JSON 結構：
 
@@ -184,7 +183,7 @@ PixiJS  是個很龐大的 2D 渲染引擎，使用後，你會發現更多美�
 
 同時指標也不會呈現 pointer ～
 
-![vfb9Ucp.gif](images/2020-03-07_PixiJS - 修正 sprite 為透明背景時的 hitArea/vfb9Ucp.gif)
+![vfb9Ucp.gif](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2020-03-07_PixiJS%20-%20%E4%BF%AE%E6%AD%A3%20sprite%20%E7%82%BA%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF%E6%99%82%E7%9A%84%20hitArea/vfb9Ucp.gif)
 
 4\. 後記
 ------

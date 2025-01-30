@@ -1,18 +1,17 @@
 ---
 title: "TypeScript - 在 interface 中理解 Pick, Omit, Partial, Intersection Types"
-date: "2023-06-24"
-tags: [Intersection Types, Omit, Partial, Pick, typescript, 交叉型別]
-view: "175"
-history: "0"
-group: "TypeScript"
-banner: "images/2023-06-24_TypeScript - 在 interface 中理解 Pick, Omit, Partial, Intersection Types/banner/1687544088.png.png"
----
+subtitle: "關於 interface 的特性應用！"
+date: "2023-06-24T00:00:00.000Z"
+series: "typescript"
+tags: "Intersection Types","Omit","Partial","Pick","typescript","交叉型別"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2023-06-24_TypeScript%20-%20%E5%9C%A8%20interface%20%E4%B8%AD%E7%90%86%E8%A7%A3%20Pick%2C%20Omit%2C%20Partial%2C%20Intersection%20Types/banner/1687544088.png.png"
+--- 
 
 關於 interface 的特性應用！
 
 又是值得探索 typescript 的日子 ~
 
-[![1687544088.png.png](images/2023-06-24_TypeScript - 在 interface 中理解 Pick, Omit, Partial, Intersection Types/1687544088.png.png)](https://dotblogsfile.blob.core.windows.net/user/robby/70750be1-3b97-4661-8cec-abe36ff9a52a/1687544088.png.png)
+[![1687544088.png.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2023-06-24_TypeScript%20-%20%E5%9C%A8%20interface%20%E4%B8%AD%E7%90%86%E8%A7%A3%20Pick%2C%20Omit%2C%20Partial%2C%20Intersection%20Types/1687544088.png.png)](https://dotblogsfile.blob.core.windows.net/user/robby/70750be1-3b97-4661-8cec-abe36ff9a52a/1687544088.png.png)
 
 前言
 --
@@ -248,6 +247,6 @@ Partial<Type>
 
 關於 [Intersection Types](https://en.wikipedia.org/wiki/Intersection_type#Intersection_of_a_type_family)  可以在維基百科看到更多擁有此特性的語言：
 
-[![1687542661.png.png](images/2023-06-24_TypeScript - 在 interface 中理解 Pick, Omit, Partial, Intersection Types/1687542661.png.png)](https://dotblogsfile.blob.core.windows.net/user/robby/70750be1-3b97-4661-8cec-abe36ff9a52a/1687542661.png.png)
+[![1687542661.png.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2023-06-24_TypeScript%20-%20%E5%9C%A8%20interface%20%E4%B8%AD%E7%90%86%E8%A7%A3%20Pick%2C%20Omit%2C%20Partial%2C%20Intersection%20Types/1687542661.png.png)](https://dotblogsfile.blob.core.windows.net/user/robby/70750be1-3b97-4661-8cec-abe36ff9a52a/1687542661.png.png)
 
 有勘誤之處，不吝指教。ob'\_'ov

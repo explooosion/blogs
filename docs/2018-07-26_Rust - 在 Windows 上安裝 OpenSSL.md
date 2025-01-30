@@ -1,12 +1,11 @@
 ---
 title: "Rust - 在 Windows 上安裝 OpenSSL"
-date: "2018-07-26"
-tags: [cargo, rust, openssl, actix-web, actix, alpn]
-view: "7168"
-history: "0"
-group: "Rust"
-banner: "images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/banner/0003533582_B.JPG"
----
+subtitle: "撐住啊別放棄在 Windows 上操作 rust ...."
+date: "2018-07-26T00:00:00.000Z"
+series: "rust"
+tags: "cargo","rust","openssl","actix-web","actix","alpn"
+image: "https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/banner/0003533582_B.JPG"
+--- 
 
 撐住啊別放棄在 Windows 上操作 rust ....
 
@@ -16,7 +15,7 @@ banner: "images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/banner/000353358
 
 我都知道～
 
-![0003533582_B.JPG](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/0003533582_B.JPG)
+![0003533582_B.JPG](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/0003533582_B.JPG)
 
 一、前言
 ----
@@ -32,7 +31,7 @@ banner: "images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/banner/000353358
 
 **在** [package-feature](https://docs.rs/actix-web/0.6.11/actix_web/#package-feature) 可以看到一些功能如下：
 
-[![1532544636_59104.png](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/1532544636_59104.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532544636_59104.png)
+[![1532544636_59104.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532544636_59104.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532544636_59104.png)
 
 *   **alpn**：使用到了 opsnssl，因此如果要使用這個模組，就得要安裝！！
 
@@ -51,11 +50,11 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 
 請依據個人電腦位元決定下載哪個。
 
-[![1532545019_35701.png](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/1532545019_35701.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532545019_35701.png)
+[![1532545019_35701.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532545019_35701.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532545019_35701.png)
 
 安裝過程皆為下一步，請安心上路。
 
-![1532545194_02246.png](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/1532545194_02246.png)
+![1532545194_02246.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532545194_02246.png)
 
 #### 1.2 環境變數
 
@@ -65,13 +64,13 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 
 首先右鍵「我的電腦」－「內容」。
 
-![1532545700_27192.png](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/1532545700_27192.png)
+![1532545700_27192.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532545700_27192.png)
 
 依序點選「進階系統設定」－選擇「進階」頁籤的「環境變數」，
 
 在視窗中，上半部就是使用者所有的環境變數。
 
-[![1532545604_61547.png](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/1532545604_61547.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532545604_61547.png)
+[![1532545604_61547.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532545604_61547.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532545604_61547.png)
 
 ###### **PATH**
 
@@ -81,7 +80,7 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 
     C:\OpenSSL-Win64\bin
 
-[![1532546173_78822.png](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/1532546173_78822.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532546173_78822.png)
+[![1532546173_78822.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532546173_78822.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532546173_78822.png)
 
 ###### **OPENSSL\_DIR**
 
@@ -95,7 +94,7 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
     # 變數值
     C:\OpenSSL-Win64
 
-[![1532546541_18586.png](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/1532546541_18586.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532546541_18586.png)
+[![1532546541_18586.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532546541_18586.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532546541_18586.png)
 
 筆者希望能讓沒有這類知識的讀者也能輕鬆上手，所以精心策畫以上圖解<3。
 
@@ -107,7 +106,7 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 
 也可點選網站如下紅框處：
 
-[![1532546867_81318.png](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/1532546867_81318.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532546867_81318.png)
+[![1532546867_81318.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532546867_81318.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532546867_81318.png)
 
 然後存到剛剛 OpenSSL 目錄底下的 certs 資料夾，
 
@@ -131,7 +130,7 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
     # 變數值
     C:\OpenSSL-Win64\certs\cacert.pem
 
-[![1532547306_56676.png](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/1532547306_56676.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532547306_56676.png)
+[![1532547306_56676.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532547306_56676.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532547306_56676.png)
 
 ### 恭喜～以上就完成在 Rust 環境中 OpenSSL 的安裝了！！！
 
@@ -148,7 +147,7 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 *   x86 - [下載](http://repo.msys2.org/distrib/i686/msys2-i686-20180531.exe)
 *   x64 - [下載](http://repo.msys2.org/distrib/x86_64/msys2-x86_64-20180531.exe)
 
-[![1532547611_55121.png](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/1532547611_55121.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532547611_55121.png)
+[![1532547611_55121.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532547611_55121.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532547611_55121.png)
 
 #### 3.1 安裝
 
@@ -189,7 +188,7 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 
     cargo build
 
-[![1532549021_65273.png](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/1532549021_65273.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532549021_65273.png)
+[![1532549021_65273.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532549021_65273.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532549021_65273.png)
 
 如果發現電腦有點當機，可以改使用：
 
@@ -198,7 +197,7 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 *   \-j：調用的 cpu 執行續數量
     
 
-#### ![1532548620_52416.png](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/1532548620_52416.png)
+#### ![1532548620_52416.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532548620_52416.png)
 
 ### 執行專案
 
@@ -206,11 +205,11 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 
     cargo run
 
-[![1532548353_19116.png](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/1532548353_19116.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532548353_19116.png)
+[![1532548353_19116.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532548353_19116.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532548353_19116.png)
 
 *   可以打開網頁看看有沒有畫面，[http://localhost:8080/](http://localhost:8080/)。
 
-[![1532549135_68179.png](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/1532549135_68179.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532549135_68179.png)
+[![1532549135_68179.png](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/1532549135_68179.png)](https://dotblogsfile.blob.core.windows.net/user/incredible/37d0d35d-c3e7-4bea-91a0-b0c2de02858c/1532549135_68179.png)
 
 *   其實有畫面就行了XD
 
@@ -219,6 +218,6 @@ Windows 平台的安裝過程較為繁瑣，本篇主要為 Windows 64bit 的環
 
 你放棄 Windows 了嗎？
 
-[![slam_dunk01.jpg](images/2018-07-26_Rust - 在 Windows 上安裝 OpenSSL/slam_dunk01.jpg)](https://www.mplus.com.tw/images/article/75/slam_dunk01.jpg)
+[![slam_dunk01.jpg](https://raw.githubusercontent.com/explooosion/blogs/refs/heads/main/docs/images/2018-07-26_Rust%20-%20%E5%9C%A8%20Windows%20%E4%B8%8A%E5%AE%89%E8%A3%9D%20OpenSSL/slam_dunk01.jpg)](https://www.mplus.com.tw/images/article/75/slam_dunk01.jpg)
 
 有勘誤之處，不吝指教。ob'\_'ov
