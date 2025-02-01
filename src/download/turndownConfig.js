@@ -40,7 +40,16 @@ turndownService.addRule("codeBlock", {
     const langClass = codeNode.getAttribute("class"); // e.g., "language-js"
     const lang = langClass ? langClass.replace("language-", "") : "";
 
-    return `\n\`\`\`${lang}\n${codeNode.textContent.trim()}\n\`\`\`\n`;
+    return `\n\
+\`\`\`${lang}\n${codeNode.textContent.trim()}\n\`\`\`\n`;
+  },
+});
+
+// Preserve <br /> tags as line breaks
+turndownService.addRule("preserveBr", {
+  filter: "br",
+  replacement: function () {
+    return "  \n"; // Two spaces followed by a newline ensures a line break in Markdown
   },
 });
 

@@ -10,9 +10,14 @@ const { downloadImage, updateMarkdownImagePaths } = require("./imageUtils");
 const { BASE_URL, OUTPUT_DIR, GITHUB_RAW_BASE } = require("./config");
 
 /**
- * Scrape blog articles
+ * Scrape blog articles with page and article limits
+ * @param {number} maxPages - Maximum number of pages to scrape
+ * @param {number} maxArticlesPerPage - Maximum number of articles to scrape per page
  */
-async function scrapeArticles() {
+async function scrapeArticles(
+  maxPages = Infinity,
+  maxArticlesPerPage = Infinity
+) {
   const browser = await puppeteer.launch({ headless: true });
   const page = await browser.newPage();
 
@@ -20,33 +25,31 @@ async function scrapeArticles() {
   let hasNextPage = true;
   let articles = [];
 
-  while (hasNextPage) {
+  while (hasNextPage && currentPage <= maxPages) {
     const pageUrl = `${BASE_URL}/${currentPage}`;
     console.log(`🔍 Scraping page ${currentPage}: ${pageUrl}`);
     await page.goto(pageUrl, { waitUntil: "domcontentloaded" });
 
-    // Extract article list
-    const pageArticles = await page.evaluate(() => {
+    // Extract article list with limit
+    const pageArticles = await page.evaluate((limit) => {
       return [
         .../** @type {NodeListOf<HTMLLinkElement>} */ (
           document.querySelectorAll(".article--in-list .article__title a")
         ),
-      ].map((a) => ({
-        title: a.innerText.trim(),
-        url: a.href,
-      }));
-    });
+      ]
+        .slice(0, limit)
+        .map((a) => ({
+          title: a.innerText.trim(),
+          url: a.href,
+        }));
+    }, maxArticlesPerPage);
 
     articles = [...articles, ...pageArticles];
 
     // Check for "Next Page" button
     const nextPageElement = await page.$("li.PagedList-skipToNext a");
-
-    if (nextPageElement) {
-      currentPage++;
-    } else {
-      hasNextPage = false;
-    }
+    hasNextPage = !!nextPageElement;
+    currentPage++;
   }
 
   console.log(`✅ Found ${articles.length} articles. Starting download...`);
@@ -87,7 +90,7 @@ async function scrapeArticles() {
           subtitle: subtitleElement ? subtitleElement.innerText.trim() : "",
           date: dateElement ? dateElement.innerText.trim() : "",
           series: seriesElement
-            ? seriesElement.innerText.trim().toLocaleLowerCase()
+            ? seriesElement.innerText.trim().toLowerCase()
             : "",
           tags: [...tagElements].map((tag) => tag.innerText.trim()).join(", "),
           images: imageUrls,
